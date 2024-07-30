@@ -493,21 +493,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Request schema">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#request-body" class="md-nav__link">
-    <span class="md-ellipsis">
-      Request body
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -577,21 +562,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Request schema">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#request-body_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Request body
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -660,21 +630,6 @@
       Request schema
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Request schema">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#request-body_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Request body
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -901,21 +856,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Request schema">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#request-body" class="md-nav__link">
-    <span class="md-ellipsis">
-      Request body
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -985,21 +925,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Request schema">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#request-body_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Request body
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -1068,21 +993,6 @@
       Request schema
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Request schema">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#request-body_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Request body
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1174,7 +1084,8 @@
 <h3 id="description_1">Description</h3>
 <p>This endpoint validates the credential sent by the user from Bamboo Client. Using the <code>model login_auth</code>, Bamboo Teamserver will determine if the credentials are valid. If it is valid, Bamboo Teamserver will generate a JSON Web Token (JWT) for the Bamboo Client user and respond back to the user.</p>
 <h3 id="request-schema">Request schema</h3>
-<h4 id="request-body">Request body</h4>
+<h4>Request body</h4>
+
 <table>
 <thead>
 <tr>
@@ -1251,7 +1162,8 @@
 <h3 id="description_2">Description</h3>
 <p>This endpoint is called when the Bamboo Client user want to log off using <code>exit</code>/<code>quit</code> command. Bamboo Teamserver will update the user status in the database using the <code>model users</code> and will generate a log. Bamboo Teamserver will also remove the username from the WebSocket Client dictionary.</p>
 <h3 id="request-schema_1">Request schema</h3>
-<h4 id="request-body_1">Request body</h4>
+<h4>Request body</h4>
+
 <table>
 <thead>
 <tr>
@@ -1310,7 +1222,8 @@
 <h3 id="description_3">Description</h3>
 <p>When Bamboo Client user uses commands such as {<code>exploit</code> and <code>cmd</code>}, Bamboo Client will need to determine if the Bamboo Agent in use is online. This endpoint uses the <code>model obtain_status</code> and will return the status of the specific Bamboo Agent.</p>
 <h3 id="request-schema_2">Request schema</h3>
-<h4 id="request-body_2">Request body</h4>
+<h4>Request body</h4>
+
 <table>
 <thead>
 <tr>
