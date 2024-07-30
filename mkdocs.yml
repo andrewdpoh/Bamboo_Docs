@@ -1,0 +1,14 @@
+site_name: Bamboo Docs
+site_url: http://Bamboo_Docs
+theme:
+  name: material
+  palette:
+    scheme: slate
+  features:
+    - header.autohide
+    - navigation.footer
+    - navigation.expand
+    - navigation.path
+plugins:
+  - offline
+  - search
