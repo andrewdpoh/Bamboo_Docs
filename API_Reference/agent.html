@@ -1,0 +1,2508 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="http://Bamboo_Docs/API_Reference/agent.html">
+      
+      
+        <link rel="prev" href="_overview.html">
+      
+      
+        <link rel="next" href="authentication.html">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
+    
+    
+      
+        <title>/agent - Bamboo Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#agent" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="Bamboo Docs" class="md-header__button md-logo" aria-label="Bamboo Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bamboo Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              /agent
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="Bamboo Docs" class="md-nav__button md-logo" aria-label="Bamboo Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Bamboo Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../evasion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evasion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exploits.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exploits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    API Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            API Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="_overview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    /agent
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="agent.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    /agent
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#agent-heartbeats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent Heartbeats
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Agent Heartbeats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request schema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Request schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request body
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registering-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registering Agent
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Registering Agent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endpoint_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-schema_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request schema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Request schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request body
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-schema_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command Response
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Command Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endpoint_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-schema_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request schema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Request schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request body
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-example_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-schema_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-example_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-download" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Download
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File Download">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endpoint_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-schema_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response schema
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keylog-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keylog Result
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Keylog Result">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endpoint_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-schema_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request schema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Request schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request body
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-example_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-schema_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-example_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#websocket-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebSocket schema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WebSocket schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#websocket-body" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebSocket body
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#websocket-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebSocket example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enumerate-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enumerate Result
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enumerate Result">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endpoint_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-schema_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request schema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Request schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request body
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-example_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-schema_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-example_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#websocket-schema_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebSocket schema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WebSocket schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#websocket-body_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebSocket body
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#websocket-example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebSocket example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sss_retrieve-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSS_Retrieve Result
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SSS_Retrieve Result">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endpoint_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-schema_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request schema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Request schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request body
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-example_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-schema_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-example_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#websocket-schema_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebSocket schema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WebSocket schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#websocket-body_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebSocket body
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#websocket-example_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebSocket example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="authentication.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    /auth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exploit.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    /exploit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="handler_func.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    /handler_func
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="postexp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    /postexp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#agent-heartbeats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent Heartbeats
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Agent Heartbeats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request schema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Request schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request body
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registering-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registering Agent
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Registering Agent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endpoint_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-schema_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request schema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Request schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request body
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-schema_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command Response
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Command Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endpoint_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-schema_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request schema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Request schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request body
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-example_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-schema_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-example_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-download" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Download
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File Download">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endpoint_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-schema_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response schema
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keylog-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keylog Result
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Keylog Result">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endpoint_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-schema_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request schema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Request schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request body
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-example_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-schema_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-example_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#websocket-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebSocket schema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WebSocket schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#websocket-body" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebSocket body
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#websocket-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebSocket example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enumerate-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enumerate Result
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enumerate Result">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endpoint_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-schema_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request schema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Request schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request body
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-example_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-schema_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-example_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#websocket-schema_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebSocket schema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WebSocket schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#websocket-body_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebSocket body
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#websocket-example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebSocket example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sss_retrieve-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSS_Retrieve Result
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SSS_Retrieve Result">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endpoint_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-schema_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request schema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Request schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request body
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-example_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-schema_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-example_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#websocket-schema_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebSocket schema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WebSocket schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#websocket-body_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebSocket body
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#websocket-example_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebSocket example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="agent">/agent</h1>
+<!-- Endpoint 1 -->
+<h2 id="agent-heartbeats">Agent Heartbeats</h2>
+<p>Record Bamboo Agent heartbeat</p>
+<h3 id="endpoint">Endpoint</h3>
+<pre><code>POST /agent/heartbeat
+</code></pre>
+<h3 id="description">Description</h3>
+<p>Agent heartbeats endpoint is for Bamboo Agents to 'ping' after their initial connection. This API helps determine if a Bamboo Agent is still 'alive' and running. Heartbeat, is a mechanism used in Bamboo to ensure that an individual Bamboo Agent is still 'alive' and running. The initial connection will give Bamboo Agents 5 seconds before the next heartbeat is expected. After that, the Bamboo Agent will continue sending their heartbeat at random between 5 to 10 seconds. This endpoint will use the <code>model add_heartbeat</code> to repeatedly update the <code>collection heartbeats</code>.</p>
+<p>After obtaining the 2 data in the request body from Bamboo Agent, Bamboo Teamserver will take the time that the request was made and compare it with the expected_heartbeat column in the database. Refer to db collection heartbeats for more information.</p>
+<p>If the current time is later than the expected time, it would mean that the Bamboo Agent was 'dead' and it became 'alive' after a while. While if the current time matches the expected time for the next heartbeat, it would mean that the Bamboo Agent is 'punctual' and still alive.</p>
+<h3 id="request-schema">Request schema</h3>
+<h4 id="request-body">Request body</h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>agent_identifier</td>
+<td>String</td>
+<td>Identifier of Bamboo Agent</td>
+</tr>
+<tr>
+<td>heartbeat</td>
+<td>Integer</td>
+<td>Seconds before the next heartbeat</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-example">Request example</h3>
+<pre><code>{
+    &quot;agent_identifier&quot;: &quot;5zrire9a&quot;,
+    &quot;heartbeat&quot;: 8
+}
+</code></pre>
+<h3 id="response-schema">Response schema</h3>
+<table>
+<thead>
+<tr>
+<th>Status Code</th>
+<th>Schema</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>200</code></td>
+<td>{"status": "alive"}</td>
+<td>Success</td>
+</tr>
+<tr>
+<td><code>404</code></td>
+<td>{"message": "Invalid Body"}</td>
+<td>Invalid Body</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-example">Response example</h3>
+<pre><code>{
+    &quot;status&quot;: &quot;alive&quot;
+}
+</code></pre>
+<!-- ENDPOINT 2 -->
+<p><br></p>
+<h2 id="registering-agent">Registering Agent</h2>
+<p>Register new Bamboo Agent</p>
+<h3 id="endpoint_1">Endpoint</h3>
+<pre><code>POST /agent/initial_connection/register
+</code></pre>
+<h3 id="description_1">Description</h3>
+<p>The Register Agent endpoint is called when a Bamboo Agent is executed. The Bamboo Agent will request for this endpoint to register itself into Bamboo Teamserver and using the <code>model check_agent_identifier</code>, Bamboo Teamserver will be able to generate unique agent identifiers and avoid duplicates.</p>
+<p>Bamboo Teamserver will create a new unique agent identifier for all Bamboo Agent. Once the agent identifier is created, Bamboo Teamserver will update the database in the <code>agents collection</code> using  the <code>model add_agent</code> with the new Bamboo Agent information. Not only that, also update the <code>heartbeat collection</code> using the <code>model add_heartbeat</code> and give the agent 5 seconds buffer time to request for the next heartbeat. For more details for the collections, do refer here for the <code>heartbeat collection</code> and here for the agents collection.</p>
+<p>After the procedure is completed, Bamboo Teamserver will broadcast to all connected Bamboo Clients that a new Bamboo Agent is connected, with its agent identifier. From there, Bamboo Client users will be able to interact and view the information using commands. For more information on commands, do refer to command.</p>
+<h3 id="request-schema_1">Request schema</h3>
+<h4 id="request-body_1">Request body</h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hostname</td>
+<td>String</td>
+<td>Hostname if infected machine</td>
+</tr>
+<tr>
+<td>publicIP</td>
+<td>String</td>
+<td>Public IP address of infected machine</td>
+</tr>
+<tr>
+<td>privateIP</td>
+<td>String</td>
+<td>Private IP address of infected machine</td>
+</tr>
+<tr>
+<td>Integrity</td>
+<td>String</td>
+<td>Privilege level of Bamboo Agent</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-example_1">Request example</h3>
+<pre><code>{
+    &quot;hostname&quot;: &quot;bambooMachine&quot;,
+    &quot;publicIP&quot;: &quot;39.100.49.231&quot;,
+    &quot;privateIP&quot;: &quot;192.168.45.7&quot;,
+    &quot;Integrity&quot;: &quot;medium&quot;
+}
+</code></pre>
+<h3 id="response-schema_1">Response schema</h3>
+<table>
+<thead>
+<tr>
+<th>Status Code</th>
+<th>Schema</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>200</code></td>
+<td>{"listener_status": "connected", "agent_identifier", "5zrire9a"}</td>
+<td>Success</td>
+</tr>
+<tr>
+<td><code>404</code></td>
+<td>{"message": "Invalid Body"}</td>
+<td>Invalid Body</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-example_1">Response example</h3>
+<pre><code>{
+    &quot;listener_status&quot;: &quot;connected&quot;,
+    &quot;agent_identifier&quot;: &quot;5zrire9a&quot;
+}
+</code></pre>
+<!-- ENDPOINT 3 -->
+<p><br></p>
+<h2 id="command-response">Command Response</h2>
+<p>Store response of command for <code>cmd</code> Bamboo Client command</p>
+<h3 id="endpoint_2">Endpoint</h3>
+<pre><code>POST /agent/agent_response
+</code></pre>
+<h3 id="description_2">Description</h3>
+<p>Command Response endpoint is part of the {<code>cmd</code> command} component. This endpoint receives the response of the Bamboo Agent after the Bamboo Client user sends a command over. Bamboo Teamserver will then update a dictionary in the global variable for /handler/handler_output API to receive it, which details are in here. </p>
+<h3 id="request-schema_2">Request schema</h3>
+<h4 id="request-body_2">Request body</h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>agent_identifier</td>
+<td>String</td>
+<td>Identifier of Bamboo Agent</td>
+</tr>
+<tr>
+<td>response</td>
+<td>String</td>
+<td>Result of command (e.g. <code>whoami</code>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-example_2">Request example</h3>
+<pre><code>{
+    &quot;agent_identifier&quot;: &quot;5zrire9a&quot;,
+    &quot;response&quot;: &quot;bambooMachine\panda&quot;
+}
+</code></pre>
+<h3 id="response-schema_2">Response schema</h3>
+<table>
+<thead>
+<tr>
+<th>Status Code</th>
+<th>Schema</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>200</code></td>
+<td>{"status": "success", "response", "bambooMachine\panda"}</td>
+<td>Success</td>
+</tr>
+<tr>
+<td><code>404</code></td>
+<td>{"message": "Invalid Body"}</td>
+<td>Invalid Body</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-example_2">Response example</h3>
+<pre><code>{
+    &quot;status&quot;: &quot;success&quot;,
+    &quot;response&quot;: &quot;bambooMachine\panda&quot;
+}
+</code></pre>
+<!-- ENDPOINT 4 -->
+<p><br></p>
+<h2 id="file-download">File Download</h2>
+<p>Download exploit files by name</p>
+<h3 id="endpoint_3">Endpoint</h3>
+<pre><code>GET /agent/download/&lt;filename&gt;
+</code></pre>
+<h3 id="description_3">Description</h3>
+<p>During exploiting phrase, if drop file is required, Bamboo Agent will request for this API to download the exploit file. All exploit files is located in <code>/exploits</code> folder</p>
+<h3 id="response-schema_3">Response schema</h3>
+<table>
+<thead>
+<tr>
+<th>Status Code</th>
+<th>Schema</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>200</code></td>
+<td>File</td>
+<td>Success</td>
+</tr>
+<tr>
+<td><code>404</code></td>
+<td>Null</td>
+<td>Invalid Body</td>
+</tr>
+</tbody>
+</table>
+<!-- ENDPOINT 5 -->
+<p><br></p>
+<h2 id="keylog-result">Keylog Result</h2>
+<p>Store post exploit (<code>keylog</code>) result (keystrokes)</p>
+<h3 id="endpoint_4">Endpoint</h3>
+<pre><code>POST /agent/post_exploit/keylog
+</code></pre>
+<h3 id="description_4">Description</h3>
+<p>Keylog Result will be called by Bamboo Agent when Bamboo Client command the Bamboo Agent to stop recording keystrokes. There will be error checking to determine if there were any error, if there are no errors, Bamboo Teamserver will send the keystroke to the user via WebSocket.</p>
+<h3 id="request-schema_3">Request schema</h3>
+<h4 id="request-body_3">Request body</h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>agent_identifier</td>
+<td>String</td>
+<td>Identifier of Bamboo Agent</td>
+</tr>
+<tr>
+<td>status</td>
+<td>String</td>
+<td>State of agent: <code>done</code>, <code>start</code>, <code>error</code></td>
+</tr>
+<tr>
+<td>keystroke</td>
+<td>String</td>
+<td>Key strokes recorded</td>
+</tr>
+<tr>
+<td>handler</td>
+<td>String</td>
+<td>Bamboo Client user that started the keylogging</td>
+</tr>
+<tr>
+<td>error</td>
+<td>String</td>
+<td>If status is error, will state error</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-example_3">Request example</h3>
+<pre><code>{
+    &quot;agent_identifier&quot;: &quot;5zrire9a&quot;,
+    &quot;status&quot;: &quot;done&quot;:,
+    &quot;keystroke&quot;: &quot;keystrokesrecorded&quot;,
+    &quot;handler&quot;: &quot;Bamboo User A&quot;,
+    &quot;error&quot;: &quot;&quot;
+}
+</code></pre>
+<h3 id="response-schema_4">Response schema</h3>
+<table>
+<thead>
+<tr>
+<th>Status Code</th>
+<th>Schema</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>200</code></td>
+<td>{"message": "success"}</td>
+<td>Successfully sent broadcasted to Bamboo Client</td>
+</tr>
+<tr>
+<td><code>400</code></td>
+<td>{"message": "failed"}</td>
+<td>Failed to broadcast to Bamboo Client</td>
+</tr>
+<tr>
+<td><code>404</code></td>
+<td>{"message": "error"}</td>
+<td>There was an error when logging keystrokes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-example_3">Response example</h3>
+<pre><code>{
+    &quot;message&quot;: &quot;success&quot;
+}
+</code></pre>
+<h3 id="websocket-schema">WebSocket schema</h3>
+<h4 id="websocket-body">WebSocket body</h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>keylogMsg</td>
+<td>String</td>
+<td>Keystrokes recorded</td>
+</tr>
+<tr>
+<td>agent_identifier</td>
+<td>String</td>
+<td>Identifier of Bamboo Agent</td>
+</tr>
+</tbody>
+</table>
+<h3 id="websocket-example">WebSocket example</h3>
+<pre><code>{
+    &quot;keylogMsg&quot;: &quot;keystrokesrecorded&quot;,
+    &quot;agent_identifier&quot;: &quot;5zrire9a&quot;
+}
+</code></pre>
+<!-- Endpoint 6 -->
+<p><br></p>
+<h2 id="enumerate-result">Enumerate Result</h2>
+<p>Store enumeration (<code>enum</code>) result</p>
+<h3 id="endpoint_5">Endpoint</h3>
+<pre><code>POST /agent/post_exploit/enumerate
+</code></pre>
+<h3 id="description_5">Description</h3>
+<p>Enumerate Result will be called by Bamboo Agent when Bamboo Client command the Bamboo Agent to enumerate the infected machine. There will be error checking to determine if there were any error, if there are no errors, Bamboo Teamserver will send the enumerate results to the user via WebSocket.</p>
+<h3 id="request-schema_4">Request schema</h3>
+<h4 id="request-body_4">Request body</h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>agent_identifier</td>
+<td>String</td>
+<td>Identifier of Bamboo Agent</td>
+</tr>
+<tr>
+<td>status</td>
+<td>String</td>
+<td>State of agent: <code>done</code>, <code>error</code></td>
+</tr>
+<tr>
+<td>result</td>
+<td>String</td>
+<td>Enumerate Result</td>
+</tr>
+<tr>
+<td>handler</td>
+<td>String</td>
+<td>Bamboo Client user that started the keylogging</td>
+</tr>
+<tr>
+<td>error</td>
+<td>String</td>
+<td>If status is error, will state error</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-example_4">Request example</h3>
+<pre><code>{
+    &quot;agent_identifier&quot;: &quot;5zrire9a&quot;,
+    &quot;status&quot;: &quot;done&quot;:,
+    &quot;result&quot;: &lt;a very long list of string&gt;,
+    &quot;handler&quot;: &quot;Bamboo User A&quot;,
+    &quot;error&quot;: &quot;&quot;
+}
+</code></pre>
+<h3 id="response-schema_5">Response schema</h3>
+<table>
+<thead>
+<tr>
+<th>Status Code</th>
+<th>Schema</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>200</code></td>
+<td>{"message": "success"}</td>
+<td>Successfully sent broadcasted to Bamboo Client</td>
+</tr>
+<tr>
+<td><code>400</code></td>
+<td>{"message": "failed"}</td>
+<td>Failed to broadcast to Bamboo Client</td>
+</tr>
+<tr>
+<td><code>404</code></td>
+<td>{"message": "error"}</td>
+<td>There was an error when enumerating</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-example_4">Response example</h3>
+<pre><code>{
+    &quot;message&quot;: &quot;success&quot;
+}
+</code></pre>
+<h3 id="websocket-schema_1">WebSocket schema</h3>
+<h4 id="websocket-body_1">WebSocket body</h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enumerateMsg</td>
+<td>String</td>
+<td>Enumerated result</td>
+</tr>
+<tr>
+<td>agent_identifier</td>
+<td>String</td>
+<td>Identifier of Bamboo Agent</td>
+</tr>
+</tbody>
+</table>
+<h3 id="websocket-example_1">WebSocket example</h3>
+<pre><code>{
+    &quot;enumerateMsg&quot;: &lt;a very long list of string&gt;,
+    &quot;agent_identifier&quot;: &quot;5zrire9a&quot;
+}
+</code></pre>
+<!-- Endpoint 7 -->
+<p><br></p>
+<h2 id="sss_retrieve-result">SSS_Retrieve Result</h2>
+<p>Store SSS_Retrieve (<code>retrieve</code>) result</p>
+<h3 id="endpoint_6">Endpoint</h3>
+<pre><code>POST /agent/post_exploit/sss_retrieve
+</code></pre>
+<h3 id="description_6">Description</h3>
+<p>SSS_Retrieve Result will be called by Bamboo Agent when Bamboo Client command the Bamboo Agent to Retrieve registry hives from the infected machine. There will be error checking to determine if there were any error, if there are no errors, Bamboo Teamserver will send the retrieved results to the user via WebSocket.</p>
+<h3 id="request-schema_5">Request schema</h3>
+<h4 id="request-body_5">Request body</h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>agent_identifier</td>
+<td>String</td>
+<td>Identifier of Bamboo Agent</td>
+</tr>
+<tr>
+<td>status</td>
+<td>String</td>
+<td>State of agent: <code>done</code>, <code>error</code></td>
+</tr>
+<tr>
+<td>files</td>
+<td>String</td>
+<td>Dictionary of binary</td>
+</tr>
+<tr>
+<td>handler</td>
+<td>String</td>
+<td>Bamboo Client user that started the keylogging</td>
+</tr>
+<tr>
+<td>error</td>
+<td>String</td>
+<td>If status is error, will state error</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-example_5">Request example</h3>
+<pre><code>{
+    &quot;agent_identifier&quot;: &quot;5zrire9a&quot;,
+    &quot;status&quot;: &quot;done&quot;:,
+    &quot;result&quot;: &lt;dictionary of binary&gt;,
+    &quot;handler&quot;: &quot;Bamboo User A&quot;,
+    &quot;error&quot;: &quot;&quot;
+}
+</code></pre>
+<h3 id="response-schema_6">Response schema</h3>
+<table>
+<thead>
+<tr>
+<th>Status Code</th>
+<th>Schema</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>200</code></td>
+<td>{"message": "success"}</td>
+<td>Successfully sent broadcasted to Bamboo Client</td>
+</tr>
+<tr>
+<td><code>400</code></td>
+<td>{"message": "failed"}</td>
+<td>Failed to broadcast to Bamboo Client</td>
+</tr>
+<tr>
+<td><code>404</code></td>
+<td>{"message": "error"}</td>
+<td>There was an error when enumerating</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-example_5">Response example</h3>
+<pre><code>{
+    &quot;message&quot;: &quot;success&quot;
+}
+</code></pre>
+<h3 id="websocket-schema_2">WebSocket schema</h3>
+<h4 id="websocket-body_2">WebSocket body</h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>retrieveMsg</td>
+<td>String</td>
+<td>Enumerated result</td>
+</tr>
+<tr>
+<td>agent_identifier</td>
+<td>String</td>
+<td>Identifier of Bamboo Agent</td>
+</tr>
+</tbody>
+</table>
+<h3 id="websocket-example_2">WebSocket example</h3>
+<pre><code>{
+    &quot;retrieveMsg&quot;: &lt;dictionary of binary&gt;,
+    &quot;agent_identifier&quot;: &quot;5zrire9a&quot;
+}
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="_overview.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Overview
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="authentication.html" class="md-footer__link md-footer__link--next" aria-label="Next: /auth">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                /auth
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.footer", "navigation.expand", "navigation.path"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
