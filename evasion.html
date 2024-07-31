@@ -1205,7 +1205,7 @@
 
 <h1 id="evasion">Evasion</h1>
 <h2 id="shellcode-injection">Shellcode Injection</h2>
-<p>Elastic Defend is unable to detect malicious in-memory files. Thus, these shellcode injection techniques are effective in executing payloads undetected. The shellcode injection techniques are implemented within Bamboo Agent.</p>
+<p>Elastic Defend is unable to detect malicious in-memory files. Thus, these shellcode injection techniques are effective in executing payloads undetected. The shellcode injection techniques are implemented within Bamboo Agent and can be selected when the user uses the <a href="Client/commands.html#exploit"><code>exploit</code></a> command.</p>
 <h3 id="virtual-allocation-injection">Virtual Allocation Injection</h3>
 <p>Virtual Allocation injection is a technique used to inject shellcode into memory. As this method of injection uses VirtualAlloc, it allocates and injects shellcode into the memory of its own process.</p>
 <p>The exploits used by Bamboo tend to crash the injected process, so using Virtual Allocation will likely cause the Agent that ran it to crash.</p>

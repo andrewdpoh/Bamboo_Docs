@@ -2671,7 +2671,7 @@
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>POST /handler_func/agent/display
 </span></code></pre></div></td></tr></table></div>
 <h3 id="description">Description</h3>
-<p>This endpoint is called when a Bamboo Client user wants to view all current Bamboo Agents registered in Bamboo Teamserver using the {command <code>display</code>}. Using the <code>model show_agents</code> and <code>model get_heartbeat</code>, Bamboo Teamserver will be able to extract all register Bamboo Agents information and status from the database.</p>
+<p>This endpoint is called when a Bamboo Client user wants to view all current Bamboo Agents registered in Bamboo Teamserver using the command <a href="../Client/commands.html#display"><code>display</code></a>. Using the model <a href="../Database/model_agents.html#show_agents">show_agents</a> and model <a href="../Database/model_agents.html#get_heartbeat">get_heartbeat</a>, Bamboo Teamserver will be able to extract all register Bamboo Agents information and status from the database.</p>
 <h3 id="request-schema">Request schema</h3>
 <h4>Request body</h4>
 
@@ -2692,11 +2692,11 @@
 </tbody>
 </table>
 <h3 id="request-example">Request example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<div class="language-JSON highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>{
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>    &quot;username&quot;: &quot;bambooUser&quot;
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>}
+<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bambooUser&quot;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="response-schema">Response schema</h3>
 <table>
@@ -2726,15 +2726,15 @@
 </tbody>
 </table>
 <h3 id="response-example">Response example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<div class="language-JSON highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
 <span class="normal"><a href="#__codelineno-2-4">4</a></span>
-<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>{
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>    &quot;status&quot;: &quot;success&quot;,
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>    &quot;agent&quot;: &lt;list of agent information&gt;,
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>    &quot;heartbeat&quot;: &lt;list of agent&#39;s heartbeat information&gt;
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>}
+<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="nt">&quot;agent&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;lis</span><span class="kc">t</span><span class="w"> </span><span class="err">o</span><span class="kc">f</span><span class="w"> </span><span class="err">age</span><span class="kc">nt</span><span class="w"> </span><span class="err">i</span><span class="kc">nf</span><span class="err">orma</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">&gt;</span><span class="p">,</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="nt">&quot;heartbeat&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;lis</span><span class="kc">t</span><span class="w"> </span><span class="err">o</span><span class="kc">f</span><span class="w"> </span><span class="err">age</span><span class="kc">nt</span><span class="err">&#39;s</span><span class="w"> </span><span class="err">hear</span><span class="kc">t</span><span class="err">bea</span><span class="kc">t</span><span class="w"> </span><span class="err">i</span><span class="kc">nf</span><span class="err">orma</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">&gt;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <!-- Endpoint 2 -->
 <p><br></p>
@@ -2744,7 +2744,7 @@
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>POST /handler_func/handler/use_agent
 </span></code></pre></div></td></tr></table></div>
 <h3 id="description_1">Description</h3>
-<p>This endpoint is called when a Bamboo Client user wants to start using a Bamboo Agent to interact with using the {command <code>use [agent]</code>}. Using the <code>model use_agent</code>, Bamboo Teamserver will be able to identify if the Bamboo Agent specified exist. If it does, the data of that Bamboo Agent will be return.</p>
+<p>This endpoint is called when a Bamboo Client user wants to start using a Bamboo Agent to interact with using the command <a href="../Client/commands.html#use"><code>use [agent]</code></a>. Using the model <a href="../Database/model_agents.html#use_agent">use_agent</a>, Bamboo Teamserver will be able to identify if the Bamboo Agent specified exist. If it does, the data of that Bamboo Agent will be return.</p>
 <h3 id="request-schema_1">Request schema</h3>
 <h4>Request body</h4>
 
@@ -2770,13 +2770,13 @@
 </tbody>
 </table>
 <h3 id="request-example_1">Request example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<div class="language-JSON highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
 <span class="normal"><a href="#__codelineno-4-3">3</a></span>
-<span class="normal"><a href="#__codelineno-4-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>{
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>    &quot;username&quot;: &quot;bambooUser&quot;,
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>    &quot;agent_identifier&quot;: &quot;5zrire9a&quot;
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>}
+<span class="normal"><a href="#__codelineno-4-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bambooUser&quot;</span><span class="p">,</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="nt">&quot;agent_identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;5zrire9a&quot;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="response-schema_1">Response schema</h3>
 <table>
@@ -2806,13 +2806,13 @@
 </tbody>
 </table>
 <h3 id="response-example_1">Response example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<div class="language-JSON highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span>
 <span class="normal"><a href="#__codelineno-5-3">3</a></span>
-<span class="normal"><a href="#__codelineno-5-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>{
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>    &quot;status&quot;: &quot;success&quot;,
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a>    &quot;agent_data&quot;: &lt;list of specified Bamboo Agent data&gt;
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a>}
+<span class="normal"><a href="#__codelineno-5-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p">{</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="nt">&quot;agent_data&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;lis</span><span class="kc">t</span><span class="w"> </span><span class="err">o</span><span class="kc">f</span><span class="w"> </span><span class="err">speci</span><span class="kc">f</span><span class="err">ied</span><span class="w"> </span><span class="err">Bamboo</span><span class="w"> </span><span class="err">Age</span><span class="kc">nt</span><span class="w"> </span><span class="err">da</span><span class="kc">ta</span><span class="err">&gt;</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <!-- Endpoint 3 -->
 <p><br></p>
@@ -2822,7 +2822,7 @@
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>POST /handler_func/handler/stop_agent
 </span></code></pre></div></td></tr></table></div>
 <h3 id="description_2">Description</h3>
-<p>This endpoint is called when a Bamboo Client user wants to stop using a Bamboo Agent using the {command <code>stop</code>}. It is for logging purposes</p>
+<p>This endpoint is called when a Bamboo Client user wants to stop using a Bamboo Agent using the command <a href="../Client/commands.html#stop"><code>stop</code></a>. It is for logging purposes</p>
 <h3 id="request-schema_2">Request schema</h3>
 <h4>Request body</h4>
 
@@ -2848,13 +2848,13 @@
 </tbody>
 </table>
 <h3 id="request-example_2">Request example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<div class="language-JSON highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
 <span class="normal"><a href="#__codelineno-7-2">2</a></span>
 <span class="normal"><a href="#__codelineno-7-3">3</a></span>
-<span class="normal"><a href="#__codelineno-7-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>{
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a>    &quot;username&quot;: &quot;bambooUser&quot;,
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a>    &quot;agent_identifier&quot;: &quot;5zrire9a&quot;
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a>}
+<span class="normal"><a href="#__codelineno-7-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="p">{</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">    </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bambooUser&quot;</span><span class="p">,</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">    </span><span class="nt">&quot;agent_identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;5zrire9a&quot;</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="response-schema_2">Response schema</h3>
 <table>
@@ -2879,13 +2879,13 @@
 </tbody>
 </table>
 <h3 id="response-example_2">Response example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<div class="language-JSON highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
 <span class="normal"><a href="#__codelineno-8-2">2</a></span>
 <span class="normal"><a href="#__codelineno-8-3">3</a></span>
-<span class="normal"><a href="#__codelineno-8-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a>{
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a>    &quot;status&quot;: &quot;success&quot;,
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a>    &quot;agent_data&quot;: &lt;list of specified Bamboo Agent data&gt;
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a>}
+<span class="normal"><a href="#__codelineno-8-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="p">{</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">    </span><span class="nt">&quot;agent_data&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;lis</span><span class="kc">t</span><span class="w"> </span><span class="err">o</span><span class="kc">f</span><span class="w"> </span><span class="err">speci</span><span class="kc">f</span><span class="err">ied</span><span class="w"> </span><span class="err">Bamboo</span><span class="w"> </span><span class="err">Age</span><span class="kc">nt</span><span class="w"> </span><span class="err">da</span><span class="kc">ta</span><span class="err">&gt;</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <!-- Endpoint 4 -->
 <p><br></p>
@@ -2895,7 +2895,7 @@
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a>POST /handler_func/handler/remove_agent
 </span></code></pre></div></td></tr></table></div>
 <h3 id="description_3">Description</h3>
-<p>This endpoint is called when a Bamboo Client user wants to remove a Bamboo Agent from Bamboo Teamserver using the {command <code>delete [agent]</code>}. Using the <code>model remove_agent</code>, Bamboo Teamserver will delete all instances of the specified Bamboo Agent if it exist. Additionally, if the Bamboo Agent is still running, Bamboo Teamserver will send a <code>kill</code> command to stop the Bamboo Agent.</p>
+<p>This endpoint is called when a Bamboo Client user wants to remove a Bamboo Agent from Bamboo Teamserver using the <a href="../Client/commands.html#delete"><code>delete [agent]</code></a>. Using the model <a href="../Database/model_agents.html#remove_agent">remove_agent</a>, Bamboo Teamserver will delete all instances of the specified Bamboo Agent if it exist. Additionally, if the Bamboo Agent is still running, Bamboo Teamserver will send a <a href="../Client/commands.html#kill"><code>kill</code></a> command to stop the Bamboo Agent.</p>
 <h3 id="request-schema_3">Request schema</h3>
 <h4>Request body</h4>
 
@@ -2921,13 +2921,13 @@
 </tbody>
 </table>
 <h3 id="request-example_3">Request example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<div class="language-JSON highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
 <span class="normal"><a href="#__codelineno-10-2">2</a></span>
 <span class="normal"><a href="#__codelineno-10-3">3</a></span>
-<span class="normal"><a href="#__codelineno-10-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a>{
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a>    &quot;username&quot;: &quot;bambooUser&quot;,
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3"></a>    &quot;agent_identifier&quot;: &quot;5zrire9a&quot;
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4"></a>}
+<span class="normal"><a href="#__codelineno-10-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="p">{</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">    </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bambooUser&quot;</span><span class="p">,</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">    </span><span class="nt">&quot;agent_identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;5zrire9a&quot;</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="response-schema_3">Response schema</h3>
 <table>
@@ -2962,11 +2962,11 @@
 </tbody>
 </table>
 <h3 id="response-example_3">Response example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<div class="language-JSON highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
 <span class="normal"><a href="#__codelineno-11-2">2</a></span>
-<span class="normal"><a href="#__codelineno-11-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a>{
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2"></a>    &quot;status&quot;: &quot;success&quot;
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3"></a>}
+<span class="normal"><a href="#__codelineno-11-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="p">{</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <!-- Endpoint 5 -->
 <p><br></p>
@@ -2976,7 +2976,7 @@
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a>POST /handler_func/handler/info_status
 </span></code></pre></div></td></tr></table></div>
 <h3 id="description_4">Description</h3>
-<p>This endpoint is called when a Bamboo Client user wants to the Bamboo Agent in use information using the {command <code>info</code>}. Using the <code>model info_status</code>, Bamboo Teamserver will be able to extract the information of the requested Bamboo Agent.</p>
+<p>This endpoint is called when a Bamboo Client user wants to the Bamboo Agent in use information using the command <a href="../Client/commands.html#info"><code>info</code></a>. Using the model <a href="../Database/model_agents.html#info_status">info_status</a>, Bamboo Teamserver will be able to extract the information of the requested Bamboo Agent.</p>
 <h3 id="request-schema_4">Request schema</h3>
 <h4>Request body</h4>
 
@@ -3002,13 +3002,13 @@
 </tbody>
 </table>
 <h3 id="request-example_4">Request example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<div class="language-JSON highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
 <span class="normal"><a href="#__codelineno-13-2">2</a></span>
 <span class="normal"><a href="#__codelineno-13-3">3</a></span>
-<span class="normal"><a href="#__codelineno-13-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a>{
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2"></a>    &quot;username&quot;: &quot;bambooUser&quot;,
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3"></a>    &quot;agent_identifier&quot;: &quot;5zrire9a&quot;
-</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4"></a>}
+<span class="normal"><a href="#__codelineno-13-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="p">{</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="w">    </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bambooUser&quot;</span><span class="p">,</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">    </span><span class="nt">&quot;agent_identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;5zrire9a&quot;</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="response-schema_4">Response schema</h3>
 <table>
@@ -3043,11 +3043,11 @@
 </tbody>
 </table>
 <h3 id="response-example_4">Response example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<div class="language-JSON highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
 <span class="normal"><a href="#__codelineno-14-2">2</a></span>
-<span class="normal"><a href="#__codelineno-14-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a>{
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2"></a>    &quot;status&quot;: &quot;alive&quot;
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3"></a>}
+<span class="normal"><a href="#__codelineno-14-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="p">{</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;alive&quot;</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <!-- Endpoint 6 -->
 <p><br></p>
@@ -3057,7 +3057,7 @@
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1"></a>POST /handler_func/handler/view_users
 </span></code></pre></div></td></tr></table></div>
 <h3 id="description_5">Description</h3>
-<p>This endpoint is called when a Bamboo Client user wants to view all registered users in Bamboo Teamserver using the {command <code>users</code>}. Using the <code>model view_users</code>, Bamboo Teamserver will be able to extract the username and status of the registered users.</p>
+<p>This endpoint is called when a Bamboo Client user wants to view all registered users in Bamboo Teamserver using the <a href="../Client/commands.html#users"><code>users</code></a>. Using the model <a href="../Database/model_users.html#view_users">view_users</a>, Bamboo Teamserver will be able to extract the username and status of the registered users.</p>
 <h3 id="request-schema_5">Request schema</h3>
 <h4>Request body</h4>
 
@@ -3078,11 +3078,11 @@
 </tbody>
 </table>
 <h3 id="request-example_5">Request example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<div class="language-JSON highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
 <span class="normal"><a href="#__codelineno-16-2">2</a></span>
-<span class="normal"><a href="#__codelineno-16-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1"></a>{
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2"></a>    &quot;username&quot;: &quot;bambooUser&quot;
-</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3"></a>}
+<span class="normal"><a href="#__codelineno-16-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="p">{</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="w">    </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bambooUser&quot;</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="response-schema_5">Response schema</h3>
 <table>
@@ -3112,13 +3112,13 @@
 </tbody>
 </table>
 <h3 id="response-example_5">Response example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<div class="language-JSON highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
 <span class="normal"><a href="#__codelineno-17-2">2</a></span>
 <span class="normal"><a href="#__codelineno-17-3">3</a></span>
-<span class="normal"><a href="#__codelineno-17-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1"></a>{
-</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2"></a>    &quot;status&quot;: &quot;success&quot;,
-</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3"></a>    &quot;user_data&quot;: &lt;list of usernames and status&gt;
-</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4"></a>}
+<span class="normal"><a href="#__codelineno-17-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="p">{</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="w">    </span><span class="nt">&quot;user_data&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;lis</span><span class="kc">t</span><span class="w"> </span><span class="err">o</span><span class="kc">f</span><span class="w"> </span><span class="err">user</span><span class="kc">na</span><span class="err">mes</span><span class="w"> </span><span class="err">a</span><span class="kc">n</span><span class="err">d</span><span class="w"> </span><span class="err">s</span><span class="kc">tatus</span><span class="err">&gt;</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <!-- Endpoint 7 -->
 <p><br></p>
@@ -3128,7 +3128,7 @@
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1"></a>POST /handler_func/handler/register_user
 </span></code></pre></div></td></tr></table></div>
 <h3 id="description_6">Description</h3>
-<p>This endpoint is called when a Bamboo Client user wants to register a new user into Bamboo Teamserver using the {command <code>register</code>}. Using the <code>model find_one</code>, Bamboo Teamserver will be able to determine if there will be any duplicates of username. After that, it will use the <code>model register_user</code> to add the information of the new user into the database.</p>
+<p>This endpoint is called when a Bamboo Client user wants to register a new user into Bamboo Teamserver using the <a href="../Client/commands.html#register"><code>register</code></a>. Using the model <a href="../Database/model_users.html#find_one">find_one</a>, Bamboo Teamserver will be able to determine if there will be any duplicates of username. After that, it will use the model <a href="../Database/model_users.html#register_user">register_user</a> to add the information of the new user into the database.</p>
 <h3 id="request-schema_6">Request schema</h3>
 <h4>Request body</h4>
 
@@ -3159,15 +3159,15 @@
 </tbody>
 </table>
 <h3 id="request-example_6">Request example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
+<div class="language-JSON highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
 <span class="normal"><a href="#__codelineno-19-2">2</a></span>
 <span class="normal"><a href="#__codelineno-19-3">3</a></span>
 <span class="normal"><a href="#__codelineno-19-4">4</a></span>
-<span class="normal"><a href="#__codelineno-19-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1"></a>{
-</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2"></a>    &quot;username&quot;: &quot;bambooUser&quot;,
-</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3"></a>    &quot;new_username&quot;: &quot;bambooUserTwo&quot;,
-</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4"></a>    &quot;new_password&quot;: &quot;ilovePandas213&quot;
-</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5"></a>}
+<span class="normal"><a href="#__codelineno-19-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="p">{</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="w">    </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bambooUser&quot;</span><span class="p">,</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="w">    </span><span class="nt">&quot;new_username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bambooUserTwo&quot;</span><span class="p">,</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="w">    </span><span class="nt">&quot;new_password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ilovePandas213&quot;</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="response-schema_6">Response schema</h3>
 <table>
@@ -3202,11 +3202,11 @@
 </tbody>
 </table>
 <h3 id="response-example_6">Response example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
+<div class="language-JSON highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
 <span class="normal"><a href="#__codelineno-20-2">2</a></span>
-<span class="normal"><a href="#__codelineno-20-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1"></a>{
-</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2"></a>    &quot;status&quot;: &quot;success&quot;,
-</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3"></a>}
+<span class="normal"><a href="#__codelineno-20-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="p">{</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <!-- Endpoint 8 -->
 <p><br></p>
@@ -3216,7 +3216,7 @@
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1"></a>POST /handler_func/handler/delete_user
 </span></code></pre></div></td></tr></table></div>
 <h3 id="description_7">Description</h3>
-<p>This endpoint is called when a Bamboo Client user wants to remove a user from Bamboo Teamserver using the {command <code>remove [username]</code>}. Using the <code>model delete_user</code>, Bamboo Teamserver will be able to delete the specified user.</p>
+<p>This endpoint is called when a Bamboo Client user wants to remove a user from Bamboo Teamserver using the <a href="../Client/commands.html#remove"><code>remove [username]</code></a>. Using the model <a href="../Database/model_users.html#delete_user">delete_user</a>, Bamboo Teamserver will be able to delete the specified user.</p>
 <h3 id="request-schema_7">Request schema</h3>
 <h4>Request body</h4>
 
@@ -3242,13 +3242,13 @@
 </tbody>
 </table>
 <h3 id="request-example_7">Request example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
+<div class="language-JSON highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
 <span class="normal"><a href="#__codelineno-22-2">2</a></span>
 <span class="normal"><a href="#__codelineno-22-3">3</a></span>
-<span class="normal"><a href="#__codelineno-22-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1"></a>{
-</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2"></a>    &quot;username&quot;: &quot;bambooUser&quot;,
-</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3"></a>    &quot;del_username&quot;: &quot;bambooUserTwo&quot;
-</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4"></a>}
+<span class="normal"><a href="#__codelineno-22-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="p">{</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="w">    </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bambooUser&quot;</span><span class="p">,</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="w">    </span><span class="nt">&quot;del_username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bambooUserTwo&quot;</span>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="response-schema_7">Response schema</h3>
 <table>
@@ -3283,11 +3283,11 @@
 </tbody>
 </table>
 <h3 id="response-example_7">Response example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
+<div class="language-JSON highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
 <span class="normal"><a href="#__codelineno-23-2">2</a></span>
-<span class="normal"><a href="#__codelineno-23-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1"></a>{
-</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2"></a>    &quot;status&quot;: &quot;success&quot;
-</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3"></a>}
+<span class="normal"><a href="#__codelineno-23-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="p">{</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <!-- Endpoint 9 -->
 <p><br></p>
@@ -3297,7 +3297,7 @@
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1"></a>POST /handler_func/cmd
 </span></code></pre></div></td></tr></table></div>
 <h3 id="description_8">Description</h3>
-<p>This endpoint is called when a Bamboo Client user wants to start a shell session with a Bamboo Agent using the {command <code>cmd</code>}. Bamboo Teamserver will use WebSocket to broadcast the command to the specified Bamboo Agent.</p>
+<p>This endpoint is called when a Bamboo Client user wants to start a shell session with a Bamboo Agent using the <a href="../Client/commands.html#cmd"><code>cmd</code></a>. Bamboo Teamserver will use WebSocket to broadcast the command to the specified Bamboo Agent.</p>
 <h3 id="request-schema_8">Request schema</h3>
 <h4>Request body</h4>
 
@@ -3328,15 +3328,15 @@
 </tbody>
 </table>
 <h3 id="request-example_8">Request example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
+<div class="language-JSON highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
 <span class="normal"><a href="#__codelineno-25-2">2</a></span>
 <span class="normal"><a href="#__codelineno-25-3">3</a></span>
 <span class="normal"><a href="#__codelineno-25-4">4</a></span>
-<span class="normal"><a href="#__codelineno-25-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1"></a>{
-</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2"></a>    &quot;username&quot;: &quot;bambooUser&quot;,
-</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3"></a>    &quot;agent_identifier&quot;: &quot;5zrire9a&quot;,
-</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4"></a>    &quot;command&quot;: &quot;whoami&quot;
-</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5"></a>}
+<span class="normal"><a href="#__codelineno-25-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="p">{</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2"></a><span class="w">    </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bambooUser&quot;</span><span class="p">,</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3"></a><span class="w">    </span><span class="nt">&quot;agent_identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;5zrire9a&quot;</span><span class="p">,</span>
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4"></a><span class="w">    </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;whoami&quot;</span>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="response-schema_8">Response schema</h3>
 <table>
@@ -3366,11 +3366,11 @@
 </tbody>
 </table>
 <h3 id="response-example_8">Response example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
+<div class="language-JSON highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
 <span class="normal"><a href="#__codelineno-26-2">2</a></span>
-<span class="normal"><a href="#__codelineno-26-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1"></a>{
-</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2"></a>    &quot;status&quot;: &quot;success&quot;
-</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3"></a>}
+<span class="normal"><a href="#__codelineno-26-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="p">{</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2"></a><span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span>
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="websocket-schema">WebSocket schema</h3>
 <h4>Websocket body</h4>
@@ -3397,13 +3397,13 @@
 </tbody>
 </table>
 <h3 id="websocket-example">WebSocket example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
+<div class="language-JSON highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
 <span class="normal"><a href="#__codelineno-27-2">2</a></span>
 <span class="normal"><a href="#__codelineno-27-3">3</a></span>
-<span class="normal"><a href="#__codelineno-27-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1"></a>{
-</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2"></a>    &quot;command&quot;: &quot;cmd&quot;,
-</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3"></a>    &quot;cmd&quot;: &quot;whoami&quot;
-</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4"></a>}
+<span class="normal"><a href="#__codelineno-27-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="p">{</span>
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2"></a><span class="w">    </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cmd&quot;</span><span class="p">,</span>
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3"></a><span class="w">    </span><span class="nt">&quot;cmd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;whoami&quot;</span>
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <!-- Endpoint 10 -->
 <p><br></p>
@@ -3413,7 +3413,7 @@
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1"></a>POST /handler_func/handler_output
 </span></code></pre></div></td></tr></table></div>
 <h3 id="description_9">Description</h3>
-<p>After the Bamboo Client sends a command over to a Bamboo Agent using the {command <code>cmd</code>}, the Bamboo Client will request for this endpoint and wait for a response. To prevent users for waiting indefinitely, there is a timeout mechanism. Every 10 second, Bamboo Teamserver will check if the command response have been sent every second. If none have been sent, the user will get timeout.</p>
+<p>After the Bamboo Client sends a command over to a Bamboo Agent using the <a href="../Client/commands.html#cmd"><code>cmd</code></a>, the Bamboo Client will request for this endpoint and wait for a response. To prevent users for waiting indefinitely, there is a timeout mechanism. Every 10 second, Bamboo Teamserver will check if the command response have been sent every second. If none have been sent, the user will get timeout.</p>
 <h3 id="request-schema_9">Request schema</h3>
 <h4>Request body</h4>
 
@@ -3439,13 +3439,13 @@
 </tbody>
 </table>
 <h3 id="request-example_9">Request example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span>
+<div class="language-JSON highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span>
 <span class="normal"><a href="#__codelineno-29-2">2</a></span>
 <span class="normal"><a href="#__codelineno-29-3">3</a></span>
-<span class="normal"><a href="#__codelineno-29-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1"></a>{
-</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2"></a>    &quot;username&quot;: &quot;bambooUser&quot;,
-</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3"></a>    &quot;agent_identifier&quot;: &quot;5zrire9a&quot;
-</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4"></a>}
+<span class="normal"><a href="#__codelineno-29-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="p">{</span>
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2"></a><span class="w">    </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bambooUser&quot;</span><span class="p">,</span>
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3"></a><span class="w">    </span><span class="nt">&quot;agent_identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;5zrire9a&quot;</span>
+</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="response-schema_9">Response schema</h3>
 <table>
@@ -3475,11 +3475,11 @@
 </tbody>
 </table>
 <h3 id="response-example_9">Response example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span>
+<div class="language-JSON highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span>
 <span class="normal"><a href="#__codelineno-30-2">2</a></span>
-<span class="normal"><a href="#__codelineno-30-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1"></a>{
-</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2"></a>    &quot;5zrire9a&quot;: &quot;bambooMachine\panda&quot;
-</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3"></a>}
+<span class="normal"><a href="#__codelineno-30-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="p">{</span>
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2"></a><span class="w">    </span><span class="nt">&quot;5zrire9a&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bambooMachine\panda&quot;</span>
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <!-- Endpoint 11 -->
 <p><br></p>
@@ -3489,7 +3489,7 @@
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1"></a>POST /handler_func/teamchat
 </span></code></pre></div></td></tr></table></div>
 <h3 id="description_10">Description</h3>
-<p>This endpoint is called everytime a Bamboo Client user sends a message in the Teamchat using the {command <code>chat</code>} in CLI or using the <code>TEAMCHAT tab</code> in GUI. Bamboo Teamserver will relay the message from the Bamboo Client to all Bamboo Client using WebSocket broadcast.</p>
+<p>This endpoint is called everytime a Bamboo Client user sends a message in the Teamchat using the <a href="../Client/commands.html#chat"><code>chat</code></a> in CLI or using the <code>TEAMCHAT tab</code> in GUI. Bamboo Teamserver will relay the message from the Bamboo Client to all Bamboo Client using WebSocket broadcast.</p>
 <h3 id="request-schema_10">Request schema</h3>
 <h4>Request body</h4>
 
@@ -3515,13 +3515,13 @@
 </tbody>
 </table>
 <h3 id="request-example_10">Request example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span>
+<div class="language-JSON highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span>
 <span class="normal"><a href="#__codelineno-32-2">2</a></span>
 <span class="normal"><a href="#__codelineno-32-3">3</a></span>
-<span class="normal"><a href="#__codelineno-32-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1"></a>{
-</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2"></a>    &quot;username&quot;: &quot;bambooUser&quot;,
-</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3"></a>    &quot;message&quot;: &quot;hello everyone&quot;
-</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4"></a>}
+<span class="normal"><a href="#__codelineno-32-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="p">{</span>
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2"></a><span class="w">    </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bambooUser&quot;</span><span class="p">,</span>
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3"></a><span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;hello everyone&quot;</span>
+</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="response-schema_10">Response schema</h3>
 <table>
@@ -3551,11 +3551,11 @@
 </tbody>
 </table>
 <h3 id="response-example_10">Response example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1">1</a></span>
+<div class="language-JSON highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1">1</a></span>
 <span class="normal"><a href="#__codelineno-33-2">2</a></span>
-<span class="normal"><a href="#__codelineno-33-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1"></a>{
-</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2"></a>    &quot;status&quot;: &quot;success&quot;
-</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3"></a>}
+<span class="normal"><a href="#__codelineno-33-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="p">{</span>
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2"></a><span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span>
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="websocket-schema_1">WebSocket schema</h3>
 <h4>Websocket body</h4>
@@ -3577,11 +3577,11 @@
 </tbody>
 </table>
 <h3 id="websocket-example_1">WebSocket example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1">1</a></span>
+<div class="language-JSON highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1">1</a></span>
 <span class="normal"><a href="#__codelineno-34-2">2</a></span>
-<span class="normal"><a href="#__codelineno-34-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1"></a>{
-</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2"></a>    &quot;chatMsg&quot;: &quot;hello everyone&quot;
-</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3"></a>}
+<span class="normal"><a href="#__codelineno-34-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1"></a><span class="p">{</span>
+</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2"></a><span class="w">    </span><span class="nt">&quot;chatMsg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;hello everyone&quot;</span>
+</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 
 
