@@ -7,8 +7,19 @@ theme:
   features:
     - header.autohide
     - navigation.footer
-    - navigation.expand
+    # - navigation.expand
     - navigation.path
+    - content.code.copy # allows users to copy code blocks
 plugins:
   - offline
   - search
+markdown_extensions:
+  - pymdownx.highlight: # for coloring code blocks
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      auto_title: true
+      linenums: true
+  - pymdownx.inlinehilite # for coloring code blocks
+  - pymdownx.snippets # for coloring code blocks
+  - pymdownx.superfences # for coloring code blocks

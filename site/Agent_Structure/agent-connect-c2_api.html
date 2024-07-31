@@ -8,22 +8,28 @@
       
       
       
+        <link rel="canonical" href="http://Bamboo_Docs/Agent_Structure/agent-connect-c2_api.html">
       
       
+        <link rel="prev" href="../global_variables.html">
       
-      <link rel="icon" href="/assets/images/favicon.png">
+      
+        <link rel="next" href="agent-connect-websocket.html">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
     
     
       
-        <title>Bamboo Docs</title>
+        <title>agent/connect/c2_api - Bamboo Docs</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.3cba04c6.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -67,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#agentconnectc2_api" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -79,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/index.html" title="Bamboo Docs" class="md-header__button md-logo" aria-label="Bamboo Docs" data-md-component="logo">
+    <a href="../index.html" title="Bamboo Docs" class="md-header__button md-logo" aria-label="Bamboo Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -99,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              agent/connect/c2_api
             
           </span>
         </div>
@@ -174,7 +185,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/index.html" title="Bamboo Docs" class="md-nav__button md-logo" aria-label="Bamboo Docs" data-md-component="logo">
+    <a href="../index.html" title="Bamboo Docs" class="md-nav__button md-logo" aria-label="Bamboo Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -192,7 +203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/index.html" class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -212,7 +223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/bamboo_architecture.html" class="md-nav__link">
+      <a href="../bamboo_architecture.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -232,7 +243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/evasion.html" class="md-nav__link">
+      <a href="../evasion.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -252,7 +263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/exploits.html" class="md-nav__link">
+      <a href="../exploits.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -272,7 +283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/global_variables.html" class="md-nav__link">
+      <a href="../global_variables.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -289,17 +300,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -313,7 +326,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Agent Structure
@@ -324,10 +337,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/Agent_Structure/agent-connect-c2_api.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    agent/connect/c2_api
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="agent-connect-c2_api.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -336,6 +369,92 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#c2-connection-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      C2 Connection Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C2 Connection Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c2_http" class="md-nav__link">
+    <span class="md-ellipsis">
+      C2_http
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetFile
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-parsing-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Parsing Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Parsing Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#datatohttpbody" class="md-nav__link">
+    <span class="md-ellipsis">
+      dataToHttpBody
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#httpbodytodata" class="md-nav__link">
+    <span class="md-ellipsis">
+      httpBodyToData
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -348,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Agent_Structure/agent-connect-websocket.html" class="md-nav__link">
+      <a href="agent-connect-websocket.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -369,7 +488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Agent_Structure/agent-exploit.html" class="md-nav__link">
+      <a href="agent-exploit.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -390,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Agent_Structure/agent-post_exploit.html" class="md-nav__link">
+      <a href="agent-post_exploit.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -411,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Agent_Structure/agent.html" class="md-nav__link">
+      <a href="agent.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -432,7 +551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Agent_Structure/overview.html" class="md-nav__link">
+      <a href="overview.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -495,7 +614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Client/commands.html" class="md-nav__link">
+      <a href="../Client/commands.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -516,7 +635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Client/gui_commands.html" class="md-nav__link">
+      <a href="../Client/gui_commands.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -572,7 +691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Client/Command_Classes/command_auth.html" class="md-nav__link">
+      <a href="../Client/Command_Classes/command_auth.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -593,7 +712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Client/Command_Classes/command_cmd.html" class="md-nav__link">
+      <a href="../Client/Command_Classes/command_cmd.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -614,7 +733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Client/Command_Classes/command_exploit.html" class="md-nav__link">
+      <a href="../Client/Command_Classes/command_exploit.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -635,7 +754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Client/Command_Classes/command_handler_func.html" class="md-nav__link">
+      <a href="../Client/Command_Classes/command_handler_func.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -706,7 +825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Database/collections.html" class="md-nav__link">
+      <a href="../Database/collections.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -727,7 +846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Database/model_agents.html" class="md-nav__link">
+      <a href="../Database/model_agents.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -748,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Database/model_auth.html" class="md-nav__link">
+      <a href="../Database/model_auth.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -769,7 +888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Database/model_exploits.html" class="md-nav__link">
+      <a href="../Database/model_exploits.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -790,7 +909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Database/model_users.html" class="md-nav__link">
+      <a href="../Database/model_users.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -853,7 +972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Teamserver_API_Reference/agent.html" class="md-nav__link">
+      <a href="../Teamserver_API_Reference/agent.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -874,7 +993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Teamserver_API_Reference/authentication.html" class="md-nav__link">
+      <a href="../Teamserver_API_Reference/authentication.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -895,7 +1014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Teamserver_API_Reference/exploit.html" class="md-nav__link">
+      <a href="../Teamserver_API_Reference/exploit.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -916,7 +1035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Teamserver_API_Reference/handler_func.html" class="md-nav__link">
+      <a href="../Teamserver_API_Reference/handler_func.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -937,7 +1056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Teamserver_API_Reference/overview.html" class="md-nav__link">
+      <a href="../Teamserver_API_Reference/overview.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -958,7 +1077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Teamserver_API_Reference/postexp.html" class="md-nav__link">
+      <a href="../Teamserver_API_Reference/postexp.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -996,6 +1115,82 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#c2-connection-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      C2 Connection Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C2 Connection Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c2_http" class="md-nav__link">
+    <span class="md-ellipsis">
+      C2_http
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetFile
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-parsing-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Parsing Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Parsing Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#datatohttpbody" class="md-nav__link">
+    <span class="md-ellipsis">
+      dataToHttpBody
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#httpbodytodata" class="md-nav__link">
+    <span class="md-ellipsis">
+      httpBodyToData
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1007,8 +1202,199 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+<h1 id="agentconnectc2_api">agent/connect/c2_api</h1>
+<p>The packege that exports functions used to interact with the Teamserver via HTTP APIs</p>
+<h2 id="c2-connection-functions">C2 Connection Functions</h2>
+<h3 id="c2_http">C2_http</h3>
+<p>Make a request to the Teamserver's HTTP APIs</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>url</td>
+<td>string</td>
+<td>Address of the server in format ip:port</td>
+</tr>
+<tr>
+<td>endpoint</td>
+<td>string</td>
+<td>The resource to connect to on the Teamserver</td>
+</tr>
+<tr>
+<td>method</td>
+<td>string</td>
+<td>The HTTP RESTful method to use (GET, POST)</td>
+</tr>
+<tr>
+<td>message</td>
+<td>any</td>
+<td>Map of body to send to Teamserver</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>map[string]any</td>
+<td>Server response</td>
+</tr>
+<tr>
+<td>error</td>
+<td>Error from request if any</td>
+</tr>
+</tbody>
+</table>
+<h3 id="getfile">GetFile</h3>
+<p>Download file from Teamserver (at /agent/download/&lt;filename&gt;)</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>url</td>
+<td>string</td>
+<td>Address of the server in format ip:port</td>
+</tr>
+<tr>
+<td>filename</td>
+<td>string</td>
+<td>Name of file to download</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[]byte</td>
+<td>File in bytes slice</td>
+</tr>
+<tr>
+<td>error</td>
+<td>Error from request if any</td>
+</tr>
+</tbody>
+</table>
+<h2 id="data-parsing-functions">Data Parsing Functions</h2>
+<p>These functions are not exported but rather used by C2_http to handle the request and response body. </p>
+<h3 id="datatohttpbody">dataToHttpBody</h3>
+<p>Convert from map variable into io.Reader that can be used with the http package</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td>any</td>
+<td>Map of body to convert to send</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>io.Reader</td>
+<td>Reader interface to be used by http</td>
+</tr>
+<tr>
+<td>error</td>
+<td>Error from request if any</td>
+</tr>
+</tbody>
+</table>
+<h3 id="httpbodytodata">httpBodyToData</h3>
+<p>Download file from Teamserver (at /agent/download/&lt;filename&gt;)</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>http_body</td>
+<td>io.ReadCloser</td>
+<td>Reader returned by http response</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>map[string]any</td>
+<td>Map response data</td>
+</tr>
+<tr>
+<td>error</td>
+<td>Error from request if any</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1020,6 +1406,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../global_variables.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Global Variables">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Global Variables
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="agent-connect-websocket.html" class="md-footer__link md-footer__link--next" aria-label="Next: agent/connect/websocket">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                agent/connect/websocket
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -1044,10 +1468,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/", "features": ["header.autohide", "navigation.footer", "navigation.path", "content.code.copy"], "search": "/assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.footer", "navigation.path", "content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
     
   </body>
