@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>http://Bamboo_Docs/bamboo_architecture.html</loc>
+         <lastmod>2024-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>http://Bamboo_Docs/evasion.html</loc>
          <lastmod>2024-07-31</lastmod>
          <changefreq>daily</changefreq>
@@ -16,67 +21,122 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://Bamboo_Docs/_Teamserver_API_Reference/__overview.html</loc>
+         <loc>http://Bamboo_Docs/global_variables.html</loc>
          <lastmod>2024-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://Bamboo_Docs/_Teamserver_API_Reference/agent.html</loc>
+         <loc>http://Bamboo_Docs/Agent_Structure/agent-connect-c2_api.html</loc>
          <lastmod>2024-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://Bamboo_Docs/_Teamserver_API_Reference/authentication.html</loc>
+         <loc>http://Bamboo_Docs/Agent_Structure/agent-connect-websocket.html</loc>
          <lastmod>2024-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://Bamboo_Docs/_Teamserver_API_Reference/exploit.html</loc>
+         <loc>http://Bamboo_Docs/Agent_Structure/agent-exploit.html</loc>
          <lastmod>2024-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://Bamboo_Docs/_Teamserver_API_Reference/handler_func.html</loc>
+         <loc>http://Bamboo_Docs/Agent_Structure/agent-post_exploit.html</loc>
          <lastmod>2024-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://Bamboo_Docs/_Teamserver_API_Reference/postexp.html</loc>
+         <loc>http://Bamboo_Docs/Agent_Structure/agent.html</loc>
          <lastmod>2024-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://Bamboo_Docs/__Agent_Structure/__overview.html</loc>
+         <loc>http://Bamboo_Docs/Agent_Structure/overview.html</loc>
          <lastmod>2024-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://Bamboo_Docs/__Agent_Structure/_agent.html</loc>
+         <loc>http://Bamboo_Docs/Client/commands.html</loc>
          <lastmod>2024-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://Bamboo_Docs/__Agent_Structure/agent-connect-c2_api.html</loc>
+         <loc>http://Bamboo_Docs/Client/gui_commands.html</loc>
          <lastmod>2024-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://Bamboo_Docs/__Agent_Structure/agent-connect-websocket.html</loc>
+         <loc>http://Bamboo_Docs/Client/Command_Classes/command_auth.html</loc>
          <lastmod>2024-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://Bamboo_Docs/__Agent_Structure/agent-exploit.html</loc>
+         <loc>http://Bamboo_Docs/Client/Command_Classes/command_cmd.html</loc>
          <lastmod>2024-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://Bamboo_Docs/__Agent_Structure/agent-post_exploit.html</loc>
+         <loc>http://Bamboo_Docs/Client/Command_Classes/command_exploit.html</loc>
          <lastmod>2024-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://Bamboo_Docs/___Database_Models/agent.html</loc>
+         <loc>http://Bamboo_Docs/Client/Command_Classes/command_handler_func.html</loc>
+         <lastmod>2024-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://Bamboo_Docs/Database/collections.html</loc>
+         <lastmod>2024-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://Bamboo_Docs/Database/model_agents.html</loc>
+         <lastmod>2024-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://Bamboo_Docs/Database/model_auth.html</loc>
+         <lastmod>2024-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://Bamboo_Docs/Database/model_exploits.html</loc>
+         <lastmod>2024-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://Bamboo_Docs/Database/model_users.html</loc>
+         <lastmod>2024-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://Bamboo_Docs/Teamserver_API_Reference/agent.html</loc>
+         <lastmod>2024-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://Bamboo_Docs/Teamserver_API_Reference/authentication.html</loc>
+         <lastmod>2024-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://Bamboo_Docs/Teamserver_API_Reference/exploit.html</loc>
+         <lastmod>2024-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://Bamboo_Docs/Teamserver_API_Reference/handler_func.html</loc>
+         <lastmod>2024-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://Bamboo_Docs/Teamserver_API_Reference/overview.html</loc>
+         <lastmod>2024-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://Bamboo_Docs/Teamserver_API_Reference/postexp.html</loc>
          <lastmod>2024-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
