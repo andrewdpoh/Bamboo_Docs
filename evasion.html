@@ -880,7 +880,6 @@
 <h3 id="virtual-allocation-injection">Virtual Allocation Injection</h3>
 <p>Virtual Allocation injection is a technique used to inject shellcode into memory. As this method of injection uses VirtualAlloc, it allocates and injects shellcode into the memory of its own process.</p>
 <p>The exploits used by Bamboo tend to crash the injected process, so using Virtual Allocation will likely cause the Agent that ran it to crash.</p>
-<p><strong>Mechanism</strong></p>
 <p>The technique involves the following steps:</p>
 <ol>
 <li>Use VirtualAlloc to reserve space to inject the shellcode inside the process.</li>
@@ -921,7 +920,6 @@
 <li>Causing the injected process to crash instead of the agent used to inject.</li>
 <li>Make use of any whitelisting detection tools have for the injected process</li>
 </ul>
-<p><strong>Mechanism</strong></p>
 <p>The steps this technique uses is:</p>
 <ol>
 <li>Get the PID of the process to inject.</li>
@@ -980,9 +978,24 @@ return
 <hr />
 <h3 id="ntqueueapcthreadex-ntdll-gadget-injection">NtQueueApcThreadEx NTDLL Gadget Injection</h3>
 <p><strong>Description</strong></p>
-<p>This is a novel shellcode injection method first used by Roshtyak, the DLL backdoor used by the malware Raspberry Robin. This was adapted into a C program and published on github by <a href="https://github.com/LloydLabs/ntqueueapcthreadex-ntdll-gadget-injection">LLoydLabs</a>, which is the original code Bamboo uses for its NtQueueApcThreadEx NTDLL Gadget Injection. The image below shows the parameters of <code>NtQueueApcThreadEx()</code>, a function in the Windows Native API.</p>
+<p>This is a novel shellcode injection method first used by Roshtyak, the DLL backdoor used by the malware Raspberry Robin. This was adapted into a C program and published on github by <a href="https://github.com/LloydLabs/ntqueueapcthreadex-ntdll-gadget-injection">LLoydLabs</a>, which is the original code Bamboo uses for its NtQueueApcThreadEx NTDLL Gadget Injection. The image below shows the parameters of <code>NtQueueApcThreadEx()</code>, a function in the Windows Native API. The original code only works with x86 shellcode. However, in the explanation below, the gadget <code>pop rax; ret</code> is used instead of <code>pop r32; ret</code> to make the technique work with x64 shellcode instead.</p>
 <p><img alt="ntqueueapcthreadex_api" src="img/ntqueue.png" /></p>
-<p>A brief overview of this technique involves allocating shellcode into the current process memory and pointing the <code>SystemArgument</code> parameter of <code>NtQueueApcThreadEx()</code> to the shellcode address, then abusing the <code>ApcRoutine</code> parameter of <code>NtQueueApcThreadEx()</code> by pointing it to a random NTDLL gadget that meets the requirements of <code>pop r32; ret</code>. This then returns into the <code>SystemArgument</code> parameter which executes the shellcode. The above gadget only works for x86 shellcode. The technique used in Bamboo uses the gadget <code>pop rax; ret</code> instead, making it work for x64 shellcode instead. This technique requires Microsoft Visual C++ redistributables x86 to be installed on the target which can be found at <a href="https://aka.ms/vs/16/release/vc_redist.x86.exe">https://aka.ms/vs/16/release/vc_redist.x86.exe</a>.</p>
+<p>The technique uses the following steps:</p>
+<ol>
+<li>Allocate shellcode into the memory of the current process</li>
+<li>Scan the ntdll.dll code sections of the current process for a <code>pop rax; ret</code> gadget and pick 1 of these gadgets randomly. <ul>
+<li>“rax” refers to a general-purpose register such as eax, ebc, ecx etc. Thus, an example gadget that would meet this requirement is <code>pop ebp; ret</code>. </li>
+<li>An exception is the gadget <code>pop esp; ret</code> because this would pivot the stack. </li>
+<li>“Code sections” refers to IMAGE_SCN_CNT_CODE and IMAGE_SCN_MEM_EXECUTE</li>
+</ul>
+</li>
+<li>Call <code>NtQueueApcThreadEx()</code> with the <code>ApcRoutine</code> set to the address of the random gadget found in step 2 (<code>pop rax; ret</code>) and <code>SystemArgument1</code> as the pointer to the shellcode allocated in step 1. <ul>
+<li>With <code>ApcRoutine</code> set to the random gadget, the <code>pop r32</code> instruction will make the stack pointer point to <code>SystemArgument1</code>. </li>
+<li>The <code>ret</code> instruction will make the Instruction Pointer (IP) jump to the location that <code>SystemArgument1</code> points to, which is the location of the allocated shellcode in step 1  </li>
+</ul>
+</li>
+</ol>
+<p>This technique requires Microsoft Visual C++ redistributables x86 to be installed on the target which can be found at <a href="https://aka.ms/vs/16/release/vc_redist.x86.exe">https://aka.ms/vs/16/release/vc_redist.x86.exe</a>.</p>
 <p><strong>Implementation</strong></p>
 <p>The code is modified to work with x64 shellcode by changing a single line in gadget.h as shown in the code snippet below.</p>
 <details>
@@ -1003,10 +1016,10 @@ gadget_match_valid(
 
 </details>
 
-<p>In the original code, the shellcode was hardcoded in main.h. In Bamboo, the code is modified to receive shellcode via standard input. After the injection program is dropped onto the target and executed, the shellcode will be passed via standard input from the agent as a hexstring in the format “ab1823129ef…”, which is the standard format of shellcode that our agent uses for its injection techniques. This hexstring is stored into a buffer of the injection program and converted by a <code>convert_hex()</code> function into a hexstring of format “\xab\x18\x23\x12\xef…”. The rest of the code follows the logic of the original PoC from LloydLabs.</p>
+<p>Additionally, in the original code, the shellcode was hardcoded in main.h. In Bamboo, the code is modified to receive shellcode via standard input. After the injection program is dropped onto the target and executed, the shellcode will be passed via standard input from the agent as a hexstring in the format “ab1823129ef…”, which is the standard format of shellcode that our agent uses for its injection techniques. This hexstring is stored into a buffer of the injection program and converted by a <code>convert_hex()</code> function into a hexstring of format “\xab\x18\x23\x12\xef…”. The rest of the code follows the logic of the original PoC from LloydLabs.</p>
 <hr />
 <h2 id="edr-blinding">EDR Blinding</h2>
-<p>The tool below is used to disrupt the effectiveness of the EDR itself.</p>
+<p>The tool below is not an injection technique, but instead used to disrupt the effectiveness of the EDR itself.</p>
 <h3 id="edr-silencer">EDR Silencer</h3>
 <p><strong>Description</strong></p>
 <p>EDRSilencer, created by <a href="https://github.com/netero1010">netero1010</a> is an <a href="https://github.com/netero1010/EDRSilencer">open-source</a> evasion tool designed for disrupting Endpoint Detection and Response (EDR) systems. It leverages Windows Filtering Platform (WFP) APIs, which allows a program developer to create network filtering software that can examine, modify and stop network traffic. EDRSilencer uses the WFP to prevent EDR agents and processes from connecting and reporting security events with their servers, effectively disabling the EDR’s threat detection capabilities of the EDR. The tool currently supports Elastic EDR, among other popular EDR solutions.</p>
