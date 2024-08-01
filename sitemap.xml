@@ -91,6 +91,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>http://Bamboo_Docs/Client/GUI/overview.html</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://Bamboo_Docs/Client/GUI/widgets.html</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>http://Bamboo_Docs/Client/GUI_Command_Classes/gui_commands.html</loc>
          <lastmod>2024-08-01</lastmod>
          <changefreq>daily</changefreq>
@@ -162,6 +172,41 @@
     </url>
     <url>
          <loc>http://Bamboo_Docs/Teamserver/api_reference/postexp.html</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://Bamboo_Docs/User%20Guide/overview.html</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://Bamboo_Docs/User%20Guide/prerequisites.html</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://Bamboo_Docs/User%20Guide/using_bamboo_client.html</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://Bamboo_Docs/User%20Guide/commands/command_guide.html</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://Bamboo_Docs/User%20Guide/commands/command_list.html</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://Bamboo_Docs/User%20Guide/installation/agent-setup.html</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://Bamboo_Docs/User%20Guide/installation/teamserver-setup.html</loc>
          <lastmod>2024-08-01</lastmod>
          <changefreq>daily</changefreq>
     </url>

@@ -1,0 +1,2534 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="http://Bamboo_Docs/Client/GUI/widgets.html">
+      
+      
+        <link rel="prev" href="overview.html">
+      
+      
+        <link rel="next" href="../Command_Classes/command_auth.html">
+      
+      
+      <link rel="icon" href="../../img/logo.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
+    
+    
+      
+        <title>Widgets - Bamboo Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#widgets" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="Bamboo Docs" class="md-header__button md-logo" aria-label="Bamboo Docs" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bamboo Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Widgets
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Bamboo Docs" class="md-nav__button md-logo" aria-label="Bamboo Docs" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Bamboo Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    User Guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            User Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../User%20Guide/overview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../User%20Guide/prerequisites.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prerequisites
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../User%20Guide/installation/agent-setup.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../User%20Guide/installation/teamserver-setup.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Teamserver Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../User%20Guide/using_bamboo_client.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Bamboo Client
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Commands
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Commands
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../User%20Guide/commands/command_list.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Command List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../User%20Guide/commands/command_guide.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Command Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bamboo_architecture.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bamboo Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Teamserver
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Teamserver
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Teamserver/overview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    API Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            API Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Teamserver/api_reference/overview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Teamserver/api_reference/agent.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    /agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Teamserver/api_reference/authentication.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    /auth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Teamserver/api_reference/exploit.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    /exploit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Teamserver/api_reference/handler_func.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    /handler_func
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Teamserver/api_reference/postexp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    /postexp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Database
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Database
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Teamserver/Database/collections.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Collections
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Teamserver/Database/model_agents.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Model Class - agents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Teamserver/Database/model_auth.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Model Class - authentication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Teamserver/Database/model_exploits.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Model Class - exploits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Teamserver/Database/model_users.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Model Class - users
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Teamserver/global_variables.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Global Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Teamserver/misc_func.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Miscellaneous Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Agent
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent/overview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Packages
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Packages
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent/Packages/agent.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent/Packages/agent-connect-c2_api.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    agent/connect/c2_api
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent/Packages/agent-connect-websocket.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    agent/connect/websocket
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent/Packages/agent-exploit.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    agent/exploit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent/Packages/agent-post_exploit.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    agent/post-exploit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Client
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Client
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commands.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    GUI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            GUI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="overview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Widgets
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="widgets.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Widgets
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#menu-bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Menu Bar
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Menu Bar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bamboo" class="md-nav__link">
+    <span class="md-ellipsis">
+      BAMBOO
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agents
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Users
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exploits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exploits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      View files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#help" class="md-nav__link">
+    <span class="md-ellipsis">
+      Help
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display-frame" class="md-nav__link">
+    <span class="md-ellipsis">
+      Display Frame
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#websocket-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Websocket Logs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tabs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#teamchat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Teamchat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#main-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main Console
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Main Console">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#help_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      help
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exit-quit" class="md-nav__link">
+    <span class="md-ellipsis">
+      exit / quit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      clear
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#users_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      users
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#register" class="md-nav__link">
+    <span class="md-ellipsis">
+      register
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove" class="md-nav__link">
+    <span class="md-ellipsis">
+      remove
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display" class="md-nav__link">
+    <span class="md-ellipsis">
+      display
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use" class="md-nav__link">
+    <span class="md-ellipsis">
+      use
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kill" class="md-nav__link">
+    <span class="md-ellipsis">
+      kill
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exp" class="md-nav__link">
+    <span class="md-ellipsis">
+      exp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add" class="md-nav__link">
+    <span class="md-ellipsis">
+      add
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      delete
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify" class="md-nav__link">
+    <span class="md-ellipsis">
+      modify
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agent-identifier-tabs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent Identifier Tabs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Agent Identifier Tabs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      stop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#info" class="md-nav__link">
+    <span class="md-ellipsis">
+      info
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exploit" class="md-nav__link">
+    <span class="md-ellipsis">
+      exploit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      cmd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enum-start-enumerating" class="md-nav__link">
+    <span class="md-ellipsis">
+      enum / Start Enumerating
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#postexp-toggle-keylog-get-registry-hives" class="md-nav__link">
+    <span class="md-ellipsis">
+      postexp / Toggle Keylog &amp; Get Registry Hives
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Command Classes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Command Classes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Command_Classes/command_auth.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    auth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Command_Classes/command_cmd.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Command_Classes/command_exploit.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    exploits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Command_Classes/command_handler_func.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    handler_func
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    GUI Command Classes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            GUI Command Classes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GUI_Command_Classes/gui_commands.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GUI Commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../misc_func.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Miscellaneous Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exploits.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exploits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../evasion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evasion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../post_exploitation.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Post Exploitation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#menu-bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Menu Bar
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Menu Bar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bamboo" class="md-nav__link">
+    <span class="md-ellipsis">
+      BAMBOO
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agents
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Users
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exploits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exploits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      View files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#help" class="md-nav__link">
+    <span class="md-ellipsis">
+      Help
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display-frame" class="md-nav__link">
+    <span class="md-ellipsis">
+      Display Frame
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#websocket-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Websocket Logs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tabs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#teamchat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Teamchat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#main-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main Console
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Main Console">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#help_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      help
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exit-quit" class="md-nav__link">
+    <span class="md-ellipsis">
+      exit / quit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      clear
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#users_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      users
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#register" class="md-nav__link">
+    <span class="md-ellipsis">
+      register
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove" class="md-nav__link">
+    <span class="md-ellipsis">
+      remove
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display" class="md-nav__link">
+    <span class="md-ellipsis">
+      display
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use" class="md-nav__link">
+    <span class="md-ellipsis">
+      use
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kill" class="md-nav__link">
+    <span class="md-ellipsis">
+      kill
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exp" class="md-nav__link">
+    <span class="md-ellipsis">
+      exp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add" class="md-nav__link">
+    <span class="md-ellipsis">
+      add
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      delete
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify" class="md-nav__link">
+    <span class="md-ellipsis">
+      modify
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agent-identifier-tabs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent Identifier Tabs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Agent Identifier Tabs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      stop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#info" class="md-nav__link">
+    <span class="md-ellipsis">
+      info
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exploit" class="md-nav__link">
+    <span class="md-ellipsis">
+      exploit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      cmd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enum-start-enumerating" class="md-nav__link">
+    <span class="md-ellipsis">
+      enum / Start Enumerating
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#postexp-toggle-keylog-get-registry-hives" class="md-nav__link">
+    <span class="md-ellipsis">
+      postexp / Toggle Keylog &amp; Get Registry Hives
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="widgets">Widgets</h1>
+<h2 id="description">Description</h2>
+<p>The main application is where the user will interact with the rest of the framework. In the main application, all widgets have been positioned using the grid() function, and thus can be resized to the user's liking. The font size will also adjust accordingly depending on the height of tabs widget.
+The main application consists of 5 main widgets: the menu bar, the display frame, the websocket logs and the tabs.</p>
+<h2 id="menu-bar">Menu Bar</h2>
+<p>The menu bar is made using the tk.Menu() widget, and contains 6 menu options. Each menu option has its own dropdown, where each dropdown option will either display a table in the display frame, or open a new Toplevel, depending on the function it is bound to.</p>
+<p>For the displaying of tables, all follow the same general logic. The items in the display frame will first be cleared with grid.forget(), before retrieving required information from MongoDB and generating the table using CTkLabels and the grid() function. </p>
+<h3 id="bamboo">BAMBOO</h3>
+<p>BAMBOO only has 1 dropdown option: bamboo. </p>
+<p>Clicking on this will clear the items in the display frame, and display the Bamboo logo, which is a CTkImage object, and a label telling users to click on the menu bar to display other items.</p>
+<h3 id="agents">Agents</h3>
+<p>Agents has only has 1 dropdown option: Display Agents. </p>
+<p><img alt="agent_table" src="../../img/GUI_images/agent_table.png" /></p>
+<p>Clicking on this will clear the items in the display frame, and retrieve the agents information from the database using the display_agent() function defined in the agent_commands() class. This will call an API, which will either return a list containing the table headers and agent information, or a string '[x] No agent is connected'.</p>
+<p>If the agents table is returned, a table displaying the agents will then be generated, using CTkLabels and information from the table. Above the table and separated by a ttk.Separator widget is where users can kill agents using a dropdown list, which has been dynamically filled with the agent identifiers using the information from the table. Clicking on the Confirm button will call the delete_agent function, which will then kill the selected agent. If successful, the table will refresh.</p>
+<p>However, if '[x] No agent is connected' is returned, a label prompting users to run an agent will instead be displayed.</p>
+<h3 id="users">Users</h3>
+<p>Users has 2 dropdown options: Display Users and Add User.</p>
+<p><img alt="users_table" src="../../img/GUI_images/users_table.png" /></p>
+<p>Clicking on Display Users will clear the items in the display frame, and retrieve the users information from the database. This is done by calling the /handler/view_users API using the show_users() method defined in the user_commands() class.</p>
+<p>A list containing the table headers and a nested list containing the information of each user will then be returned. Using this, a table will then be generated and displayed in the display frame. The user's status will be coloured either green or red if they are online or offline, respectively.</p>
+<p>Above the table and separated by a ttk.Separator widget, users can also delete other users using the dropdown list, which has been dynamically generated using the user information retrieved. Clicking on confirm will call the delete_user function, which will get the selected user and call the /handler/delete_user API if the selected user is a valid user. Upon success, the table will refresh.</p>
+<p>Clicking on Add User will open up a new Toplevel window, where users can register new users. </p>
+<h3 id="exploits">Exploits</h3>
+<p>Exploits has 3 dropdown options: Display Exploits, Add Exploit and Modify Exploit.</p>
+<p><img alt="exploits_table" src="../../img/GUI_images/exploits_table.png" /></p>
+<p>Clicking on Display Exploits will clear the items in the display frame and retrieve the exploits information from the database. This is done by calling the /exploit/view_all API using the display_exploit() method defined in the exploit_commands() class. </p>
+<p>If there are exploits in the database, it will return a list containing the table headers and a nested list containing the information of each exploit. Using this, a table will then be generated and displayed in the display frame. Users are recommended to increase the window size to see the table clearly.</p>
+<p>Above the table and separated by a ttk.Separator widget, users can delete exploits using the dropdown list, which has been dynamically generated using the exploits information retrieved. Clicking on confirm will call the delete_exploit() function, which will get the selected exploit and call the /exploit/delete API if the selected exploit is valid. Upon success, the table will refresh.</p>
+<p>If there are no exploits in the database, a 'No exploits in DB' string will be returned. The display frame will then display a label telling users to add exploits into the database.</p>
+<p>Clicking on Add Exploit will open up a new Toplevel window, where users can add their own exploits. Files added must be an .exe file, and depending on the options selected, other options will be unhidden. Once there is a valid configuration, users can click on Add Exploit to add their exploit.</p>
+<p>Clicking on Modify Exploit will open up a new Toplevel window, where users are able to edit the existing exploits. </p>
+<h3 id="view-files">View files</h3>
+<p>View files has 3 dropdown options: ... from Enumerate, ... from Keylog and ... from Retrieve.</p>
+<p>Clicking on either of the 3 will open up the default file explorer in the /handler/postexp/enumerate, /handler/postexp/keylog or /handler/postexp/retrieve path respectively.</p>
+<h3 id="help">Help</h3>
+<p>Help has 3 dropdown options: Help, User Guide and Technical Doc.</p>
+<p>Clicking on Help will open a new Toplevel window containing the commands.</p>
+<p>Clicking on User Guide or Technical Doc will open the respective document in either the default document viewer or browser.</p>
+<hr />
+<h2 id="display-frame">Display Frame</h2>
+<p><img alt="defaultdf" src="../../img/GUI_images/defaultdf.png" /></p>
+<p>The display frame is made using the CTk.CTkFrame() widget, and is used to display information using 'tables' generated with CTk.CTkLabel() widgets.</p>
+<p>Upon launching the main application, the default homescreen for the display frame has the Bamboo logo and text telling the user to click on the main menu to display items there.</p>
+<p>Depending on the menu option clicked, the display frame can either display a table of agents, users or exploits. To see the logic for this, refer to the above section.</p>
+<hr />
+<h2 id="websocket-logs">Websocket Logs</h2>
+<p><img alt="wslogs" src="../../img/GUI_images/wslogs.png" /></p>
+<p>The websocket logs is a CTk.CTkTextbox() widget, and contains messages and/or logs from the Bamboo Teamserver, including messages from the teamchat, as well as any agent connection. Its class is defined in /handler/gui/widgets/ws_textBox.py.</p>
+<p>It checks for messages from the Bamboo Teamserver using a websocket process that runs alongside the main process using multiprocessing, and a recursive function that calls itself every 1000ms. This function will check if a message has been received, and will remove the ANSI coding before inserting it into the websocket logs.</p>
+<hr />
+<h2 id="tabs">Tabs</h2>
+<p><img alt="tabs" src="../../img/GUI_images/tabs.png" /></p>
+<p>At the bottom of the widget is a CTk.CTkTabview() widget, which by default contains 2 tabs, TEAMCHAT and MAIN CONSOLE. It can have up to 7 additional tabs for running agents. The class is defined in /handler/gui/widgets/tabs.py.</p>
+<h3 id="teamchat">Teamchat</h3>
+<p>The teamchat contains messages from other users. It will periodically check for new messages in the teamchat.txt file using polling. If there are any new messages, it will remove the ANSI encoding and insert the message into the console_output CTk.CTkTextbox() widget. </p>
+<p>Users can also send messages through this tab. Users can type their messages in the CTk.CTkEntry() widget and press enter to send a chat message. </p>
+<h3 id="main-console">Main Console</h3>
+<p>The main console is mainly where users will run commands. It consists of two widgets, console_output, a CTk.CTkTextbox() widget where the commands entered and the results will appear, and console_input, a CTk.CTkEntry() widget where users can enter commands. The class is defined under /handler/gui/widgets/console.py.</p>
+<p>Depending on the commands entered by the user, the application will run different functions and call different APIs, similar to the CLI. The available commands can be found below. </p>
+<h4 id="help_1">help</h4>
+<p>Usage: <code>help</code></p>
+<p>Shows all possible commands in console_output.</p>
+<h4 id="exit-quit">exit / quit</h4>
+<p>Usage: <code>exit</code> or <code>quit</code></p>
+<p>Quits the client, and terminates the websocket connection. The user will then be set as offline.</p>
+<h4 id="clear">clear</h4>
+<p>Usage: <code>clear</code></p>
+<p>Clears the chat log and teamchat. This will clear the teamchat.txt file.</p>
+<h4 id="users_1">users</h4>
+<p>Usage: <code>users</code></p>
+<p>Displays the table of users. The information is retrieved from the database using the show_users() method defined in the user_commands class, and then displayed in console_output using tabulate.</p>
+<h4 id="register">register</h4>
+<p>Usage: <code>register</code></p>
+<p>Opens a CTk.CTkToplevel window where users can register new users. This Toplevel window is defined in /handler/gui/func/run_register.py.</p>
+<p>The text in console_output will reflect whether the user closed the window, or successfully registered another user. </p>
+<h4 id="remove">remove</h4>
+<p>Usage: <code>remove [user]</code></p>
+<p>Removes the user given. The application will call the corresponding API and attempt to delete the user. The result in console_output will reflect whether or not it is successful.</p>
+<p>If the user did not put a username, an error message informing the user of the correct usage will be printed.</p>
+<h4 id="display">display</h4>
+<p>Usage: <code>display</code></p>
+<p>Displays all connected agents. The application will call the corresponding API and retrieve the agent information, and return it as <code>status</code>. If <code>status</code> contains the table, it will be displayed in console_output using tabulate; otherwise, '[x] No agent is connected' will be printed.</p>
+<h4 id="use">use</h4>
+<p>Usage: <code>use [agent_identifier]</code></p>
+<p>Opens a new tab for the given agent identifier. Up to 7 tabs can be opened using this command. If there are already 7 agent identifier tabs open, or if the agent is already in use or does not exist, or an agent identifier was not given, the corresponding error message will be printed in console_output.</p>
+<p>More information about the commands that can be used in the agent identifier tabs can be found in the next section.</p>
+<h4 id="kill">kill</h4>
+<p>Usage: <code>kill [agent_identifier]</code></p>
+<p>Kills the agent given. The application will call the corresponding API and attempt to kill the given agent. The result will then be printed in console_output. If no agent identifier was given, an error message will be printed.</p>
+<h4 id="exp">exp</h4>
+<p>Usage: <code>exp</code></p>
+<p>Displays all exploits. The corresponding API will be called and the exploits information will be retrieved, and returned as <code>exploit_table</code>. If <code>exploit_table</code> is not 'No exploits in DB', the information will be displayed in console_output using tabulate.</p>
+<h4 id="add">add</h4>
+<p>Usage: <code>add</code></p>
+<p>Opens a new CTk.CTkToplevel window where users can add their own exploits. This toplevel window is defined in /handler/gui/func/run_add.py.</p>
+<p>The exploit's file must be an .exe. Other options for the exploit can be chosen, and will differ based on the selections chosen.</p>
+<h4 id="delete">delete</h4>
+<p>Usage: <code>delete [exploit_name]</code></p>
+<p>Deletes the given exploit. The application will call the corresponding API and attempt to delete the given exploit. The result will then be printed in console_output. If no exploit name was given, an error message will be printed.</p>
+<h4 id="modify">modify</h4>
+<p>Usage: <code>modify</code></p>
+<p>Opens a new CTk.CTkToplevel window where users can modify existing exploits. This toplevel window is defined in /handler/gui/func/run_modify.py.</p>
+<p>Modifying exploits must follow the same rules as adding an exploit, such as files must be .exe, etc.</p>
+<h3 id="agent-identifier-tabs">Agent Identifier Tabs</h3>
+<p>Agent identifier tabs can be opened using the <code>use [agent_identifier]</code> command in MAIN CONSOLE. Only 7 agent identifier tabs can be opened at any one time on a client.</p>
+<p><img alt="agent_id_tabs" src="../../img/GUI_images/agent_id_tabs.png" /></p>
+<p>Clicking on an agent identifier tab will show three buttons: Start Enumerating, Toggle Keylog and Get Registry Hives. These buttons are only shown when the current tab is an agent identifier tab, and will not appear in TEAMCHAT or MAIN CONSOLE. As there is no tab-changed event for CTk, this is done using a recursive function that checks for the current tab every 100ms and hides or shows the buttons accordingly.</p>
+<p>The three buttons, as well as the commands that can only be used when an agent is in use, can be found below. </p>
+<h4 id="stop">stop</h4>
+<p>Usage: <code>stop</code></p>
+<p>Stops using the agent. This will close the tab, but will not kill the agent.</p>
+<h4 id="info">info</h4>
+<p>Usage: <code>info</code></p>
+<p>Shows the information of the current agent. The corresponding API is called, and the information of the current agent is retrieved from the database. The information will then be displayed in console_output using tabulate.</p>
+<h4 id="exploit">exploit</h4>
+<p>Usage: <code>exploit</code></p>
+<p>Opens a new CTk.CTkToplevel window where users can select the exploit to run. This toplevel window is defined in /handler/gui/func/run_exploit.py.</p>
+<h4 id="cmd">cmd</h4>
+<p>Usage: <code>cmd</code></p>
+<p>Opens a command prompt for the current agent.</p>
+<h4 id="enum-start-enumerating">enum / Start Enumerating</h4>
+<p>Usage: <code>enum</code> or click on Start Enumerating</p>
+<p>Enumerates on the victim machine. Files can be found under /handler/postexp/enumerate.</p>
+<h4 id="postexp-toggle-keylog-get-registry-hives">postexp / Toggle Keylog &amp; Get Registry Hives</h4>
+<p>Usage: <code>postexp [keylog|retrieve]</code> or click on Toggle Keylog/Get Registry Hives</p>
+<p>Runs a post-exploitation method based on the method given. Entering <code>keylog</code> as the method or clicking on Toggle Keylog will start/stop logging keystrokes, while entering <code>retrieve</code> as the method or clicking Get Registry Hives will retrieve the registry hives.</p>
+<p>Files can be found under /handler/postexp/keylog and /handler/postexp/retrieve.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="overview.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Overview
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Command_Classes/command_auth.html" class="md-footer__link md-footer__link--next" aria-label="Next: auth">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                auth
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "navigation.footer", "navigation.path", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
