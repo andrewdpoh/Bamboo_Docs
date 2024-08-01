@@ -1,4 +1,0 @@
-Setting up:
-https://squidfunk.github.io/mkdocs-material/creating-your-site/
-Offline usage:
-https://squidfunk.github.io/mkdocs-material/setup/building-for-offline-usage/

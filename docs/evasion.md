@@ -41,7 +41,10 @@ func VirturalAlloc(payload string) (err error) {
   return
 }
 ```
+
 </details>
+
+The code for this injection technique is found in Bamboo Agent.
 
 ---
 
@@ -91,6 +94,7 @@ exploitPID := cmd.Process.Pid
 fmt.Println("exploit pid:", exploitPID)
 ...
 ```
+
 </details>
 
 The rest of the injection technique is implemented with [zaneGittins’ go-inject](https://github.com/zaneGittins/go-inject) library.
@@ -109,8 +113,10 @@ inject.CloseHandle(processHandle)
 fmt.Println(windows.GetLastError())
 return
 ```
+
 </details>
----
+
+The code for this injection technique is found in Bamboo Agent.
 
 ### NtQueueApcThreadEx NTDLL Gadget Injection
 
@@ -123,13 +129,13 @@ This is a novel shellcode injection method first used by Roshtyak, the DLL backd
 The technique uses the following steps:
 
 1. Allocate shellcode into the memory of the current process
-2. Scan the ntdll.dll code sections of the current process for a `pop rax; ret` gadget and pick 1 of these gadgets randomly. 
-    - “rax” refers to a general-purpose register such as eax, ebc, ecx etc. Thus, an example gadget that would meet this requirement is `pop ebp; ret`. 
-    - An exception is the gadget `pop esp; ret` because this would pivot the stack. 
-    - “Code sections” refers to IMAGE_SCN_CNT_CODE and IMAGE_SCN_MEM_EXECUTE
-3. Call `NtQueueApcThreadEx()` with the `ApcRoutine` set to the address of the random gadget found in step 2 (`pop rax; ret`) and `SystemArgument1` as the pointer to the shellcode allocated in step 1. 
-    - With `ApcRoutine` set to the random gadget, the `pop r32` instruction will make the stack pointer point to `SystemArgument1`. 
-    - The `ret` instruction will make the Instruction Pointer (IP) jump to the location that `SystemArgument1` points to, which is the location of the allocated shellcode in step 1  
+2. Scan the ntdll.dll code sections of the current process for a `pop rax; ret` gadget and pick 1 of these gadgets randomly.
+   - “rax” refers to a general-purpose register such as eax, ebc, ecx etc. Thus, an example gadget that would meet this requirement is `pop ebp; ret`.
+   - An exception is the gadget `pop esp; ret` because this would pivot the stack.
+   - “Code sections” refers to IMAGE_SCN_CNT_CODE and IMAGE_SCN_MEM_EXECUTE
+3. Call `NtQueueApcThreadEx()` with the `ApcRoutine` set to the address of the random gadget found in step 2 (`pop rax; ret`) and `SystemArgument1` as the pointer to the shellcode allocated in step 1.
+   - With `ApcRoutine` set to the random gadget, the `pop r32` instruction will make the stack pointer point to `SystemArgument1`.
+   - The `ret` instruction will make the Instruction Pointer (IP) jump to the location that `SystemArgument1` points to, which is the location of the allocated shellcode in step 1
 
 This technique requires Microsoft Visual C++ redistributables x86 to be installed on the target which can be found at [https://aka.ms/vs/16/release/vc_redist.x86.exe](https://aka.ms/vs/16/release/vc_redist.x86.exe).
 
@@ -152,13 +158,17 @@ gadget_match_valid(
 
 }
 ```
+
 </details>
 
 Additionally, in the original code, the shellcode was hardcoded in main.h. In Bamboo, the code is modified to receive shellcode via standard input. After the injection program is dropped onto the target and executed, the shellcode will be passed via standard input from the agent as a hexstring in the format “ab1823129ef…”, which is the standard format of shellcode that our agent uses for its injection techniques. This hexstring is stored into a buffer of the injection program and converted by a `convert_hex()` function into a hexstring of format “\xab\x18\x23\x12\xef…”. The rest of the code follows the logic of the original PoC from LloydLabs.
 
+When this injection technique is selected, Bamboo Agent drops its embedded Gadget Injection file onto the target, executes it, then passes the payload as a hexstring via standard input which is then injected.
+
 ---
 
 ## EDR Blinding
+
 The tool below is not an injection technique, but instead used to disrupt the effectiveness of the EDR itself.
 
 ### EDR Silencer
@@ -171,15 +181,15 @@ EDRSilencer, created by [netero1010](https://github.com/netero1010) is an [open-
 
 In the [original code's](https://github.com/netero1010/EDRSilencer/blob/main/EDRSilencer.c) main function, it checks if the user inputs the correct number of command-line arguments and performs different actions based on the argument’s value:
 
-| Arguments | Description |
-| --- | --- |
-| -h or --help | Prints the help information |
-| blockedr | Blocks all detected EDR processes from sending outbound traffic |
-| block <process path> | Blocks a specific process from sending outbound traffic |
-| unblockall | Removes all WFP filters applied |
-| unblock <filter id> | Removes a specific WFP filter based on its filter ID |
+| Arguments            | Description                                                     |
+| -------------------- | --------------------------------------------------------------- |
+| -h or --help         | Prints the help information                                     |
+| blockedr             | Blocks all detected EDR processes from sending outbound traffic |
+| block <process path> | Blocks a specific process from sending outbound traffic         |
+| unblockall           | Removes all WFP filters applied                                 |
+| unblock <filter id>  | Removes a specific WFP filter based on its filter ID            |
 
-The team modified the main function of the original code. The modified code no longer requires command-line arguments. It has been altered to only execute the  `blockedr` argument. The modified code is as follows:
+The team modified the main function of the original code. The modified code no longer requires command-line arguments. It has been altered to only execute the `blockedr` argument. The modified code is as follows:
 
 <details>
 <summary>Expand code</summary>
@@ -194,5 +204,6 @@ int main() {
     return 0;
 }
 ```
+
 </details>
 This modification allows the executable to be easily incorporated within our C2 and agent, making it more convenient and efficient for our purposes.

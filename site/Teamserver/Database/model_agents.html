@@ -1,0 +1,4423 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="http://Bamboo_Docs/Teamserver/Database/model_agents.html">
+      
+      
+        <link rel="prev" href="collections.html">
+      
+      
+        <link rel="next" href="model_auth.html">
+      
+      
+      <link rel="icon" href="../../img/logo.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
+    
+    
+      
+        <title>Model Class - agents - Bamboo Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#model-class-agents" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="Bamboo Docs" class="md-header__button md-logo" aria-label="Bamboo Docs" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bamboo Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Model Class - agents
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Bamboo Docs" class="md-nav__button md-logo" aria-label="Bamboo Docs" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Bamboo Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    User Guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            User Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../User%20Guide/overview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../User%20Guide/prerequisites.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prerequisites
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../User%20Guide/installation/agent-setup.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../User%20Guide/installation/teamserver-setup.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Teamserver Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../User%20Guide/using_bamboo_client.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Bamboo Client
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Commands
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Commands
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../User%20Guide/commands/command_list.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Command List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../User%20Guide/commands/command_guide.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Command Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bamboo_architecture.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bamboo Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Teamserver
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Teamserver
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    API Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            API Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_reference/overview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_reference/agent.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    /agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_reference/authentication.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    /auth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_reference/exploit.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    /exploit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_reference/handler_func.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    /handler_func
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_reference/postexp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    /postexp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Database
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Database
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="collections.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Collections
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Model Class - agents
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="model_agents.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Model Class - agents
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#add_agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_agent
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="add_agent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Arguments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arguments-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguments Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insertion-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insertion Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-return" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Return
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#show_agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      show_agents
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="show_agents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-arguments_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Arguments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-method_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-return_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Return
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check_agent_identifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      check_agent_identifier
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="check_agent_identifier">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-arguments_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Arguments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arguments-example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguments Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-method_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-return_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Return
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-example_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add_heartbeat" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_heartbeat
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="add_heartbeat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-arguments_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Arguments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arguments-example_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguments Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-method_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insertion-example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insertion Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-return_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Return
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get_heartbeat" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_heartbeat
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="get_heartbeat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-arguments_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Arguments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-method_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-return_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Return
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-example_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status_dead" class="md-nav__link">
+    <span class="md-ellipsis">
+      status_dead
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="status_dead">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-arguments_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Arguments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arguments-example_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguments Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-method_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-return_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Return
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-example_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find_dead_but_alive" class="md-nav__link">
+    <span class="md-ellipsis">
+      find_dead_but_alive
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="find_dead_but_alive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-arguments_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Arguments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-method_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-return_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Return
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-example_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use_agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      use_agent
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="use_agent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-arguments_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Arguments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arguments-example_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguments Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-method_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-return_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Return
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-example_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove_agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      remove_agent
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="remove_agent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-arguments_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Arguments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arguments-example_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguments Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-method_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-return_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Return
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-example_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#info_status" class="md-nav__link">
+    <span class="md-ellipsis">
+      info_status
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="info_status">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-arguments_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Arguments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arguments-example_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguments Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-method_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-return-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Find Return Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-return_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Return
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-example_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove_inactive" class="md-nav__link">
+    <span class="md-ellipsis">
+      remove_inactive
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="remove_inactive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-arguments_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Arguments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-method_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-return_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Return
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-example_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="model_auth.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Model Class - authentication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="model_exploits.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Model Class - exploits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="model_users.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Model Class - users
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../global_variables.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Global Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../misc_func.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Miscellaneous Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Agent
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent/overview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Packages
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Packages
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent/Packages/agent.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent/Packages/agent-connect-c2_api.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    agent/connect/c2_api
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent/Packages/agent-connect-websocket.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    agent/connect/websocket
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent/Packages/agent-exploit.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    agent/exploit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent/Packages/agent-post_exploit.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    agent/post-exploit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Client
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Client
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Client/overview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Client/commands.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    GUI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            GUI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Client/GUI/overview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Client/GUI/widgets.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Widgets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Command Classes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Command Classes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Client/Command_Classes/command_auth.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    auth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Client/Command_Classes/command_cmd.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Client/Command_Classes/command_exploit.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    exploits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Client/Command_Classes/command_handler_func.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    handler_func
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    GUI Command Classes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            GUI Command Classes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Client/GUI_Command_Classes/gui_commands.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GUI Commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Client/misc_func.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Miscellaneous Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exploits.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exploits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../evasion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evasion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../post_exploitation.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Post Exploitation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#add_agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_agent
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="add_agent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Arguments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arguments-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguments Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insertion-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insertion Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-return" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Return
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#show_agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      show_agents
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="show_agents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-arguments_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Arguments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-method_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-return_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Return
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check_agent_identifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      check_agent_identifier
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="check_agent_identifier">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-arguments_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Arguments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arguments-example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguments Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-method_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-return_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Return
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-example_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add_heartbeat" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_heartbeat
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="add_heartbeat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-arguments_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Arguments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arguments-example_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguments Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-method_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insertion-example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insertion Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-return_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Return
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get_heartbeat" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_heartbeat
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="get_heartbeat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-arguments_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Arguments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-method_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-return_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Return
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-example_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status_dead" class="md-nav__link">
+    <span class="md-ellipsis">
+      status_dead
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="status_dead">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-arguments_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Arguments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arguments-example_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguments Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-method_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-return_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Return
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-example_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find_dead_but_alive" class="md-nav__link">
+    <span class="md-ellipsis">
+      find_dead_but_alive
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="find_dead_but_alive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-arguments_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Arguments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-method_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-return_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Return
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-example_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use_agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      use_agent
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="use_agent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-arguments_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Arguments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arguments-example_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguments Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-method_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-return_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Return
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-example_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove_agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      remove_agent
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="remove_agent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-arguments_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Arguments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arguments-example_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguments Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-method_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-return_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Return
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-example_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#info_status" class="md-nav__link">
+    <span class="md-ellipsis">
+      info_status
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="info_status">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-arguments_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Arguments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arguments-example_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguments Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-method_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-return-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Find Return Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-return_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Return
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-example_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove_inactive" class="md-nav__link">
+    <span class="md-ellipsis">
+      remove_inactive
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="remove_inactive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-arguments_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Arguments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-method_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-return_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Return
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-example_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="model-class-agents">Model Class - agents</h1>
+<p>This class contains all models related to Bamboo Agent. Bamboo Teamserver will make use of the functions within this class to find, update, add, and delete Bamboo Agents according to the needs of Bamboo Client. This class will be interacting with the <a href="collections.html#agents">agents</a> collection and the <a href="collections.html#heartbeats">heartbeats</a> collection</p>
+<!-- Func 1 -->
+
+<h2 id="add_agent">add_agent</h2>
+<p>Add new Bamboo Agent information into the database</p>
+<h3 id="usage">Usage</h3>
+<!-- should link both endpoint n command to their respective pages -->
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>POST /agent/initial_connection/register
+</span></code></pre></div>
+<h3 id="description">Description</h3>
+<p>add_agent is used when a new Bamboo Agent is registered and Bamboo Teamserver wants to insert the new Bamboo Agent information into the <code>collection agents</code></p>
+<h4 id="function-arguments">Function Arguments</h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>agent_identifier</td>
+<td>String</td>
+<td>Identifier of Bamboo Agent</td>
+</tr>
+<tr>
+<td>hostname</td>
+<td>String</td>
+<td>Hostname if infected machine</td>
+</tr>
+<tr>
+<td>publicIP</td>
+<td>String</td>
+<td>Public IP address of infected machine</td>
+</tr>
+<tr>
+<td>privateIP</td>
+<td>String</td>
+<td>Private IP address of infected machine</td>
+</tr>
+<tr>
+<td>priv_lvl</td>
+<td>String</td>
+<td>Privilege level of Bamboo Agent</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arguments-example">Arguments Example</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>add_agent(&quot;5zrire9a&quot;, &quot;bambooMachine&quot;, &quot;39.100.49.231&quot;, &quot;192.168.45.7&quot;, &quot;medium&quot;)
+</span></code></pre></div>
+<h3 id="database-method">Database Method</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Collection</th>
+<th>Return</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>insert_one</td>
+<td>agents</td>
+<td>Null</td>
+</tr>
+</tbody>
+</table>
+<h3 id="insertion-example">Insertion Example</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>new_agent = {
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    &quot;agent_identifier&quot;: &quot;5zrire9a&quot;,
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    &quot;hostname&quot;: &quot;bambooMachine&quot;,
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    &quot;publicIP&quot;: &quot;39.100.49.231&quot;,
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    &quot;privateIP&quot;: &quot;192.168.45.7&quot;,
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    &quot;Integrity&quot;: &quot;Medium&quot;
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>}
+</span></code></pre></div>
+<h3 id="function-return">Function Return</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dictionary</td>
+<td>Notify Bamboo Teamserver of status</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-example">Return Example</h3>
+<div class="language-JSON highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">}</span>
+</span></code></pre></div>
+<!-- Func 2 -->
+<p><br></p>
+<h2 id="show_agents">show_agents</h2>
+<p>Retrieve all information of registered Bamboo Agent</p>
+<h3 id="usage_1">Usage</h3>
+<!-- should link both endpoint n command to their respective pages -->
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>POST /handler_func/agent/display
+</span></code></pre></div>
+<h3 id="description_1">Description</h3>
+<p>show_agents extracts all registered Bamboo Agent data from the <code>collection agents</code>. It will then loop through all the data and append them into a list, returning the list to Bamboo Teamserver.</p>
+<h4 id="function-arguments_1">Function Arguments</h4>
+<p><strong>Does not require any arguments</strong></p>
+<h3 id="database-method_1">Database Method</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Collection</th>
+<th>Return</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>find</td>
+<td>agents</td>
+<td>List of data</td>
+</tr>
+</tbody>
+</table>
+<h3 id="function-return_1">Function Return</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nested List</td>
+<td>All Bamboo Agent data</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-example_1">Return Example</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>data = [
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    [
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>        &quot;agent_identifier&quot;: &quot;5zrire9a&quot;,
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>        &quot;hostname&quot;: &quot;bambooMachine&quot;,
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>        &quot;publicIP&quot;: &quot;39.100.49.231&quot;,
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>        &quot;privateIP&quot;: &quot;192.168.45.7&quot;,
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>        &quot;Integrity&quot;: &quot;Medium&quot;
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    ],
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    [
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>        &quot;agent_identifier&quot;: &quot;ysa903nq&quot;,
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>        &quot;hostname&quot;: &quot;bambooMachine2&quot;,
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>        &quot;publicIP&quot;: &quot;84.120.93.211&quot;,
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>        &quot;privateIP&quot;: &quot;192.168.88.110&quot;,
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>        &quot;Integrity&quot;: &quot;High&quot;
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>    ]
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>]
+</span></code></pre></div>
+<!-- Func 3 -->
+<p><br></p>
+<h2 id="check_agent_identifier">check_agent_identifier</h2>
+<p>Determines if Bamboo Agent specified exist in the database</p>
+<h3 id="usage_2">Usage</h3>
+<!-- should link both endpoint n command to their respective pages -->
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>POST /agent/initial_connection/register
+</span></code></pre></div>
+<h3 id="description_2">Description</h3>
+<p>check_agent_identifier attempts to find specified agent identifier in <code>collection agents</code>, and determines if it exist in the database</p>
+<h4 id="function-arguments_2">Function Arguments</h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>agent_identifier</td>
+<td>String</td>
+<td>Identifier of Bamboo Agent</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arguments-example_1">Arguments Example</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>check_agent_identifier(&quot;5zrire9a&quot;)
+</span></code></pre></div>
+<h3 id="database-method_2">Database Method</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Collection</th>
+<th>Return</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>find_one</td>
+<td>agents</td>
+<td>Boolean (True of exist)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="function-return_2">Function Return</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Boolean</td>
+<td>If specified Bamboo Agent exist</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-example_2">Return Example</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>True
+</span></code></pre></div>
+<!-- Func 4 -->
+<p><br></p>
+<h2 id="add_heartbeat">add_heartbeat</h2>
+<p>Add new Bamboo Agent heartbeat information into database</p>
+<h3 id="usage_3">Usage</h3>
+<!-- should link both endpoint n command to their respective pages -->
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>POST /agent/initial_connection/register
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>POST /agent/heartbeat
+</span></code></pre></div>
+<h3 id="description_3">Description</h3>
+<p>add_heartbeat will allows Bamboo Teamserver to keep track of all Bamboo Agent status. It will be called when a new Bamboo Agent is registered or existing registered Bamboo Agent send their heartbeat. Only <code>collection heartbeats</code> will be affected.</p>
+<p>The model will first attempt to find the Bamboo Agent using their agent identifier to determine if the Bamboo Agent is new by extracting data. It will be empty if the Bamboo Agent is new. If the Bamboo Agent is new, it will insert the data into the collection. If the Bamboo Agent already exist, it will determine if the Bamboo Agent heartbeat was "late" or not and update the existing information. It will return different values depending on it.</p>
+<h4 id="function-arguments_3">Function Arguments</h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>agent_identifier</td>
+<td>String</td>
+<td>Identifier of Bamboo Agent</td>
+</tr>
+<tr>
+<td>heartbeat</td>
+<td>String</td>
+<td>Seconds before the next heartbeat</td>
+</tr>
+<tr>
+<td>current_time</td>
+<td>Date</td>
+<td>Current timestamp</td>
+</tr>
+<tr>
+<td>expected_time</td>
+<td>Date</td>
+<td>Expected timestamp to receive heartbeat (current_time + heartbeat)</td>
+</tr>
+<tr>
+<td>status</td>
+<td>String</td>
+<td>Update it to "alive"</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arguments-example_2">Arguments Example</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>add_heartbeat(&quot;5zrire9a&quot;, &quot;6&quot;, &quot;2024-07-30T16:38:15.653+00:00&quot;, &quot;2024-07-30T16:38:21.653+00:00&quot;, &quot;alive&quot;)
+</span></code></pre></div>
+<h3 id="database-method_3">Database Method</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Collection</th>
+<th>Return</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>find</td>
+<td>heartbeats</td>
+<td>Data of Bamboo Agent. Empty if does not exist</td>
+<td>Determine if Bamboo Agent is new</td>
+</tr>
+<tr>
+<td>insert_one</td>
+<td>heartbeats</td>
+<td>Null</td>
+<td>Insert new Bamboo Agent information</td>
+</tr>
+<tr>
+<td>update_many</td>
+<td>heartbeats</td>
+<td>True for success, False for failed</td>
+<td>If Bamboo Agent heartbeat Bamboo Teamserver after expected_time</td>
+</tr>
+<tr>
+<td>update_many</td>
+<td>heartbeats</td>
+<td>True for success, False for failed</td>
+<td>Bamboo Agent heartbeat is punctual</td>
+</tr>
+</tbody>
+</table>
+<h3 id="insertion-example_1">Insertion Example</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>new_heartbeat = {
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    &quot;agent_identifier&quot;: &quot;5zrire9a&quot;,
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    &quot;heartbeat&quot;: 6,
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    &quot;current_time&quot;: &quot;2024-07-30T16:38:15.653+00:00&quot;,
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    &quot;expected_time&quot;: &quot;2024-07-30T16:38:21.653+00:00&quot;,
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>    &quot;status&quot;: &quot;alive&quot;
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>}
+</span></code></pre></div>
+<h3 id="update-example">Update Example</h3>
+<div class="language-JSON highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="p">{</span><span class="nt">&quot;agent_identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;5zrire9a&quot;</span><span class="p">},</span><span class="w"> </span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="p">{</span><span class="nt">&quot;$set&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="nt">&quot;heartbeat&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="nt">&quot;current_time&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-07-30T16:38:15.653+00:00&quot;</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="nt">&quot;expected_time&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-07-30T16:38:21.653+00:00&quot;</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;alive&quot;</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="function-return_3">Function Return</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dictionary</td>
+<td>Added new heartbeat</td>
+</tr>
+<tr>
+<td>Dictionary</td>
+<td>Updated heartbeat</td>
+</tr>
+</tbody>
+</table>
+<h3 id="function-example">Function Example</h3>
+<div class="language-JSON highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="p">{</span><span class="nt">&quot;agent&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;new&quot;</span><span class="p">}</span>
+</span></code></pre></div>
+<div class="language-JSON highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="p">{</span><span class="nt">&quot;agent&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;punctual&quot;</span><span class="p">}</span>
+</span></code></pre></div>
+<!-- Func 5 -->
+<p><br></p>
+<h2 id="get_heartbeat">get_heartbeat</h2>
+<p>Retrieve Bamboo Agent status from heartbeats</p>
+<h3 id="usage_4">Usage</h3>
+<!-- should link both endpoint n command to their respective pages -->
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>POST /handler_func/agent/display
+</span></code></pre></div>
+<h3 id="description_4">Description</h3>
+<p>get_heartbeat objective is to extract the status of the Bamboo Agent to determine if they are "dead" or "alive" from the <code>collection heartbeats</code>. It will then loop through all the data and append only the status into a list, returning the list to Bamboo Teamserver.</p>
+<h4 id="function-arguments_4">Function Arguments</h4>
+<p><strong>Does not require any arguments</strong></p>
+<h3 id="database-method_4">Database Method</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Collection</th>
+<th>Return</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>find</td>
+<td>heartbeats</td>
+<td>List status</td>
+</tr>
+</tbody>
+</table>
+<h3 id="function-return_4">Function Return</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>List</td>
+<td>Status of all Bamboo Agent in database</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-example_3">Return Example</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>data = [
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    &quot;dead&quot;,
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>    &quot;dead&quot;,
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>    &quot;alive&quot;
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>]
+</span></code></pre></div>
+<!-- Func 6 -->
+<p><br></p>
+<h2 id="status_dead">status_dead</h2>
+<p>Update Bamboo Agent status to dead</p>
+<h3 id="usage_5">Usage</h3>
+<!-- should link both endpoint n command to their respective pages -->
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>Automatic function in Bamboo Teamserver that cleans up Bamboo Agent in database
+</span></code></pre></div>
+<h3 id="description_5">Description</h3>
+<p>status_dead will update the specified Bamboo Agent status to dead in the <code>collection heartbeats</code>.</p>
+<h4 id="function-arguments_5">Function Arguments</h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>agent_identifier</td>
+<td>String</td>
+<td>Identifier of Bamboo Agent</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arguments-example_3">Arguments Example</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>status_dead(&quot;5zrire9a&quot;)
+</span></code></pre></div>
+<h3 id="database-method_5">Database Method</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Collection</th>
+<th>Return</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>update_many</td>
+<td>heartbeats</td>
+<td>Status of update (boolean)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="function-return_5">Function Return</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dictionary</td>
+<td>Status of update</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-example_4">Return Example</h3>
+<div class="language-JSON highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="p">{</span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;done&quot;</span><span class="p">}</span>
+</span></code></pre></div>
+<!-- Func 7 -->
+<p><br></p>
+<h2 id="find_dead_but_alive">find_dead_but_alive</h2>
+<p>Extract all Bamboo Agent who are "alive"</p>
+<h3 id="usage_6">Usage</h3>
+<!-- should link both endpoint n command to their respective pages -->
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Automatic function in Bamboo Teamserver that cleans up Bamboo Agent in database
+</span></code></pre></div>
+<h3 id="description_6">Description</h3>
+<p>find_dead_but_alive will retrieve all registered Bamboo Agent status which are "alive" in the <code>collection heartbeats</code>.</p>
+<h4 id="function-arguments_6">Function Arguments</h4>
+<p><strong>Does not require any arguments</strong></p>
+<h3 id="database-method_6">Database Method</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Collection</th>
+<th>Return</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>find</td>
+<td>heartbeats</td>
+<td>List of agent identifier that match the criteria</td>
+</tr>
+</tbody>
+</table>
+<h3 id="function-return_6">Function Return</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dictionary</td>
+<td>Contains a list of agent identifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-example_5">Return Example</h3>
+<div class="language-JSON highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="p">{</span><span class="nt">&quot;alive_agents&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;5zrire9a&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;62yb10jd&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;p12ls3da&quot;</span><span class="p">]}</span>
+</span></code></pre></div>
+<!-- Func 8 -->
+<p><br></p>
+<h2 id="use_agent">use_agent</h2>
+<p>Extract all information of specified Bamboo Agent</p>
+<h3 id="usage_7">Usage</h3>
+<!-- should link both endpoint n command to their respective pages -->
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>POST /hander_func/handler/use_agent
+</span></code></pre></div>
+<h3 id="description_7">Description</h3>
+<p>use_agent retrieve the information of the specified Bamboo Agent in <code>agents collection</code>.</p>
+<h4 id="function-arguments_7">Function Arguments</h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>agent_identifier</td>
+<td>String</td>
+<td>Identifier of Bamboo Agent</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arguments-example_4">Arguments Example</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>use_agent(&quot;5zrire9a&quot;)
+</span></code></pre></div>
+<h3 id="database-method_7">Database Method</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Collection</th>
+<th>Return</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>find_one</td>
+<td>agents</td>
+<td>List information of specified Bamboo agent (agent_data)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="function-return_7">Function Return</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dictionary</td>
+<td>Contains a dictionary of agent information</td>
+</tr>
+<tr>
+<td>Dictionary</td>
+<td>None (no such agent)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-example_6">Return Example</h3>
+<div class="language-JSON highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="p">{</span><span class="nt">&quot;agent_data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">        </span><span class="nt">&quot;agent_identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;5zrire9a&quot;</span><span class="p">,</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w">        </span><span class="nt">&quot;hostname&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bambooMachine&quot;</span><span class="p">,</span>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="w">        </span><span class="nt">&quot;publicIP&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;39.100.49.231&quot;</span><span class="p">,</span>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="w">        </span><span class="nt">&quot;privateIP&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;192.168.45.7&quot;</span><span class="p">,</span>
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="w">        </span><span class="nt">&quot;Integrity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Medium&quot;</span>
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="p">}</span>
+</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a><span class="p">}</span>
+</span></code></pre></div>
+<!-- Func 9 -->
+<p><br></p>
+<h2 id="remove_agent">remove_agent</h2>
+<p>Remove all information of specified Bamboo Agent</p>
+<h3 id="usage_8">Usage</h3>
+<!-- should link both endpoint n command to their respective pages -->
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>POST /hander_func/handler/remove_agent
+</span></code></pre></div>
+<h3 id="description_8">Description</h3>
+<p>remove_agent will completely remove the specified Bamboo Agent information, from both <code>collection agents and heartbeats</code>. It will first check if the specified Bamboo Agent exist first before deleting the data.</p>
+<h4 id="function-arguments_8">Function Arguments</h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>agent_identifier</td>
+<td>String</td>
+<td>Identifier of Bamboo Agent</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arguments-example_5">Arguments Example</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>remove_agent(&quot;5zrire9a&quot;)
+</span></code></pre></div>
+<h3 id="database-method_8">Database Method</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Collection</th>
+<th>Return</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>find_one</td>
+<td>agents</td>
+<td>Boolean value</td>
+</tr>
+<tr>
+<td>delete_many</td>
+<td>agents</td>
+<td>Boolean value</td>
+</tr>
+<tr>
+<td>delete_many</td>
+<td>heartbeats</td>
+<td>Boolean value</td>
+</tr>
+</tbody>
+</table>
+<h3 id="function-return_8">Function Return</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dictionary</td>
+<td>Success</td>
+</tr>
+<tr>
+<td>Dictionary</td>
+<td>Failed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-example_7">Return Example</h3>
+<div class="language-JSON highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="p">{</span>
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span>
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="p">}</span>
+</span></code></pre></div>
+<!-- Func 10 -->
+<p><br></p>
+<h2 id="info_status">info_status</h2>
+<p>Retrieve and update database (if needed) of Bamboo Agent status when command <a href="../../Client/commands.html#info"><code>info</code></a> is called</p>
+<h3 id="usage_9">Usage</h3>
+<!-- should link both endpoint n command to their respective pages -->
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>POST /handler_func/handler/info_status
+</span></code></pre></div>
+<h3 id="description_9">Description</h3>
+<p>info_status main objective is to return the status of the specified Bamboo Agent. This model will check if the specified Bamboo Agent is "dead" by comparing the <code>current timestamp</code> with the <code>expected timestamp</code> before returning the status of the specified Bamboo Agent.</p>
+<h4 id="function-arguments_9">Function Arguments</h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>agent_identifier</td>
+<td>String</td>
+<td>Identifier of Bamboo Agent</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arguments-example_6">Arguments Example</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>info_status(&quot;5zrire9a&quot;)
+</span></code></pre></div>
+<h3 id="database-method_9">Database Method</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Collection</th>
+<th>Return</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>find_one</td>
+<td>heartbeats</td>
+<td>List of information of specified Bamboo Agent</td>
+</tr>
+</tbody>
+</table>
+<h3 id="find-return-example">Find Return Example</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>[
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>    &quot;agent_identifier&quot;: &quot;5zrire9a&quot;,
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>    &quot;heartbeat&quot;: 6,
+</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>    &quot;current_time&quot;: &quot;2024-07-30T16:38:15.653+00:00&quot;,
+</span><span id="__span-30-5"><a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>    &quot;expected_time&quot;: &quot;2024-07-30T16:38:21.653+00:00&quot;,
+</span><span id="__span-30-6"><a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>    &quot;status&quot;: &quot;alive&quot;
+</span><span id="__span-30-7"><a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a>]
+</span></code></pre></div>
+<h3 id="function-return_9">Function Return</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dictionary</td>
+<td>Notify Bamboo Teamserver on specified Bamboo Agent status</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-example_8">Return Example</h3>
+<div class="language-JSON highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="p">{</span><span class="nt">&quot;agent_status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;alive&quot;</span><span class="p">}</span>
+</span></code></pre></div>
+<!-- Func 11 -->
+<p><br></p>
+<h2 id="remove_inactive">remove_inactive</h2>
+<p>Remove all "dead" registered Bamboo Agent from the database</p>
+<h3 id="usage_10">Usage</h3>
+<!-- should link both endpoint n command to their respective pages -->
+<div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>Automatic function in Bamboo Teamserver that cleans up Bamboo Agent in database
+</span></code></pre></div>
+<h3 id="description_10">Description</h3>
+<p>remove_inactive is used in the function that automatically remove data from the database. This model will help the function to automatically remove all "dead" Bamboo Agent from the database.</p>
+<h4 id="function-arguments_10">Function Arguments</h4>
+<p><strong>Does not require any arguments</strong></p>
+<h3 id="database-method_10">Database Method</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Collection</th>
+<th>Return</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>find</td>
+<td>heartbeats</td>
+<td>List of information of "dead" Bamboo Agents</td>
+</tr>
+</tbody>
+</table>
+<h3 id="function-return_10">Function Return</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dictionary</td>
+<td>List of "dead" Bamboo Agent</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-example_9">Return Example</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>[
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>    [   
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>        &quot;agent_identifier&quot;: &quot;5zrire9a&quot;,
+</span><span id="__span-33-4"><a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>        &quot;heartbeat&quot;: 6,
+</span><span id="__span-33-5"><a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>        &quot;current_time&quot;: &quot;2024-07-30T16:38:15.653+00:00&quot;,
+</span><span id="__span-33-6"><a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a>        &quot;expected_time&quot;: &quot;2024-07-30T16:38:21.653+00:00&quot;,
+</span><span id="__span-33-7"><a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a>        &quot;status&quot;: &quot;dead&quot;
+</span><span id="__span-33-8"><a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a>    ],
+</span><span id="__span-33-9"><a id="__codelineno-33-9" name="__codelineno-33-9" href="#__codelineno-33-9"></a>    [   
+</span><span id="__span-33-10"><a id="__codelineno-33-10" name="__codelineno-33-10" href="#__codelineno-33-10"></a>        &quot;agent_identifier&quot;: &quot;wohw193j&quot;,
+</span><span id="__span-33-11"><a id="__codelineno-33-11" name="__codelineno-33-11" href="#__codelineno-33-11"></a>        &quot;heartbeat&quot;: 9,
+</span><span id="__span-33-12"><a id="__codelineno-33-12" name="__codelineno-33-12" href="#__codelineno-33-12"></a>        &quot;current_time&quot;: &quot;2024-07-30T16:42:20.653+00:00&quot;,
+</span><span id="__span-33-13"><a id="__codelineno-33-13" name="__codelineno-33-13" href="#__codelineno-33-13"></a>        &quot;expected_time&quot;: &quot;2024-07-30T16:42:29.653+00:00&quot;,
+</span><span id="__span-33-14"><a id="__codelineno-33-14" name="__codelineno-33-14" href="#__codelineno-33-14"></a>        &quot;status&quot;: &quot;dead&quot;
+</span><span id="__span-33-15"><a id="__codelineno-33-15" name="__codelineno-33-15" href="#__codelineno-33-15"></a>    ]
+</span><span id="__span-33-16"><a id="__codelineno-33-16" name="__codelineno-33-16" href="#__codelineno-33-16"></a>]
+</span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="collections.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Collections">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Collections
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="model_auth.html" class="md-footer__link md-footer__link--next" aria-label="Next: Model Class - authentication">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Model Class - authentication
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "navigation.footer", "navigation.path", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>

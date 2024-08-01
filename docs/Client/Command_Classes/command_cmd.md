@@ -1,8 +1,8 @@
-# Command Class - `commands`
+# `commands`
 
 The commands class provides methods for interacting with an agent through various server endpoints. This includes processes like exploiting an agent, sending commands, enumerating system information, and performing post-exploitation activities.
 
-<br>
+
 
 ## exploit_process
 
@@ -18,15 +18,15 @@ POST /exploit/send_config
 
 ### Description
 
-This function first retrieves all available exploits from Bamboo Teamserver using the `/exploit/view_all` endpoint. The user will select an exploit, and start start configuring it. This function is dynamic in a way that only shows what can be choosen to the user. As different exploits have different configurations, each exploit configuration steps may be different. If during the configuration, the user wants to stop the process, the `/exploit/quit` endpoint will be called for logging purposes. The `/exploit/send_config` endpoint will be called to proceed once the user confirms the exploitation.
+This function first retrieves all available exploits from the Bamboo Teamserver using the `/exploit/view_all` endpoint. The user will select an exploit, and start start configuring it. This function is dynamic in a way that only shows what can be chosen to the user. As different exploits have different configurations, each exploit configuration steps may be different. If during the configuration, the user wants to stop the process, the `/exploit/quit` endpoint will be called for logging purposes. The `/exploit/send_config` endpoint will be called to proceed once the user confirms the exploitation.
 
 ### Function Argument
 
-| Field             | Type   | Description                                     |
-|-------------------|--------|-------------------------------------------------|
-| username          | String | Username of the user                           |
-| agent_identifier  | String | Identifier of the agent                         |
-| jwt_token         | String | JSON Web Token for authentication               |
+| Field            | Type   | Description                       |
+| ---------------- | ------ | --------------------------------- |
+| username         | String | Username of the user              |
+| agent_identifier | String | Identifier of the agent           |
+| jwt_token        | String | JSON Web Token for authentication |
 
 ### Arguments Example
 
@@ -36,11 +36,11 @@ exploit_process("bambooUser", "5zrire9a", jwt_token)
 
 ### Function Return
 
-| Field  | Type   | Description                                     |
-|--------|--------|-------------------------------------------------|
-| Status | String | Status of the exploit process initiation        |
+| Field  | Type   | Description                              |
+| ------ | ------ | ---------------------------------------- |
+| Status | String | Status of the exploit process initiation |
 
-<br>
+
 
 ## command_prompt
 
@@ -58,12 +58,12 @@ This function will send the command input by the user and then continuously chec
 
 ### Function Argument
 
-| Field             | Type   | Description                                     |
-|-------------------|--------|-------------------------------------------------|
-| username          | String | Username of the user                           |
-| agent_identifier  | String | Identifier of the agent                         |
-| cmd               | String | Command to be executed on the agent             |
-| jwt_token         | String | JSON Web Token for authentication               |
+| Field            | Type   | Description                         |
+| ---------------- | ------ | ----------------------------------- |
+| username         | String | Username of the user                |
+| agent_identifier | String | Identifier of the agent             |
+| cmd              | String | Command to be executed on the agent |
+| jwt_token        | String | JSON Web Token for authentication   |
 
 ### Arguments Example
 
@@ -73,11 +73,11 @@ command_prompt("bambooUser", "5zrire9a", "whoami", jwt_token)
 
 ### Function Return
 
-| Field  | Type   | Description                                     |
-|--------|--------|-------------------------------------------------|
-| Output | String | Output from the command executed on the agent  |
+| Field  | Type   | Description                                   |
+| ------ | ------ | --------------------------------------------- |
+| Output | String | Output from the command executed on the agent |
 
-<br>
+
 
 ## enum
 
@@ -95,12 +95,12 @@ This method requests the enumeration of an infected machine and indicates that t
 
 ### Function Argument
 
-| Field             | Type   | Description                                     |
-|-------------------|--------|-------------------------------------------------|
-| username          | String | Username of the user                           |
-| agent_identifier  | String | Identifier of the agent                         |
-| priv_lvl          | String | Privilege level for the enumeration             |
-| jwt_token         | String | JSON Web Token for authentication               |
+| Field            | Type   | Description                         |
+| ---------------- | ------ | ----------------------------------- |
+| username         | String | Username of the user                |
+| agent_identifier | String | Identifier of the agent             |
+| priv_lvl         | String | Privilege level for the enumeration |
+| jwt_token        | String | JSON Web Token for authentication   |
 
 ### Arguments Example
 
@@ -110,11 +110,11 @@ enum("bambooUser", "5zrire9a", "High", jwt_token)
 
 ### Function Return
 
-| Field  | Type   | Description                                     |
-|--------|--------|-------------------------------------------------|
-| Status | String | Status of the enumeration request              |
+| Field  | Type   | Description                       |
+| ------ | ------ | --------------------------------- |
+| Status | String | Status of the enumeration request |
 
-<br>
+
 
 ## postexp
 
@@ -135,13 +135,13 @@ This function will send the command to the Bamboo Agent and depending on the met
 
 ### Function Argument
 
-| Field             | Type   | Description                                     |
-|-------------------|--------|-------------------------------------------------|
-| username          | String | Username of the user                           |
-| agent_identifier  | String | Identifier of the agent                         |
-| method            | String | Post-exploitation method to be executed         |
-| priv_lvl          | String | Privilege level for the post-exploitation       |
-| jwt_token         | String | JSON Web Token for authentication               |
+| Field            | Type   | Description                               |
+| ---------------- | ------ | ----------------------------------------- |
+| username         | String | Username of the user                      |
+| agent_identifier | String | Identifier of the agent                   |
+| method           | String | Post-exploitation method to be executed   |
+| priv_lvl         | String | Privilege level for the post-exploitation |
+| jwt_token        | String | JSON Web Token for authentication         |
 
 ### Arguments Example
 
@@ -151,6 +151,6 @@ postexp("bambooUser", "5zrire9a", "keylog", "Medium", jwt_token)
 
 ### Function Return
 
-| Field  | Type   | Description                                     |
-|--------|--------|-------------------------------------------------|
-| Status | String | Status of the post-exploitation action         |
+| Field  | Type   | Description                            |
+| ------ | ------ | -------------------------------------- |
+| Status | String | Status of the post-exploitation action |

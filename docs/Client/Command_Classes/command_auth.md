@@ -1,8 +1,6 @@
-# Command Class - `auth`
+# `auth`
 
 The auth class provides methods to interact with a server for user authentication and agent status management. It facilitates operations such as checking server availability, user login, user logout, and checking the status of agents. Each method in the class is designed to communicate with specific endpoints of the server API, handling tasks related to user authentication and session management.
-
-<br>
 
 ## check
 
@@ -22,15 +20,15 @@ GET /auth/
 
 This function attempts to connect to the server by sending a GET request to the `/auth/` endpoint. If the connection is successful, it returns "success." If the server cannot be reached, it prints an error message and returns "failed."
 
-### 
+###
 
 ### Function return
 
-| Field  | Type   | Description                                       |
-|--------|--------|---------------------------------------------------|
+| Field  | Type   | Description                                                    |
+| ------ | ------ | -------------------------------------------------------------- |
 | Status | String | Indicates whether the connection to the server was successful. |
 
-<br>
+
 
 ## authentication
 
@@ -48,10 +46,10 @@ This function sends a POST request to the `/auth/login` endpoint with the provid
 
 #### Function argument
 
-| Field    | Type   | Description          |
-|----------|--------|----------------------|
-| username | String | Username of user     |
-| password | String | Password of user     |
+| Field    | Type   | Description      |
+| -------- | ------ | ---------------- |
+| username | String | Username of user |
+| password | String | Password of user |
 
 ### Arguments Example
 
@@ -61,12 +59,12 @@ authentication("bambooUser", "adnap")
 
 ### Function return
 
-| Field     | Type   | Description                           |
-|-----------|--------|---------------------------------------|
-| Status    | String | Status of login                       |
-| jwt_token | String | JWT token for authentication          |
+| Field     | Type   | Description                  |
+| --------- | ------ | ---------------------------- |
+| Status    | String | Status of login              |
+| jwt_token | String | JWT token for authentication |
 
-<br>
+
 
 ## logout
 
@@ -85,7 +83,7 @@ This function sends a POST request to the `/auth/logout` endpoint with the provi
 #### Function argument
 
 | Field     | Type   | Description                  |
-|-----------|--------|------------------------------|
+| --------- | ------ | ---------------------------- |
 | username  | String | Username of user             |
 | jwt_token | String | JWT token for authentication |
 
@@ -99,7 +97,7 @@ logout("bambooUser", jwt_token)
 
 **The function does not return anything**
 
-<br>
+
 
 ## check_agent_status
 
@@ -118,7 +116,7 @@ This function sends a POST request to the `/auth/check_agent_status` endpoint wi
 #### Function argument
 
 | Field            | Type   | Description                  |
-|------------------|--------|------------------------------|
+| ---------------- | ------ | ---------------------------- |
 | username         | String | Username of user             |
 | agent_identifier | String | Identifier for the agent     |
 | jwt_token        | String | JWT token for authentication |
@@ -131,6 +129,6 @@ check_agent_status("bambooUser", "5zrire9a", jwt_token)
 
 ### Function return
 
-| Field    | Type | Description                           |
-|----------|------|---------------------------------------|
+| Field    | Type   | Description     |
+| -------- | ------ | --------------- |
 | response | String | Status of Agent |

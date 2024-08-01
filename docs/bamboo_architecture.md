@@ -9,7 +9,7 @@ This section will provide an overview of the Bamboo Framework components and how
 The Bamboo Client acts as the handler for the Bamboo Teamserver. Developed with [Python 3.11](https://www.python.org/downloads/release/python-3110/), the user can use either the command line (CLI) or graphical interface (GUI) to interact with the rest of the framework and perform actions such as:
 
 - Run exploits on a target through the agent
-- Add and modfify exploits avaliable on the Teamserver
+- Add and modify exploits available on the Teamserver
 - Use the team chat to message other Bamboo users on the same server
 
 The Bamboo Client can be run on most computers, but it is recommended to run it on the same host as the Teamserver, if only one Client is in use.
@@ -18,16 +18,16 @@ The Bamboo Client can be run on most computers, but it is recommended to run it 
 
 | Component                 | Description                                                     | Usage                                                                                          |
 | ------------------------- | --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| Commands                  | Contain classes that directly calls Bamboo Teamserver endpoints | Bamboo Client command will call the functions within the classes                               |
-| GUI Component             | Contain all GUI only related folders and files                  | Bamboo Client GUI was built with and rely on this component to interect with Bamboo Teamserver |
-| Functions                 | Contain miscellaneous functions that is called everywhere       | Bamboo Client relys on these function to be functional                                         |
-| WebSocket Client          | Connects to server WebSocket                                    | Makes connection to Bamboo Teamserver WebSocket and process broadcasted messages               |
+| Commands                  | Contain classes that directly calls the Bamboo Teamserver endpoints | Bamboo Client command will call the functions within the classes                               |
+| GUI Component             | Contain all GUI only related folders and files                  | Bamboo Client GUI was built with and rely on this component to interect with the Bamboo Teamserver |
+| Functions                 | Contain miscellaneous functions that is called everywhere       | Bamboo Client relies on these function to be functional                                         |
+| WebSocket Client          | Connects to server WebSocket                                    | Makes connection to the Bamboo Teamserver WebSocket and process broadcasted messages               |
 | Post Exploitation Methods | Contain preloaded post exploit tools                            | Bamboo Clients can use these tools to furture extract valuable information                     |
 | Post Exploits             | Results of post exploit tools are stored here                   | Bamboo Clients can view the results of the post exploitation tool                              |
 
 ## Bamboo Teamserver
 
-The Bamboo Teamserver, designed to run on a Kali Linux machine, is the central server that records and stores data and exploits, and acts as the communication bridge between the users and the Agents. It hosts both [HTTPS RESTful APIs](./Teamserver_API_Reference/overview.md) and manages Websocket connections to handle communications with other components in the framework.
+The Bamboo Teamserver, designed to run on a Kali Linux machine, is the central server that records and stores data and exploits, and acts as the communication bridge between the users and the Agents. It hosts both [HTTPS RESTful APIs](./Teamserver/api_reference/overview.md) and manages Websocket connections to handle communications with other components in the framework.
 
 The Teamserver is built in [Python 3.11](https://www.python.org/downloads/release/python-3110/), and uses [Flask](https://flask.palletsprojects.com/en/3.0.x/) for HTTPS communication. [MongoDB](https://www.mongodb.com/try/download/community) is used to store information such as user accounts, agents connected and their status, as well as exploits and their configurations.
 
@@ -41,9 +41,9 @@ By default, the port used by the Teamserver is TCP 4444
 | ------------------ | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | APIs               | All endpoints that enable Bamboo to communicate                                   | Bamboo Client and Bamboo Agent pass information using the endpoints         |
 | WebSocket API      | Enable Bamboo Client and Bamboo Agent to connect via WebSocket                    | Allows WebSocket connection                                                 |
-| Database (MongoDB) | Contains everything related to database (models, initialisation, and collections) | Allow Bamboo Teamserver to initialise and interact with the database easily |
-| Functions          | Contain miscellaneous functions that is called everywhere                         | Bamboo Teamserver relys on these function to be functional                  |
-| PEM Files          | Contains the certificate and key                                                  | Allows Bamboo Teamserver to run in HTTPS and WSS with SSL                   |
+| Database (MongoDB) | Contains everything related to database (models, initialisation, and collections) | Allows the Bamboo Teamserver to initialise and interact with the database easily |
+| Functions          | Contain miscellaneous functions that is called everywhere                         | The Bamboo Teamserver relies on these function to be functional                  |
+| PEM Files          | Contains the certificate and key                                                  | Allows the Bamboo Teamserver to run in HTTPS and WSS with SSL                   |
 
 ## Bamboo Agent
 
@@ -63,8 +63,8 @@ Once the agent is connected, it will perform two main actions:
 
 | Component              | Description                         | Usage                                                                                |
 | ---------------------- | ----------------------------------- | ------------------------------------------------------------------------------------ |
-| WebSocket Client       | Connects to Teamserver WebSocket    | Makes connection to Bamboo Teamserver WebSocket and process commands sent through it |
-| HTTPS                  | HTTP RESTful communication          | Makes connection to Bamboo Teamserver APIs to send information or request for data   |
+| WebSocket Client       | Connects to Teamserver WebSocket    | Makes connection to the Bamboo Teamserver WebSocket and process commands sent through it |
+| HTTPS                  | HTTP RESTful communication          | Makes connection to the Bamboo Teamserver APIs to send information or request for data   |
 | Functions              | Miscellaneous functions             | Other commands the agent can perform                                                 |
 | Post Exploit Functions | Contain post exploit functions      | Agent runs post-exploitation or enumeration function on command                      |
 | Exploit Methods        | Contain methods to execute exploits | Agent receives and executes exploits on command                                      |

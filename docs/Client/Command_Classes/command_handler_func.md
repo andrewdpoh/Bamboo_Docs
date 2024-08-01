@@ -1,8 +1,8 @@
-# Command Class - `handler_func`
+# `handler_func`
 
 The handler_func class provides methods that are handy for the user but are not related to commands, exploits, and authorization. This includes processes such as displaying all agents, displaying all users, and more.
 
-<br>
+
 
 ## display
 
@@ -20,10 +20,10 @@ This function sends a POST request to retrieve agent and heartbeat status data f
 
 ### Function Argument
 
-| Field             | Type   | Description                                     |
-|-------------------|--------|-------------------------------------------------|
-| username          | String | Username of the user                           |
-| jwt_token         | String | JSON Web Token for authentication               |
+| Field     | Type   | Description                       |
+| --------- | ------ | --------------------------------- |
+| username  | String | Username of the user              |
+| jwt_token | String | JSON Web Token for authentication |
 
 ### Arguments Example
 
@@ -33,12 +33,11 @@ display("bambooUser", jwt_token)
 
 ### Function Return
 
-| Field  | Type   | Description                                     |
-|--------|--------|-------------------------------------------------|
-| table | List | List containing headers and table data       |
+| Field | Type | Description                            |
+| ----- | ---- | -------------------------------------- |
+| table | List | List containing headers and table data |
 
 
-<br>
 
 ## use_agent
 
@@ -56,11 +55,11 @@ This function requests agent data using its identifier and caches the data for f
 
 ### Function Argument
 
-| Field             | Type   | Description                                     |
-|-------------------|--------|-------------------------------------------------|
-| username          | String | Username of the user                           |
-|agent_identifier|String|Identifier of the agent|
-| jwt_token         | String | JSON Web Token for authentication               |
+| Field            | Type   | Description                       |
+| ---------------- | ------ | --------------------------------- |
+| username         | String | Username of the user              |
+| agent_identifier | String | Identifier of the agent           |
+| jwt_token        | String | JSON Web Token for authentication |
 
 ### Arguments Example
 
@@ -70,11 +69,11 @@ use_agent("bambooUser", "5zrire9a", jwt_token)
 
 ### Function Return
 
-| Field  | Type   | Description                                     |
-|--------|--------|-------------------------------------------------|
-| agent_data | Dict | Dictionary containing agent information or empty     |
+| Field      | Type | Description                                      |
+| ---------- | ---- | ------------------------------------------------ |
+| agent_data | Dict | Dictionary containing agent information or empty |
 
-<br>
+
 
 ## stop_agent
 
@@ -92,11 +91,11 @@ This function sends a request to stop using a specified agent and clears any cac
 
 ### Function Argument
 
-| Field             | Type   | Description                                     |
-|-------------------|--------|-------------------------------------------------|
-| username          | String | Username of the user                           |
-|agent_identifier|String|Identifier of the agent|
-| jwt_token         | String | JSON Web Token for authentication               |
+| Field            | Type   | Description                       |
+| ---------------- | ------ | --------------------------------- |
+| username         | String | Username of the user              |
+| agent_identifier | String | Identifier of the agent           |
+| jwt_token        | String | JSON Web Token for authentication |
 
 ### Arguments Example
 
@@ -106,11 +105,11 @@ stop_agent("bambooUser", "5zrire9a", jwt_token)
 
 ### Function Return
 
-| Field  | Type   | Description                                     |
-|--------|--------|-------------------------------------------------|
-| Status | String | Status of the stop operation|
+| Field  | Type   | Description                  |
+| ------ | ------ | ---------------------------- |
+| Status | String | Status of the stop operation |
 
-<br>
+
 
 ## remove_agent
 
@@ -128,11 +127,11 @@ This function sends a request to remove an agent from the database and handles s
 
 ### Function Argument
 
-| Field             | Type   | Description                                     |
-|-------------------|--------|-------------------------------------------------|
-| username          | String | Username of the user                           |
-|agent_identifier|String|Identifier of the agent|
-| jwt_token         | String | JSON Web Token for authentication               |
+| Field            | Type   | Description                       |
+| ---------------- | ------ | --------------------------------- |
+| username         | String | Username of the user              |
+| agent_identifier | String | Identifier of the agent           |
+| jwt_token        | String | JSON Web Token for authentication |
 
 ### Arguments Example
 
@@ -142,11 +141,11 @@ remove_agent("bambooUser", "5zrire9a", jwt_token)
 
 ### Function Return
 
-| Field  | Type   | Description                                     |
-|--------|--------|-------------------------------------------------|
-| Status | String | Status of the stop operation|
+| Field  | Type   | Description                  |
+| ------ | ------ | ---------------------------- |
+| Status | String | Status of the stop operation |
 
-<br>
+
 
 ## info_status
 
@@ -164,11 +163,11 @@ This function checks the status of a specified agent by sending a request to the
 
 ### Function Argument
 
-| Field             | Type   | Description                                     |
-|-------------------|--------|-------------------------------------------------|
-| username          | String | Username of the user                           |
-|agent_identifier|String|Identifier of the agent|
-| jwt_token         | String | JSON Web Token for authentication               |
+| Field            | Type   | Description                       |
+| ---------------- | ------ | --------------------------------- |
+| username         | String | Username of the user              |
+| agent_identifier | String | Identifier of the agent           |
+| jwt_token        | String | JSON Web Token for authentication |
 
 ### Arguments Example
 
@@ -178,11 +177,11 @@ info_status("bambooUser", "5zrire9a", jwt_token)
 
 ### Function Return
 
-| Field  | Type   | Description                                     |
-|--------|--------|-------------------------------------------------|
-| Status | String | Status of the agent|
+| Field  | Type   | Description         |
+| ------ | ------ | ------------------- |
+| Status | String | Status of the agent |
 
-<br>
+
 
 ## view_users
 
@@ -200,10 +199,10 @@ This function retrieves and displays user information from the database, showing
 
 ### Function Argument
 
-| Field             | Type   | Description                                     |
-|-------------------|--------|-------------------------------------------------|
-| username          | String | Username of the user                           |
-| jwt_token         | String | JSON Web Token for authentication               |
+| Field     | Type   | Description                       |
+| --------- | ------ | --------------------------------- |
+| username  | String | Username of the user              |
+| jwt_token | String | JSON Web Token for authentication |
 
 ### Arguments Example
 
@@ -213,11 +212,11 @@ view_users("bambooUser", jwt_token)
 
 ### Function Return
 
-| Field  | Type   | Description                                     |
-|--------|--------|-------------------------------------------------|
-| Table | List |List containing headers and user data|
+| Field | Type | Description                           |
+| ----- | ---- | ------------------------------------- |
+| Table | List | List containing headers and user data |
 
-<br>
+
 
 ## register_user
 
@@ -235,12 +234,12 @@ This function sends a request to register a new user and handles responses based
 
 ### Function Argument
 
-| Field             | Type   | Description                                     |
-|-------------------|--------|-------------------------------------------------|
-| username          | String | Username of the user                           |
-|new_username|String|Username of the new user|
-|new_password|String|Password of the new user|
-| jwt_token         | String | JSON Web Token for authentication               |
+| Field        | Type   | Description                       |
+| ------------ | ------ | --------------------------------- |
+| username     | String | Username of the user              |
+| new_username | String | Username of the new user          |
+| new_password | String | Password of the new user          |
+| jwt_token    | String | JSON Web Token for authentication |
 
 ### Arguments Example
 
@@ -250,11 +249,11 @@ register_user("bambooUser", "bambooUserTwo", "paSswORd@111", jwt_token)
 
 ### Function Return
 
-| Field  | Type   | Description                                     |
-|--------|--------|-------------------------------------------------|
-| Status | String |Status of the registration|
+| Field  | Type   | Description                |
+| ------ | ------ | -------------------------- |
+| Status | String | Status of the registration |
 
-<br>
+
 
 ## delete_user
 
@@ -272,11 +271,11 @@ This function sends a request to delete a specified user from the database.
 
 ### Function Argument
 
-| Field             | Type   | Description                                     |
-|-------------------|--------|-------------------------------------------------|
-| username          | String | Username of the user                           |
-|del_username|String|Username of the user to delete|
-| jwt_token         | String | JSON Web Token for authentication               |
+| Field        | Type   | Description                       |
+| ------------ | ------ | --------------------------------- |
+| username     | String | Username of the user              |
+| del_username | String | Username of the user to delete    |
+| jwt_token    | String | JSON Web Token for authentication |
 
 ### Arguments Example
 
@@ -286,6 +285,6 @@ delete_user("bambooUser", "bambooUserTwo", jwt_token)
 
 ### Function Return
 
-| Field  | Type   | Description                                     |
-|--------|--------|-------------------------------------------------|
-| Status | String |Status of the deletion operation|
+| Field  | Type   | Description                      |
+| ------ | ------ | -------------------------------- |
+| Status | String | Status of the deletion operation |

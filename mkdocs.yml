@@ -4,22 +4,88 @@ theme:
   name: material
   palette:
     scheme: slate
+  logo: img/logo.png
+  favicon: img/logo.png
   features:
     - header.autohide
     - navigation.footer
     # - navigation.expand
     - navigation.path
     - content.code.copy # allows users to copy code blocks
+
 plugins:
   - offline
   - search
 markdown_extensions:
-  - pymdownx.highlight: # for coloring code blocks
+  - pymdownx.highlight: # for colouring code blocks
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
-      auto_title: true
-      linenums: true
-  - pymdownx.inlinehilite # for coloring code blocks
-  - pymdownx.snippets # for coloring code blocks
-  - pymdownx.superfences # for coloring code blocks
+      # auto_title: true # titles code block with the language
+      # linenums: true  # numbers the code block lines
+  - pymdownx.inlinehilite # for colouring code blocks
+  - pymdownx.snippets # for colouring code blocks
+  - pymdownx.superfences # for colouring code blocks
+  - attr_list # to add html/css classes with special syntax
+
+nav:
+  - Introduction: index.md
+
+  - User Guide: 
+    - User Guide/overview.md
+    - User Guide/prerequisites.md
+    - Installation:
+      - User Guide/installation/agent-setup.md
+      - User Guide/installation/teamserver-setup.md
+    - User Guide/using_bamboo_client.md
+    - Commands:
+      - User Guide/commands/command_list.md
+      - User Guide/commands/command_guide.md
+
+  - Bamboo Architecture: bamboo_architecture.md
+
+  - Teamserver: 
+    - Teamserver/overview.md
+    - API Reference:
+      - Teamserver/api_reference/overview.md
+      - Teamserver/api_reference/agent.md
+      - Teamserver/api_reference/authentication.md
+      - Teamserver/api_reference/exploit.md
+      - Teamserver/api_reference/handler_func.md
+      - Teamserver/api_reference/postexp.md
+    - Database:
+      - Teamserver/Database/collections.md
+      - Teamserver/Database/model_agents.md
+      - Teamserver/Database/model_auth.md
+      - Teamserver/Database/model_exploits.md
+      - Teamserver/Database/model_users.md
+    - Global Variables: Teamserver/global_variables.md
+    - Miscellaneous Functions: Teamserver/misc_func.md
+
+  - Agent:
+    - Agent/overview.md
+    - Packages:
+      - Agent/Packages/agent.md
+      - Agent/Packages/agent-connect-c2_api.md
+      - Agent/Packages/agent-connect-websocket.md
+      - Agent/Packages/agent-exploit.md
+      - Agent/Packages/agent-post_exploit.md
+
+  - Client:
+    - Client/overview.md
+    - Client/commands.md
+    - GUI:
+      - Client/GUI/overview.md
+      - Client/GUI/widgets.md
+    - Command Classes:
+      - Client/Command_Classes/command_auth.md
+      - Client/Command_Classes/command_cmd.md
+      - Client/Command_Classes/command_exploit.md
+      - Client/Command_Classes/command_handler_func.md
+    - GUI Command Classes:
+      - Client/GUI_Command_Classes/gui_commands.md
+    - Miscellaneous Functions: Client/misc_func.md
+
+  - Exploits: exploits.md
+  - Evasion: evasion.md
+  - Post Exploitation: post_exploitation.md
