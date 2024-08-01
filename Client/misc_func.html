@@ -8,28 +8,26 @@
       
       
       
-        <link rel="canonical" href="http://Bamboo_Docs/bamboo_architecture.html">
+        <link rel="canonical" href="http://Bamboo_Docs/Client/misc_func.html">
       
       
-        <link rel="prev" href="post_exploitation.html">
+        <link rel="prev" href="Command_Classes/command_handler_func.html">
       
       
-        <link rel="next" href="Teamserver/overview.html">
       
-      
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
     
     
       
-        <title>Bamboo Architecture - Bamboo Docs</title>
+        <title>ALDEN FUNCTIONS - Client - Bamboo Docs</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.3cba04c6.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#bamboo-architecture" class="md-skip">
+        <a href="#alden-functions-client" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="index.html" title="Bamboo Docs" class="md-header__button md-logo" aria-label="Bamboo Docs" data-md-component="logo">
+    <a href="../index.html" title="Bamboo Docs" class="md-header__button md-logo" aria-label="Bamboo Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -110,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Bamboo Architecture
+              ALDEN FUNCTIONS - Client
             
           </span>
         </div>
@@ -185,7 +183,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="Bamboo Docs" class="md-nav__button md-logo" aria-label="Bamboo Docs" data-md-component="logo">
+    <a href="../index.html" title="Bamboo Docs" class="md-nav__button md-logo" aria-label="Bamboo Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -203,7 +201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="index.html" class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -223,7 +221,7 @@
   
   
     <li class="md-nav__item">
-      <a href="exploits.html" class="md-nav__link">
+      <a href="../exploits.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -243,7 +241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="evasion.html" class="md-nav__link">
+      <a href="../evasion.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -263,7 +261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="post_exploitation.html" class="md-nav__link">
+      <a href="../post_exploitation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -280,30 +278,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Bamboo Architecture
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="bamboo_architecture.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../bamboo_architecture.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -312,98 +290,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#bamboo-client" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bamboo Client
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Bamboo Client">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#components" class="md-nav__link">
-    <span class="md-ellipsis">
-      Components
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bamboo-teamserver" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bamboo Teamserver
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Bamboo Teamserver">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#components_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Components
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bamboo-agent" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bamboo Agent
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Bamboo Agent">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#components_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Components
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -450,7 +336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Teamserver/overview.html" class="md-nav__link">
+      <a href="../Teamserver/overview.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -506,7 +392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Teamserver/api_reference/overview.html" class="md-nav__link">
+      <a href="../Teamserver/api_reference/overview.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -527,7 +413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Teamserver/api_reference/agent.html" class="md-nav__link">
+      <a href="../Teamserver/api_reference/agent.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -548,7 +434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Teamserver/api_reference/authentication.html" class="md-nav__link">
+      <a href="../Teamserver/api_reference/authentication.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -569,7 +455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Teamserver/api_reference/exploit.html" class="md-nav__link">
+      <a href="../Teamserver/api_reference/exploit.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -590,7 +476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Teamserver/api_reference/handler_func.html" class="md-nav__link">
+      <a href="../Teamserver/api_reference/handler_func.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -611,7 +497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Teamserver/api_reference/postexp.html" class="md-nav__link">
+      <a href="../Teamserver/api_reference/postexp.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -675,7 +561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Teamserver/Database/collections.html" class="md-nav__link">
+      <a href="../Teamserver/Database/collections.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -696,7 +582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Teamserver/Database/model_agents.html" class="md-nav__link">
+      <a href="../Teamserver/Database/model_agents.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -717,7 +603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Teamserver/Database/model_auth.html" class="md-nav__link">
+      <a href="../Teamserver/Database/model_auth.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -738,7 +624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Teamserver/Database/model_exploits.html" class="md-nav__link">
+      <a href="../Teamserver/Database/model_exploits.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -759,7 +645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Teamserver/Database/model_users.html" class="md-nav__link">
+      <a href="../Teamserver/Database/model_users.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -788,7 +674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Teamserver/global_variables.html" class="md-nav__link">
+      <a href="../Teamserver/global_variables.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -809,7 +695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Teamserver/misc_func.html" class="md-nav__link">
+      <a href="../Teamserver/misc_func.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -872,7 +758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Agent/overview.html" class="md-nav__link">
+      <a href="../Agent/overview.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -893,7 +779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Agent/agent.html" class="md-nav__link">
+      <a href="../Agent/agent.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -914,7 +800,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Agent/agent-connect-c2_api.html" class="md-nav__link">
+      <a href="../Agent/agent-connect-c2_api.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -935,7 +821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Agent/agent-connect-websocket.html" class="md-nav__link">
+      <a href="../Agent/agent-connect-websocket.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -956,7 +842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Agent/agent-exploit.html" class="md-nav__link">
+      <a href="../Agent/agent-exploit.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -977,7 +863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Agent/agent-post_exploit.html" class="md-nav__link">
+      <a href="../Agent/agent-post_exploit.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1002,17 +888,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -1026,7 +914,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Client
@@ -1040,7 +928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Client/commands.html" class="md-nav__link">
+      <a href="commands.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1096,7 +984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Client/GUI_Command_Classes/gui_commands.html" class="md-nav__link">
+      <a href="GUI_Command_Classes/gui_commands.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1160,7 +1048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Client/Command_Classes/command_auth.html" class="md-nav__link">
+      <a href="Command_Classes/command_auth.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1181,7 +1069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Client/Command_Classes/command_cmd.html" class="md-nav__link">
+      <a href="Command_Classes/command_cmd.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1202,7 +1090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Client/Command_Classes/command_exploit.html" class="md-nav__link">
+      <a href="Command_Classes/command_exploit.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1223,7 +1111,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Client/Command_Classes/command_handler_func.html" class="md-nav__link">
+      <a href="Command_Classes/command_handler_func.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1249,17 +1137,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4" checked>
         
           
           <label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
@@ -1273,7 +1163,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8_4">
             <span class="md-nav__icon md-icon"></span>
             Miscellaneous Functions
@@ -1284,10 +1174,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="Client/misc_func.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="misc_func.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1296,6 +1195,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1336,86 +1236,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#bamboo-client" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bamboo Client
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Bamboo Client">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#components" class="md-nav__link">
-    <span class="md-ellipsis">
-      Components
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bamboo-teamserver" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bamboo Teamserver
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Bamboo Teamserver">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#components_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Components
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bamboo-agent" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bamboo Agent
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Bamboo Agent">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#components_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Components
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1429,145 +1249,337 @@
                   
 
 
-<h1 id="bamboo-architecture">Bamboo Architecture</h1>
-<p>This section will provide an overview of the Bamboo Framework components and how they interact. The Bamboo Framework consists of 3 major entities: The Client, the Teamserver and the Agent. The architecture diagram below illustrates how the components in each of these entities interact with one another.</p>
-<p><img alt="architecture_diagram" src="img/architecture_diagram.png" /></p>
-<h2 id="bamboo-client">Bamboo Client</h2>
-<p>The Bamboo Client acts as the handler for the Bamboo Teamserver. Developed with <a href="https://www.python.org/downloads/release/python-3110/">Python 3.11</a>, the user can use either the command line (CLI) or graphical interface (GUI) to interact with the rest of the framework and perform actions such as:</p>
-<ul>
-<li>Run exploits on a target through the agent</li>
-<li>Add and modify exploits available on the Teamserver</li>
-<li>Use the team chat to message other Bamboo users on the same server</li>
-</ul>
-<p>The Bamboo Client can be run on most computers, but it is recommended to run it on the same host as the Teamserver, if only one Client is in use.</p>
-<h3 id="components">Components</h3>
+<h1 id="alden-functions-client">ALDEN FUNCTIONS - Client</h1>
+<h1 id="functions">Functions</h1>
+<p>The functions below shows all the miscellaneous functions that can be found in Bamboo Client.</p>
+<p><br></p>
+<h2 id="arguments">arguments</h2>
+<h3 id="description">Description</h3>
+<p>Mainly for the CLI, this function allows user to connect to Bamboo Teamserver using a different IP Address and/or ports from the default. With this function, users can add arguments when running.</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>python handler_cli.py -ip 192.168.39.7 -p 1122
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>python handler_cli.py --host 32.222.104.31 --port 9999
+</span></code></pre></div></td></tr></table></div>
+<h3 id="function-argument">Function Argument</h3>
+<p><strong>This function does not require any arguments</strong></p>
+<p><br></p>
+<h2 id="check_agent_status">check_agent_status</h2>
+<h3 id="description_1">Description</h3>
+<p>This function acts as a 'middleman' that when called, it will call the <a href="Command_Classes/command_auth.html#check_agent_status"><code>auth.check_agent_status</code></a> command to check for the specified Bamboo Agent status. It is used in commands that requires the Bamboo Agent to be 'alive', which includes <a href="commands.html#exp"><code>exp</code></a>, <a href="commands.html#cmd"><code>cmd</code></a>, and <a href="commands.html#postexp"><code>postexp [method]</code></a>.</p>
+<h3 id="function-argument_1">Function Argument</h3>
 <table>
 <thead>
 <tr>
-<th>Component</th>
+<th>Field</th>
+<th>Type</th>
 <th>Description</th>
-<th>Usage</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Commands</td>
-<td>Contain classes that directly calls the Bamboo Teamserver endpoints</td>
-<td>Bamboo Client command will call the functions within the classes</td>
+<td>username</td>
+<td>String</td>
+<td>Username of Bamboo Client</td>
 </tr>
 <tr>
-<td>GUI Component</td>
-<td>Contain all GUI only related folders and files</td>
-<td>Bamboo Client GUI was built with and rely on this component to interect with the Bamboo Teamserver</td>
+<td>agent_identifier</td>
+<td>String</td>
+<td>Bamboo Agent to query status</td>
 </tr>
 <tr>
-<td>Functions</td>
-<td>Contain miscellaneous functions that is called everywhere</td>
-<td>Bamboo Client relies on these function to be functional</td>
+<td>server_ip</td>
+<td>String</td>
+<td>IP Address of Bamboo Teamserver</td>
 </tr>
 <tr>
-<td>WebSocket Client</td>
-<td>Connects to server WebSocket</td>
-<td>Makes connection to the Bamboo Teamserver WebSocket and process broadcasted messages</td>
-</tr>
-<tr>
-<td>Post Exploitation Methods</td>
-<td>Contain preloaded post exploit tools</td>
-<td>Bamboo Clients can use these tools to furture extract valuable information</td>
-</tr>
-<tr>
-<td>Post Exploits</td>
-<td>Results of post exploit tools are stored here</td>
-<td>Bamboo Clients can view the results of the post exploitation tool</td>
+<td>jwt_token</td>
+<td>String</td>
+<td>JWT</td>
 </tr>
 </tbody>
 </table>
-<h2 id="bamboo-teamserver">Bamboo Teamserver</h2>
-<p>The Bamboo Teamserver, designed to run on a Kali Linux machine, is the central server that records and stores data and exploits, and acts as the communication bridge between the users and the Agents. It hosts both <a href="Teamserver/api_reference/overview.html">HTTPS RESTful APIs</a> and manages Websocket connections to handle communications with other components in the framework.</p>
-<p>The Teamserver is built in <a href="https://www.python.org/downloads/release/python-3110/">Python 3.11</a>, and uses <a href="https://flask.palletsprojects.com/en/3.0.x/">Flask</a> for HTTPS communication. <a href="https://www.mongodb.com/try/download/community">MongoDB</a> is used to store information such as user accounts, agents connected and their status, as well as exploits and their configurations.</p>
-<p>The Teamserver keeps track of Agents connected to it by storing their information in the database, and constantly receives heartbeat messages from them to ensure they are alive. The Teamserver then updates the status of the Agents, and mark agents that has not communicated the heartbeat back as 'dead', which gets cleaned from the database after a while.</p>
-<p>By default, the port used by the Teamserver is TCP 4444</p>
-<h3 id="components_1">Components</h3>
+<h3 id="argument-example">Argument Example</h3>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>check_agent_status(&quot;bambooUser&quot;, &quot;5zrire9a&quot;, &quot;127.0.0.1&quot;, jwt_token)
+</span></code></pre></div></td></tr></table></div>
+<p><br></p>
+<h2 id="login-gui_login">login &amp; gui_login</h2>
+<!-- LINK COMMAND -->
+
+<h3 id="description_2">Description</h3>
+<p>Both functions is used to login Bamboo Client users, but <code>login</code> is for CLI while <code>gui_login</code> is for GUI. The difference being <code>login</code> allows user input while <code>gui_login</code> does not require user input as it is in a window. Both functions calls the <code>auth.authentication</code> command.</p>
+<h3 id="function-argument_2">Function Argument</h3>
+<h4 id="login"><code>login</code></h4>
 <table>
 <thead>
 <tr>
-<th>Component</th>
+<th>Field</th>
+<th>Type</th>
 <th>Description</th>
-<th>Usage</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>APIs</td>
-<td>All endpoints that enable Bamboo to communicate</td>
-<td>Bamboo Client and Bamboo Agent pass information using the endpoints</td>
-</tr>
-<tr>
-<td>WebSocket API</td>
-<td>Enable Bamboo Client and Bamboo Agent to connect via WebSocket</td>
-<td>Allows WebSocket connection</td>
-</tr>
-<tr>
-<td>Database (MongoDB)</td>
-<td>Contains everything related to database (models, initialisation, and collections)</td>
-<td>Allows the Bamboo Teamserver to initialise and interact with the database easily</td>
-</tr>
-<tr>
-<td>Functions</td>
-<td>Contain miscellaneous functions that is called everywhere</td>
-<td>The Bamboo Teamserver relies on these function to be functional</td>
-</tr>
-<tr>
-<td>PEM Files</td>
-<td>Contains the certificate and key</td>
-<td>Allows the Bamboo Teamserver to run in HTTPS and WSS with SSL</td>
+<td>server_ip</td>
+<td>String</td>
+<td>IP Address of Bamboo Teamserver</td>
 </tr>
 </tbody>
 </table>
-<h2 id="bamboo-agent">Bamboo Agent</h2>
-<p>The Agent an executable program developed using the <a href="https://go.dev/">Go programming language</a>, and designed to run on a Windows 11 host. It resides in the target machine, and it is recommended for the Agent should be located in a user's desktop directory for the exploits made for the Bamboo Framework to work with the best effect.</p>
-<p>When the Agent is ran by either the command line or double clicking, it first collects information about the host and itself, such as preferred local and public IP addresses, hostname, and integrity level the agent is running at. The Bamboo agent then will repeatedly attempt to connect to the Bamboo Teamserver. Once it is connected, it will initialise a WebSocket connection with the Teamserver to allow it to receive instructions from the server.</p>
-<p>Once the agent is connected, it will perform two main actions:</p>
-<ol>
-<li>Listen to the Websocket connection for commmands send from the server</li>
-<li>Repeatedly send heartbeat messages to the Teamserver to indicate it is 'alive'</li>
-<li>To do this concurrently, the heartbeat function is ran in a goroutine for concurrency</li>
-</ol>
-<p><img alt="agent_flowchart" src="img/agent_flowchart.png" /></p>
-<h3 id="components_2">Components</h3>
+<h4 id="gui_login"><code>gui_login</code></h4>
 <table>
 <thead>
 <tr>
-<th>Component</th>
+<th>Field</th>
+<th>Type</th>
 <th>Description</th>
-<th>Usage</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>WebSocket Client</td>
-<td>Connects to Teamserver WebSocket</td>
-<td>Makes connection to the Bamboo Teamserver WebSocket and process commands sent through it</td>
+<td>username</td>
+<td>String</td>
+<td>Username that user input</td>
 </tr>
 <tr>
-<td>HTTPS</td>
-<td>HTTP RESTful communication</td>
-<td>Makes connection to the Bamboo Teamserver APIs to send information or request for data</td>
+<td>password</td>
+<td>String</td>
+<td>Password that user input</td>
 </tr>
 <tr>
-<td>Functions</td>
-<td>Miscellaneous functions</td>
-<td>Other commands the agent can perform</td>
+<td>server_ip</td>
+<td>String</td>
+<td>IP Address of Bamboo Teamserver</td>
+</tr>
+</tbody>
+</table>
+<h3 id="argument-example_1">Argument Example</h3>
+<h4 id="login_1"><code>login</code></h4>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>login(&quot;127.0.0.1&quot;)
+</span></code></pre></div></td></tr></table></div>
+<h4 id="gui_login_1"><code>gui_login</code></h4>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>gui_login(&quot;bambooUser&quot;, &quot;adnap&quot;, &quot;127.0.0.1&quot;)
+</span></code></pre></div></td></tr></table></div>
+<p><br></p>
+<h2 id="teamchatreaderwriter">TeamChatReaderWriter</h2>
+<h3 id="description_3">Description</h3>
+<p>TeamChatReaderWriter is a class that enables the command <a href="commands.html#chat"><code>chat</code></a> in the CLI. This class is not needed for Bamboo Client GUI.</p>
+<h4 id="brief-breakdown">Brief Breakdown</h4>
+<p>Bamboo Client user will run the <code>run_chat</code> function within to start the teamchat function. The teamchat function will run another function <code>reading_teamchat</code> in another process and will have an infinite <code>while</code> loop until the user <code>exit</code>. <code>reading_teamchat</code> is a function within the class that will read the new chat messages in the file and if there are new messages using the <code>read_new_message</code> function, it will be printed out for the user in real time. Users will also be able to send messages in the teamchat function using the function <code>teamchat</code> within the class, that will send the user's message to Bamboo Teamserver that will be broadcasted to all Bamboo Clients connected.</p>
+<h3 id="function-argument_3">Function Argument</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>username</td>
+<td>String</td>
+<td>Username that user input</td>
 </tr>
 <tr>
-<td>Post Exploit Functions</td>
-<td>Contain post exploit functions</td>
-<td>Agent runs post-exploitation or enumeration function on command</td>
+<td>jwt_token</td>
+<td>String</td>
+<td>JWT</td>
+</tr>
+</tbody>
+</table>
+<h3 id="argument-example_2">Argument Example</h3>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>run_chat(&quot;bambooUser&quot;, jwt_token)
+</span></code></pre></div></td></tr></table></div>
+<p><br></p>
+<h2 id="timestamp">timestamp</h2>
+<h3 id="description_4">Description</h3>
+<p>Widely used in Bamboo Client that helps generate timestamp of command input.</p>
+<h3 id="function-argument_4">Function Argument</h3>
+<p><strong>This function does not require any arguments</strong></p>
+<p><br></p>
+<h2 id="websock_conn-and-server_msg">websock_conn and server_msg</h2>
+<p>These functions are the core components for WebSocket communicates between Bamboo Client and Bamboo Teamserver.</p>
+<h3 id="description-websock_conn">Description - websock_conn</h3>
+<p>websock_conn is called when a Bamboo Client is starting up. After the Bamboo Client log ins successfully, this function will help the Bamboo Client to connect to the Bamboo Teamserver WebSocket connection to receive real time updates.</p>
+<h3 id="function-argument-websock_conn">Function Argument - websock_conn</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>username</td>
+<td>String</td>
+<td>Username that user input</td>
+</tr>
+</tbody>
+</table>
+<h3 id="argument-example-websock_conn">Argument Example - websock_conn</h3>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>websock_conn(&quot;bambooUser&quot;)
+</span></code></pre></div></td></tr></table></div>
+<h3 id="description-server_msg">Description - server_msg</h3>
+<p>As another core component of the WebSocket, this function enables Bamboo Client to receive and print out the messages to Bamboo Client users in real time. There are a total of 5 message type that the Bamboo Teamserver can send.</p>
+<table>
+<thead>
+<tr>
+<th>Message Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>serverMsg</td>
+<td>General server message</td>
+<td>When a new Bamboo Agent is registered, all Bamboo Clients will be notified in real time</td>
 </tr>
 <tr>
-<td>Exploit Methods</td>
-<td>Contain methods to execute exploits</td>
-<td>Agent receives and executes exploits on command</td>
+<td>chatMsg</td>
+<td>For teamchat function</td>
+<td>Teamchat messages from other Bamboo Client will be received and be appended into the message file</td>
+</tr>
+<tr>
+<td>keylogMsg</td>
+<td>For command <a href="commands.html#postexp"><code>postexp keylog</code></a> results</td>
+<td>Bamboo Client will generate a file for the keylogging results and put it in the keylog folder</td>
+</tr>
+<tr>
+<td>enumerateMsg</td>
+<td>For <a href="commands.html#enum">command <code>enum</code></a> results</td>
+<td>Bamboo Client will generate a file for the enumeration results and put it in the enum folder</td>
+</tr>
+<tr>
+<td>retrieveMsg</td>
+<td>For <a href="commands.html#postexp">command <code>postexp retrieve</code></a> results</td>
+<td>Bamboo Client will generate a folder for the registry hive files and put it under the retrieve folder</td>
+</tr>
+</tbody>
+</table>
+<h3 id="function-argument_5">Function Argument</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ws</td>
+<td>Object</td>
+<td>WebSocket connection</td>
+</tr>
+<tr>
+<td>message</td>
+<td>Dictionary</td>
+<td>Contains the message type and the message</td>
+</tr>
+</tbody>
+</table>
+<h3 id="argument-example_3">Argument Example</h3>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>server_msg(ws,
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a>    {
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a>        &quot;chatMsg&quot;: &quot;bambooUser: Hello&quot;
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4"></a>    })
+</span></code></pre></div></td></tr></table></div>
+<p><br></p>
+<h2 id="open_files">open_files</h2>
+<h3 id="description_5">Description</h3>
+<p>This file contains 3 functions, <code>open_keylog</code>, <code>open_enum</code>, and <code>open_retrieve</code>. These functions help enable the dropdown menu of the GUI to open the respective folder when clicked.</p>
+<h3 id="function-argument_6">Function Argument</h3>
+<p><strong>This function does not require any arguments</strong></p>
+<h2 id="resize">resize</h2>
+<h3 id="description_6">Description</h3>
+<p>This function enables the widgets and the text within the GUI to be resized when the window size changes</p>
+<h3 id="function-argument_7">Function Argument</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>app</td>
+<td>Object</td>
+<td>Tkinter Root</td>
+</tr>
+<tr>
+<td>ws_box</td>
+<td>Object</td>
+<td>Widget</td>
+</tr>
+<tr>
+<td>tabs</td>
+<td>Object</td>
+<td>Widget</td>
+</tr>
+</tbody>
+</table>
+<h3 id="argument-example_4">Argument Example</h3>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>resize(app, ws_box, tabs)
+</span></code></pre></div></td></tr></table></div>
+<h2 id="start_">start_*</h2>
+<!-- LINK EACH TO WATEVER EL SEND UNDER START_ADD OR SOMETHING LIKE THAT (SHE SAY UNDER CONSOLE?) THE DESCRIPTION WILL BE THR-->
+<!-- LINK COMMANDS -->
+
+<h3 id="description_7">Description</h3>
+<p><code>start_*</code> are a list of files that contains a class or a function. Each file is a crucial component of the GUI as it contains the pop up windows for certain commands and the logic for each.</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Class\Function</th>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>run_add</td>
+<td>start_add</td>
+<td><code>add</code>/dropdown menu</td>
+<td>Allows Bamboo Client user to configure and add a new exploit into the database and server</td>
+</tr>
+<tr>
+<td>run_exploit</td>
+<td>start_exploit</td>
+<td><code>exploit</code></td>
+<td>Allows Bamboo Client user to configure exploits and sent it over to Bamboo Teamserver to proceed</td>
+</tr>
+<tr>
+<td>run_homescreen</td>
+<td>run_homescreen</td>
+<td>Null</td>
+<td>Runs the homescreen for GUI on start up</td>
+</tr>
+<tr>
+<td>run_login</td>
+<td>run_login</td>
+<td>Null</td>
+<td>Runs the connection and login window for GUI for connection and authorisation</td>
+</tr>
+<tr>
+<td>run_modify</td>
+<td>start_modify</td>
+<td><code>modify</code>/dropdown menu</td>
+<td>Allows Bamboo Client user to modify an exploit in Bamboo Teamserver</td>
+</tr>
+<tr>
+<td>run_register</td>
+<td>register_user</td>
+<td><code>register</code>/dropdown menu</td>
+<td>Allows Bamboo Client user to register a new set of credentials</td>
 </tr>
 </tbody>
 </table>
@@ -1600,7 +1612,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="post_exploitation.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Post Exploitation">
+          <a href="Command_Classes/command_handler_func.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: handler_func">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1610,27 +1622,11 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Post Exploitation
+                handler_func
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="Teamserver/overview.html" class="md-footer__link md-footer__link--next" aria-label="Next: Overview">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Overview
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
@@ -1657,10 +1653,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["header.autohide", "navigation.footer", "navigation.path", "content.code.copy"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.footer", "navigation.path", "content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
     
   </body>
