@@ -256,7 +256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/recommended_setup.html" class="md-nav__link">
+      <a href="../../User_Guide/recommended_setup.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -312,7 +312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/installation/teamserver-setup.html" class="md-nav__link">
+      <a href="../../User_Guide/installation/teamserver-setup.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -333,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/installation/agent-setup.html" class="md-nav__link">
+      <a href="../../User_Guide/installation/agent-setup.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -362,7 +362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/using_bamboo_client.html" class="md-nav__link">
+      <a href="../../User_Guide/using_bamboo_client.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -418,7 +418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/commands/command_list.html" class="md-nav__link">
+      <a href="../../User_Guide/commands/command_list.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -439,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/commands/command_guide.html" class="md-nav__link">
+      <a href="../../User_Guide/commands/command_guide.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1846,6 +1846,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../global_variables.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Global Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../misc_func.html" class="md-nav__link">
         
   
@@ -2331,18 +2352,18 @@ The main application consists of 5 main widgets: the menu bar, the display frame
 <hr />
 <h2 id="display-frame">Display Frame</h2>
 <p><img alt="defaultdf" src="../../img/GUI_images/defaultdf.png" /></p>
-<p>The display frame is made using the CTk.CTkFrame() widget, and is used to display information using 'tables' generated with CTk.CTkLabel() widgets.</p>
+<p>The display frame is made using the CTk.CTkScrollableFrame() widget, and is used to display information using 'tables' generated with CTk.CTkLabel() widgets.</p>
 <p>Upon launching the main application, the default homescreen for the display frame has the Bamboo logo and text telling the user to click on the main menu to display items there.</p>
 <p>Depending on the menu option clicked, the display frame can either display a table of agents, users or exploits. To see the logic for this, refer to the above section.</p>
 <hr />
 <h2 id="websocket-logs">Websocket Logs</h2>
 <p><img alt="wslogs" src="../../img/GUI_images/wslogs.png" /></p>
 <p>The websocket logs is a CTk.CTkTextbox() widget, and contains messages and/or logs from the Bamboo Teamserver, including messages from the teamchat, as well as any agent connection. Its class is defined in /handler/gui/widgets/ws_textBox.py.</p>
-<p>It checks for messages from the Bamboo Teamserver using a websocket process that runs alongside the main process using multiprocessing, and a recursive function that calls itself every 1000ms. This function will check if a message has been received, and will remove the ANSI coding before inserting it into the websocket logs.</p>
+<p>It checks for messages from the Bamboo Teamserver using a websocket process that runs alongside the main process using multiprocessing, and a recursive function that calls itself every 1000ms. This function will check if a message has been received, and will remove the ANSI encoding before inserting it into the websocket logs.</p>
 <hr />
 <h2 id="tabs">Tabs</h2>
 <p><img alt="tabs" src="../../img/GUI_images/tabs.png" /></p>
-<p>At the bottom of the widget is a CTk.CTkTabview() widget, which by default contains 2 tabs, TEAMCHAT and MAIN CONSOLE. It can have up to 7 additional tabs for running agents. The class is defined in /handler/gui/widgets/tabs.py.</p>
+<p>At the bottom of the widget is a CTk.CTkTabview() widget, which by default contains 2 tabs, TEAMCHAT and CONSOLE. It can have up to 7 additional tabs for running agents. The class is defined in /handler/gui/widgets/tabs.py.</p>
 <h3 id="teamchat">Teamchat</h3>
 <p>The teamchat contains messages from other users. It will periodically check for new messages in the teamchat.txt file using polling. If there are any new messages, it will remove the ANSI encoding and insert the message into the console_output CTk.CTkTextbox() widget. </p>
 <p>Users can also send messages through this tab. Users can type their messages in the CTk.CTkEntry() widget and press enter to send a chat message. </p>
@@ -2394,9 +2415,9 @@ The main application consists of 5 main widgets: the menu bar, the display frame
 <p>Opens a new CTk.CTkToplevel window where users can modify existing exploits. This toplevel window is defined in /handler/gui/func/run_modify.py.</p>
 <p>Modifying exploits must follow the same rules as adding an exploit, such as files must be .exe, etc.</p>
 <h3 id="agent-identifier-tabs">Agent Identifier Tabs</h3>
-<p>Agent identifier tabs can be opened using the <code>use [agent_identifier]</code> command in MAIN CONSOLE. Only 7 agent identifier tabs can be opened at any one time on a client.</p>
+<p>Agent identifier tabs can be opened using the <code>use [agent_identifier]</code> command in CONSOLE. Only 7 agent identifier tabs can be opened at any one time on a client.</p>
 <p><img alt="agent_id_tabs" src="../../img/GUI_images/agent_id_tabs.png" /></p>
-<p>Clicking on an agent identifier tab will show three buttons: Start Enumerating, Toggle Keylog and Get Registry Hives. These buttons are only shown when the current tab is an agent identifier tab, and will not appear in TEAMCHAT or MAIN CONSOLE. As there is no tab-changed event for CTk, this is done using a recursive function that checks for the current tab every 100ms and hides or shows the buttons accordingly.</p>
+<p>Clicking on an agent identifier tab will show three buttons: Start Enumerating, Toggle Keylog and Get Registry Hives. These buttons are only shown when the current tab is an agent identifier tab, and will not appear in TEAMCHAT or CONSOLE. As there is no tab-changed event for CTk, this is done using a recursive function that checks for the current tab every 100ms and hides or shows the buttons accordingly.</p>
 <p>The three buttons, as well as the commands that can only be used when an agent is in use, can be found below. </p>
 <h4 id="stop">stop</h4>
 <p>Usage: <code>stop</code></p>
@@ -2409,7 +2430,7 @@ The main application consists of 5 main widgets: the menu bar, the display frame
 <p>Opens a new CTk.CTkToplevel window where users can select the exploit to run. This toplevel window is defined in /handler/gui/func/run_exploit.py.</p>
 <h4 id="cmd">cmd</h4>
 <p>Usage: <code>cmd</code></p>
-<p>Opens a command prompt for the current agent.</p>
+<p>Enables users to send Windows commands to the current agent.</p>
 <h4 id="enum-start-enumerating">enum / Start Enumerating</h4>
 <p>Usage: <code>enum</code> or click on Start Enumerating</p>
 <p>Enumerates on the victim machine. Files can be found under /handler/postexp/enumerate.</p>

@@ -256,7 +256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/recommended_setup.html" class="md-nav__link">
+      <a href="../../User_Guide/recommended_setup.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -312,7 +312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/installation/teamserver-setup.html" class="md-nav__link">
+      <a href="../../User_Guide/installation/teamserver-setup.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -333,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/installation/agent-setup.html" class="md-nav__link">
+      <a href="../../User_Guide/installation/agent-setup.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -362,7 +362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/using_bamboo_client.html" class="md-nav__link">
+      <a href="../../User_Guide/using_bamboo_client.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -418,7 +418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/commands/command_list.html" class="md-nav__link">
+      <a href="../../User_Guide/commands/command_list.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -439,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/commands/command_guide.html" class="md-nav__link">
+      <a href="../../User_Guide/commands/command_guide.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2320,6 +2320,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Client/global_variables.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Global Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Client/misc_func.html" class="md-nav__link">
         
   
@@ -3312,7 +3333,7 @@
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>POST /handler_func/handler/use_agent
 </span></code></pre></div>
 <h3 id="description_1">Description</h3>
-<p>This endpoint is called when a Bamboo Client user wants to start using a Bamboo Agent to interact with using the command <a href="../../Client/commands.html#use"><code>use [agent]</code></a>. Using the model <a href="../Database/model_agents.html#use_agent">use_agent</a>, the Bamboo Teamserver will be able to identify if the Bamboo Agent specified exist. If it does, the data of that Bamboo Agent will be return.</p>
+<p>This endpoint is called when a Bamboo Client user wants to start using a Bamboo Agent to interact with using the command <a href="../../Client/commands.html#use"><code>use [agent]</code></a>. Using the model <a href="../Database/model_agents.html#use_agent">use_agent</a>, the Bamboo Teamserver will be able to identify if the Bamboo Agent specified exist. If it does, the data of that Bamboo Agent will be returned.</p>
 <h3 id="request-schema_1">Request schema</h3>
 <h4>Request body</h4>
 
@@ -3384,7 +3405,7 @@
 <div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>POST /handler_func/handler/stop_agent
 </span></code></pre></div>
 <h3 id="description_2">Description</h3>
-<p>This endpoint is called when a Bamboo Client user wants to stop using a Bamboo Agent using the command <a href="../../Client/commands.html#stop"><code>stop</code></a>. It is for logging purposes</p>
+<p>This endpoint is called when a Bamboo Client user wants to stop using a Bamboo Agent using the command <a href="../../Client/commands.html#stop"><code>stop</code></a>. It is for logging purposes.</p>
 <h3 id="request-schema_2">Request schema</h3>
 <h4>Request body</h4>
 
@@ -3451,7 +3472,7 @@
 <div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>POST /handler_func/handler/remove_agent
 </span></code></pre></div>
 <h3 id="description_3">Description</h3>
-<p>This endpoint is called when a Bamboo Client user wants to remove a Bamboo Agent from the Bamboo Teamserver using the <a href="../../Client/commands.html#delete"><code>delete [agent]</code></a>. Using the model <a href="../Database/model_agents.html#remove_agent">remove_agent</a>, the Bamboo Teamserver will delete all instances of the specified Bamboo Agent if it exist. Additionally, if the Bamboo Agent is still running, the Bamboo Teamserver will send a <a href="../../Client/commands.html#kill"><code>kill</code></a> command to stop the Bamboo Agent.</p>
+<p>This endpoint is called when a Bamboo Client user wants to remove a Bamboo Agent from the Bamboo Teamserver using the <a href="../../Client/commands.html#kill"><code>kill [agent]</code></a>. Using the model <a href="../Database/model_agents.html#remove_agent">remove_agent</a>, the Bamboo Teamserver will delete all instances of the specified Bamboo Agent if it exist. Additionally, if the Bamboo Agent is still running, the Bamboo Teamserver will send a <a href="../../Client/commands.html#kill"><code>kill</code></a> command to stop the Bamboo Agent.</p>
 <h3 id="request-schema_3">Request schema</h3>
 <h4>Request body</h4>
 
@@ -3751,7 +3772,7 @@
 <div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>POST /handler_func/handler/delete_user
 </span></code></pre></div>
 <h3 id="description_7">Description</h3>
-<p>This endpoint is called when a Bamboo Client user wants to remove a user from the Bamboo Teamserver using the <a href="../../Client/commands.html#remove"><code>remove [username]</code></a>. Using the model <a href="../Database/model_users.html#delete_user">delete_user</a>, the Bamboo Teamserver will be able to delete the specified user.</p>
+<p>This endpoint is called when a Bamboo Client user wants to remove a user from the Bamboo Teamserver using the <a href="../../Client/commands.html#remove"><code>remove [username]</code></a> command. Using the model <a href="../Database/model_users.html#delete_user">delete_user</a>, the Bamboo Teamserver will be able to delete the specified user.</p>
 <h3 id="request-schema_7">Request schema</h3>
 <h4>Request body</h4>
 

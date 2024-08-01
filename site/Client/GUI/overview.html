@@ -256,7 +256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/recommended_setup.html" class="md-nav__link">
+      <a href="../../User_Guide/recommended_setup.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -312,7 +312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/installation/teamserver-setup.html" class="md-nav__link">
+      <a href="../../User_Guide/installation/teamserver-setup.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -333,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/installation/agent-setup.html" class="md-nav__link">
+      <a href="../../User_Guide/installation/agent-setup.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -362,7 +362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/using_bamboo_client.html" class="md-nav__link">
+      <a href="../../User_Guide/using_bamboo_client.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -418,7 +418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/commands/command_list.html" class="md-nav__link">
+      <a href="../../User_Guide/commands/command_list.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -439,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/commands/command_guide.html" class="md-nav__link">
+      <a href="../../User_Guide/commands/command_guide.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1495,6 +1495,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../global_variables.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Global Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../misc_func.html" class="md-nav__link">
         
   
@@ -1612,7 +1633,7 @@
 <h1 id="overview">Overview</h1>
 <p>This section will provide an overview of the graphical user interface (GUI) Client that users can opt to use instead of the command line interface.</p>
 <p>The GUI was developed in Python 3.11, using CustomTkinter (CTk), the UI-library made by Tom Schimansky, as well as Tkinter, the standard Python interface to the Tk GUI toolkit.</p>
-<p>When handler_gui.py is first run, users will be greeted by the server connect &amp; login window, which is a separate CTk main loop from the main application. This is done by running login.py, where this window is initialised, in a subprocess using the subprocess module.</p>
+<p>When handler_gui.py is first run, users will be greeted by the server connect and login window, which is a separate CTk main loop from the main application. This is done by running login.py, where this window is initialised, in a subprocess using the subprocess module.</p>
 <p>Users will first be prompted to connect to the server. Once connected, the window will hide the frame containing the inputs for server connection, and make the frame containing the inputs for user login visible. If the user has successfully logged on before, the username section will be filled in from info.txt.</p>
 <p>A window containing the Bamboo logo and a line of trivia will then appear before destroying itself after 2.5 seconds. Similar to the previous window, this is also a separate CTk main loop from the main application, and is run in a subprocess with the subprocess module. Once this window is destroyed, the main application will appear.</p>
 <p>The following section will explain more about the main application, as well as the individual widgets.</p>

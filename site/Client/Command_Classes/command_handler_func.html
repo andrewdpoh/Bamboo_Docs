@@ -256,7 +256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/recommended_setup.html" class="md-nav__link">
+      <a href="../../User_Guide/recommended_setup.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -312,7 +312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/installation/teamserver-setup.html" class="md-nav__link">
+      <a href="../../User_Guide/installation/teamserver-setup.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -333,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/installation/agent-setup.html" class="md-nav__link">
+      <a href="../../User_Guide/installation/agent-setup.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -362,7 +362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/using_bamboo_client.html" class="md-nav__link">
+      <a href="../../User_Guide/using_bamboo_client.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -418,7 +418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/commands/command_list.html" class="md-nav__link">
+      <a href="../../User_Guide/commands/command_list.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -439,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/commands/command_guide.html" class="md-nav__link">
+      <a href="../../User_Guide/commands/command_guide.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2005,6 +2005,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../global_variables.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Global Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../misc_func.html" class="md-nav__link">
         
   
@@ -2659,7 +2680,7 @@
 </tbody>
 </table>
 <h2 id="use_agent">use_agent</h2>
-<p>Obtains agent information and caches it for future use.</p>
+<p>Obtains agent information and caches it for future use</p>
 <h3 id="endpoint_1">Endpoint</h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>POST /handler_func/handler/use_agent
 </span></code></pre></div>
@@ -2713,7 +2734,7 @@
 </tbody>
 </table>
 <h2 id="stop_agent">stop_agent</h2>
-<p>Clears the cache and stops using the specified agent.</p>
+<p>Clears the cache and stops using the specified agent</p>
 <h3 id="endpoint_2">Endpoint</h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>POST /handler_func/handler/stop_agent
 </span></code></pre></div>
@@ -2767,12 +2788,12 @@
 </tbody>
 </table>
 <h2 id="remove_agent">remove_agent</h2>
-<p>Removes an agent from the database.</p>
+<p>Removes an agent from the database</p>
 <h3 id="endpoint_3">Endpoint</h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>POST /handler_func/handler/remove_agent
 </span></code></pre></div>
 <h3 id="description_3">Description</h3>
-<p>This function sends a request to remove an agent from the database and handles success or failure responses. If the agent is still running, it will sent server will send a kill command to stop the agent from running.</p>
+<p>This function sends a request to remove an agent from the database and handles success or failure responses. If the agent is still running, it will sent server will send a <code>kill</code> command to stop the agent from running.</p>
 <h3 id="function-argument_3">Function Argument</h3>
 <table>
 <thead>
@@ -2821,7 +2842,7 @@
 </tbody>
 </table>
 <h2 id="info_status">info_status</h2>
-<p>Checks the status of a specific agent.</p>
+<p>Checks the status of a specific agent</p>
 <h3 id="endpoint_4">Endpoint</h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>POST /handler_func/handler/info_status
 </span></code></pre></div>
@@ -2875,7 +2896,7 @@
 </tbody>
 </table>
 <h2 id="view_users">view_users</h2>
-<p>Views and displays all users in the database.</p>
+<p>Views and displays all users in the database</p>
 <h3 id="endpoint_5">Endpoint</h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>POST /handler_func/handler/view_users
 </span></code></pre></div>
@@ -2924,7 +2945,7 @@
 </tbody>
 </table>
 <h2 id="register_user">register_user</h2>
-<p>Registers a new user in the database.</p>
+<p>Registers a new user in the database</p>
 <h3 id="endpoint_6">Endpoint</h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>POST /handler_func/handler/register_user
 </span></code></pre></div>
@@ -2983,7 +3004,7 @@
 </tbody>
 </table>
 <h2 id="delete_user">delete_user</h2>
-<p>Deletes a user from the database.</p>
+<p>Deletes a user from the database</p>
 <h3 id="endpoint_7">Endpoint</h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>POST /handler_func/handler/delete_user
 </span></code></pre></div>
