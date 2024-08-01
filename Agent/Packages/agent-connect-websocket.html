@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="http://Bamboo_Docs/Agent/agent-post_exploit.html">
+        <link rel="canonical" href="http://Bamboo_Docs/Agent/Packages/agent-connect-websocket.html">
       
       
-        <link rel="prev" href="agent-exploit.html">
+        <link rel="prev" href="agent-connect-c2_api.html">
       
       
-        <link rel="next" href="../Client/commands.html">
+        <link rel="next" href="agent-exploit.html">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
     
     
       
-        <title>agent/post-exploit - Bamboo Docs</title>
+        <title>agent/connect/websocket - Bamboo Docs</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#agentpost-exploit" class="md-skip">
+        <a href="#agentconnectwebsocket" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="Bamboo Docs" class="md-header__button md-logo" aria-label="Bamboo Docs" data-md-component="logo">
+    <a href="../../index.html" title="Bamboo Docs" class="md-header__button md-logo" aria-label="Bamboo Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              agent/post-exploit
+              agent/connect/websocket
             
           </span>
         </div>
@@ -185,7 +185,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="Bamboo Docs" class="md-nav__button md-logo" aria-label="Bamboo Docs" data-md-component="logo">
+    <a href="../../index.html" title="Bamboo Docs" class="md-nav__button md-logo" aria-label="Bamboo Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -203,7 +203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="../../index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -223,67 +223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../exploits.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exploits
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../evasion.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Evasion
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../post_exploitation.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Post Exploitation
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../bamboo_architecture.html" class="md-nav__link">
+      <a href="../../bamboo_architecture.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -310,10 +250,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -324,8 +264,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Teamserver
           </label>
@@ -338,7 +278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Teamserver/overview.html" class="md-nav__link">
+      <a href="../../Teamserver/overview.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -366,10 +306,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
-          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -380,8 +320,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             API Reference
           </label>
@@ -394,7 +334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Teamserver/api_reference/overview.html" class="md-nav__link">
+      <a href="../../Teamserver/api_reference/overview.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -415,7 +355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Teamserver/api_reference/agent.html" class="md-nav__link">
+      <a href="../../Teamserver/api_reference/agent.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -436,7 +376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Teamserver/api_reference/authentication.html" class="md-nav__link">
+      <a href="../../Teamserver/api_reference/authentication.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -457,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Teamserver/api_reference/exploit.html" class="md-nav__link">
+      <a href="../../Teamserver/api_reference/exploit.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -478,7 +418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Teamserver/api_reference/handler_func.html" class="md-nav__link">
+      <a href="../../Teamserver/api_reference/handler_func.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -499,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Teamserver/api_reference/postexp.html" class="md-nav__link">
+      <a href="../../Teamserver/api_reference/postexp.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -535,10 +475,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
-          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -549,8 +489,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             Database
           </label>
@@ -563,7 +503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Teamserver/Database/collections.html" class="md-nav__link">
+      <a href="../../Teamserver/Database/collections.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -584,7 +524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Teamserver/Database/model_agents.html" class="md-nav__link">
+      <a href="../../Teamserver/Database/model_agents.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -605,7 +545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Teamserver/Database/model_auth.html" class="md-nav__link">
+      <a href="../../Teamserver/Database/model_auth.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -626,7 +566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Teamserver/Database/model_exploits.html" class="md-nav__link">
+      <a href="../../Teamserver/Database/model_exploits.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -647,7 +587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Teamserver/Database/model_users.html" class="md-nav__link">
+      <a href="../../Teamserver/Database/model_users.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -676,7 +616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Teamserver/global_variables.html" class="md-nav__link">
+      <a href="../../Teamserver/global_variables.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -697,7 +637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Teamserver/misc_func.html" class="md-nav__link">
+      <a href="../../Teamserver/misc_func.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -734,10 +674,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -748,8 +688,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_7">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Agent
           </label>
@@ -762,7 +702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="overview.html" class="md-nav__link">
+      <a href="../overview.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -775,6 +715,43 @@
   
 
               
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Packages
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Packages
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -822,10 +799,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="agent-connect-websocket.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    agent/connect/websocket
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="agent-connect-websocket.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -834,6 +831,68 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#websocket-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebSocket functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WebSocket functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#send_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Send_data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#receive_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Receive_data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#init_conn" class="md-nav__link">
+    <span class="md-ellipsis">
+      Init_conn
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -864,30 +923,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    agent/post-exploit
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="agent-post_exploit.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="agent-post_exploit.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -896,142 +935,13 @@
   
 
       </a>
-      
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#enumeration-function" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enumeration function
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Enumeration function">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#powershellcsv" class="md-nav__link">
-    <span class="md-ellipsis">
-      powershellCsv
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enumeratesystem" class="md-nav__link">
-    <span class="md-ellipsis">
-      EnumerateSystem
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#keylogger" class="md-nav__link">
-    <span class="md-ellipsis">
-      Keylogger
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Keylogger">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hookkeylog" class="md-nav__link">
-    <span class="md-ellipsis">
-      hookKeylog
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#runkeylogger" class="md-nav__link">
-    <span class="md-ellipsis">
-      RunKeylogger
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#retrieve-registry-hives-sssretrieve" class="md-nav__link">
-    <span class="md-ellipsis">
-      Retrieve Registry Hives (sssretrieve)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Retrieve Registry Hives (sssretrieve)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#getlatestshadowcopy" class="md-nav__link">
-    <span class="md-ellipsis">
-      getLatestShadowCopy
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#readfile" class="md-nav__link">
-    <span class="md-ellipsis">
-      readFile
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#readfilesfromshadowcopy" class="md-nav__link">
-    <span class="md-ellipsis">
-      readFilesFromShadowCopy
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sssretriver" class="md-nav__link">
-    <span class="md-ellipsis">
-      SSSRetriver
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -1059,10 +969,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1073,8 +983,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Client
           </label>
@@ -1087,7 +997,28 @@
   
   
     <li class="md-nav__item">
-      <a href="../Client/commands.html" class="md-nav__link">
+      <a href="../../Client/overview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Client/commands.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1115,24 +1046,24 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
         
           
-          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
-    GUI Command Classes
+    Command Classes
   </span>
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
             <span class="md-nav__icon md-icon"></span>
-            GUI Command Classes
+            Command Classes
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1143,11 +1074,74 @@
   
   
     <li class="md-nav__item">
-      <a href="../Client/GUI_Command_Classes/gui_commands.html" class="md-nav__link">
+      <a href="../../Client/Command_Classes/command_auth.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    GUI Commands
+    auth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Client/Command_Classes/command_cmd.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Client/Command_Classes/command_exploit.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    exploits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Client/Command_Classes/command_handler_func.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    handler_func
   </span>
   
 
@@ -1179,24 +1173,24 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
         
           
-          <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
-    Command Classes
+    GUI Command Classes
   </span>
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
             <span class="md-nav__icon md-icon"></span>
-            Command Classes
+            GUI Command Classes
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1207,74 +1201,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../Client/Command_Classes/command_auth.html" class="md-nav__link">
+      <a href="../../Client/GUI_Command_Classes/gui_commands.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    auth
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Client/Command_Classes/command_cmd.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    commands
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Client/Command_Classes/command_exploit.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    exploits
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Client/Command_Classes/command_handler_func.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    handler_func
+    GUI Commands
   </span>
   
 
@@ -1299,7 +1230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Client/misc_func.html" class="md-nav__link">
+      <a href="../../Client/misc_func.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1316,6 +1247,66 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exploits.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exploits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../evasion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evasion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../post_exploitation.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Post Exploitation
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1347,112 +1338,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#enumeration-function" class="md-nav__link">
+  <a href="#websocket-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      Enumeration function
+      WebSocket functions
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Enumeration function">
+    <nav class="md-nav" aria-label="WebSocket functions">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#powershellcsv" class="md-nav__link">
+  <a href="#send_data" class="md-nav__link">
     <span class="md-ellipsis">
-      powershellCsv
+      Send_data
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#enumeratesystem" class="md-nav__link">
+  <a href="#receive_data" class="md-nav__link">
     <span class="md-ellipsis">
-      EnumerateSystem
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#keylogger" class="md-nav__link">
-    <span class="md-ellipsis">
-      Keylogger
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Keylogger">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hookkeylog" class="md-nav__link">
-    <span class="md-ellipsis">
-      hookKeylog
+      Receive_data
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#runkeylogger" class="md-nav__link">
+  <a href="#init_conn" class="md-nav__link">
     <span class="md-ellipsis">
-      RunKeylogger
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#retrieve-registry-hives-sssretrieve" class="md-nav__link">
-    <span class="md-ellipsis">
-      Retrieve Registry Hives (sssretrieve)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Retrieve Registry Hives (sssretrieve)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#getlatestshadowcopy" class="md-nav__link">
-    <span class="md-ellipsis">
-      getLatestShadowCopy
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#readfile" class="md-nav__link">
-    <span class="md-ellipsis">
-      readFile
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#readfilesfromshadowcopy" class="md-nav__link">
-    <span class="md-ellipsis">
-      readFilesFromShadowCopy
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sssretriver" class="md-nav__link">
-    <span class="md-ellipsis">
-      SSSRetriver
+      Init_conn
     </span>
   </a>
   
@@ -1478,11 +1394,11 @@
                   
 
 
-<h1 id="agentpost-exploit">agent/post-exploit</h1>
-<p>Package for the functions to perform system enumeration and post exploitation. For more details on how they work, refer to <a href="../post_exploitation.html">post-exploitation</a>.</p>
-<h2 id="enumeration-function">Enumeration function</h2>
-<h3 id="powershellcsv">powershellCsv</h3>
-<p>Run a command in powershell</p>
+<h1 id="agentconnectwebsocket">agent/connect/websocket</h1>
+<p>The package that exports functions used to connect and communicate with the Teamserver over WebSocket</p>
+<h2 id="websocket-functions">WebSocket functions</h2>
+<h3 id="send_data">Send_data</h3>
+<p>Send data through a established Websocket connection</p>
 <p><strong>Parameters</strong></p>
 <table>
 <thead>
@@ -1494,9 +1410,14 @@
 </thead>
 <tbody>
 <tr>
-<td>command</td>
-<td>string</td>
-<td>Command to run</td>
+<td>conn</td>
+<td>*websocket.Conn</td>
+<td>Pointer to Websocket connection object</td>
+</tr>
+<tr>
+<td>message</td>
+<td>map[string]any</td>
+<td>Message to send</td>
 </tr>
 </tbody>
 </table>
@@ -1510,46 +1431,13 @@
 </thead>
 <tbody>
 <tr>
-<td>string</td>
-<td>Output of command</td>
-</tr>
-<tr>
 <td>error</td>
-<td>Error from command if any</td>
+<td>Error from Websocket if any</td>
 </tr>
 </tbody>
 </table>
-<h3 id="enumeratesystem">EnumerateSystem</h3>
-<p>Uses powershellCsv to run specific commands for enumerating the host system  </p>
-<ul>
-<li>System Information  </li>
-<li>Updates installed  </li>
-<li>Applications installed</li>
-</ul>
-<p><strong>Parameters</strong></p>
-<p>None</p>
-<p><strong>Return</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>map[string]string</td>
-<td>Result of command</td>
-</tr>
-<tr>
-<td>error</td>
-<td>Error from command if any</td>
-</tr>
-</tbody>
-</table>
-<h2 id="keylogger">Keylogger</h2>
-<h3 id="hookkeylog">hookKeylog</h3>
-<p>Listens and records keys entered</p>
+<h3 id="receive_data">Receive_data</h3>
+<p>Listen to messages from Teamserver over Websocket</p>
 <p><strong>Parameters</strong></p>
 <table>
 <thead>
@@ -1561,16 +1449,33 @@
 </thead>
 <tbody>
 <tr>
-<td>evChan</td>
-<td>chan hook.Event</td>
-<td>Listens to keyboard activity</td>
+<td>conn</td>
+<td>*websocket.Conn</td>
+<td>Pointer to Websocket connection object</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Return</strong></p>
-<p>None</p>
-<h3 id="runkeylogger">RunKeylogger</h3>
-<p>Starts the keylogging function, and listens for a stop command to stop and transfer logged keys</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>message</td>
+<td>map[string]any</td>
+</tr>
+<tr>
+<td>error</td>
+<td>Error from Websocket if any</td>
+</tr>
+</tbody>
+</table>
+<h3 id="init_conn">Init_conn</h3>
+<p>Initialize Websocket connection with the Teamserver</p>
 <p><strong>Parameters</strong></p>
 <table>
 <thead>
@@ -1582,59 +1487,14 @@
 </thead>
 <tbody>
 <tr>
-<td>keystrokesChan</td>
-<td>chan string</td>
-<td>Channel out of function which returns keys logged</td>
-</tr>
-<tr>
-<td>stopChan</td>
-<td>chan bool</td>
-<td>Channel into function to instruct it to stop</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Return</strong></p>
-<p>None</p>
-<h2 id="retrieve-registry-hives-sssretrieve">Retrieve Registry Hives (sssretrieve)</h2>
-<h3 id="getlatestshadowcopy">getLatestShadowCopy</h3>
-<p>Get the latest shadow copy volume</p>
-<p><strong>Parameters</strong></p>
-<p>None</p>
-<p><strong>Return</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
+<td>c2_url</td>
 <td>string</td>
-<td>The latest shadow copy volume</td>
+<td>Address of the server in format ip:port</td>
 </tr>
 <tr>
-<td>error</td>
-<td>Error from command if any</td>
-</tr>
-</tbody>
-</table>
-<h3 id="readfile">readFile</h3>
-<p>Read the contents of a file</p>
-<p><strong>Parameters</strong></p>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>sourceFile</td>
+<td>agent_id</td>
 <td>string</td>
-<td>Path of file to read</td>
+<td>Agent identifier issued by Teamserver</td>
 </tr>
 </tbody>
 </table>
@@ -1648,73 +1508,12 @@
 </thead>
 <tbody>
 <tr>
-<td>[]byte</td>
-<td>Contents of file</td>
+<td>conn</td>
+<td>*websocket.Conn</td>
 </tr>
 <tr>
 <td>error</td>
-<td>Error created if any</td>
-</tr>
-</tbody>
-</table>
-<h3 id="readfilesfromshadowcopy">readFilesFromShadowCopy</h3>
-<p>Read the contents of the registry hives (sam, security, system) given the shadow copy </p>
-<p><strong>Parameters</strong></p>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>shadowCopyVolume</td>
-<td>string</td>
-<td>Location of latest shadow copy</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Return</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>map[string][]byte</td>
-<td>Contents of files</td>
-</tr>
-<tr>
-<td>error</td>
-<td>Error created if any</td>
-</tr>
-</tbody>
-</table>
-<h3 id="sssretriver">SSSRetriver</h3>
-<p>Runs the registry hive retriever function, by using the functions above </p>
-<p><strong>Parameters</strong></p>
-<p>None</p>
-<p><strong>Return</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>map[string][]byte</td>
-<td>Contents of files</td>
-</tr>
-<tr>
-<td>error</td>
-<td>Error created if any</td>
+<td>Error from Websocket if any</td>
 </tr>
 </tbody>
 </table>
@@ -1747,7 +1546,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="agent-exploit.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: agent/exploit">
+          <a href="agent-connect-c2_api.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: agent/connect/c2_api">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1757,20 +1556,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                agent/exploit
+                agent/connect/c2_api
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Client/commands.html" class="md-footer__link md-footer__link--next" aria-label="Next: Commands">
+          <a href="agent-exploit.html" class="md-footer__link md-footer__link--next" aria-label="Next: agent/exploit">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Commands
+                agent/exploit
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1804,10 +1603,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.footer", "navigation.path", "content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "navigation.footer", "navigation.path", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
     
   </body>

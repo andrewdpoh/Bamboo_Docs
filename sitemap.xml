@@ -26,32 +26,32 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://Bamboo_Docs/Agent/agent-connect-c2_api.html</loc>
-         <lastmod>2024-08-01</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>http://Bamboo_Docs/Agent/agent-connect-websocket.html</loc>
-         <lastmod>2024-08-01</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>http://Bamboo_Docs/Agent/agent-exploit.html</loc>
-         <lastmod>2024-08-01</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>http://Bamboo_Docs/Agent/agent-post_exploit.html</loc>
-         <lastmod>2024-08-01</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>http://Bamboo_Docs/Agent/agent.html</loc>
-         <lastmod>2024-08-01</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>http://Bamboo_Docs/Agent/overview.html</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://Bamboo_Docs/Agent/Packages/agent-connect-c2_api.html</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://Bamboo_Docs/Agent/Packages/agent-connect-websocket.html</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://Bamboo_Docs/Agent/Packages/agent-exploit.html</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://Bamboo_Docs/Agent/Packages/agent-post_exploit.html</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://Bamboo_Docs/Agent/Packages/agent.html</loc>
          <lastmod>2024-08-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
