@@ -70,11 +70,11 @@ Clicking on either of the 3 will open up the default file explorer in the /handl
 
 ### Help
 
-Help has 3 dropdown options: Help, User Guide and Technical Doc.
+Help has 2 dropdown options: Help and Technical Doc.
 
 Clicking on Help will open a new Toplevel window containing the commands.
 
-Clicking on User Guide or Technical Doc will open the respective document in either the default document viewer or browser.
+Clicking on Technical Doc will open the document in the browser.
 
 ---
 
