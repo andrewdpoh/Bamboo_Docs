@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="http://Bamboo_Docs/User%20Guide/prerequisites.html">
+        <link rel="canonical" href="http://Bamboo_Docs/User%20Guide/recommended_setup.html">
       
       
         <link rel="prev" href="../index.html">
@@ -278,7 +278,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="prerequisites.html" class="md-nav__link md-nav__link--active">
+      <a href="recommended_setup.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1685,30 +1685,19 @@
 <p>As Bamboo is a penetration testing C2 Framework, it will require multiple systems to be set up and connected. In order to fully experience the functions of Bamboo, the following setup is recommended.</p>
 <h2 id="systems-required">Systems Required</h2>
 <ol>
-<li>Attacker Machine: Linux (Kali is recommended)<ul>
+<li>Attacker Machine: Linux (Kali is recommended)</li>
 <li>Install the <a href="installation/teamserver-setup.html">Bamboo Teamserver</a></li>
 <li>Run the <a href="using_bamboo_client.html">Bamboo Client</a></li>
-</ul>
-</li>
-<li>Target: Windows 11 machine<ul>
-<li><a href="https://aka.ms/vs/17/release/vc_redist.x86.exe">Microsoft Visual C++ Redistributables</a> must be installed<ul>
+<li>Elastic Stack Host:</li>
+<li>The Elastic Stack can be deployed by following this <a href="https://www.elastic.co/guide/en/elastic-stack/current/installing-stack-demo-self.html">guide</a> by Elastic.</li>
+<li>Install the <a href="https://www.elastic.co/guide/en/security/current/install-endpoint.html">Elastic Defend</a> and <a href="https://www.elastic.co/docs/current/integrations/windows">Windows</a> integrations.</li>
+<li>Target: Windows 11 machine</li>
+<li><a href="https://aka.ms/vs/17/release/vc_redist.x86.exe">Microsoft Visual C++ Redistributables</a> must be installed</li>
 <li>After <a href="installation/agent-setup.html">building the Bamboo Agent</a>, the agent file must be placed in the Desktop folder of the target</li>
 <li>Ensure that the Elastic Agent is also installed to monitor the target</li>
 <li>You can choose to <a href="#vulnerable-application-installers">download the vulnerable applications</a> for Bamboo's pre-loaded exploits</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Elastic Stack Host: <ul>
-<li>The Elastic Stack can be deployed by following this <a href="https://www.elastic.co/guide/en/elastic-stack/current/installing-stack-demo-self.html">guide</a> by Elastic. <ul>
-<li>Installing the <a href="https://www.elastic.co/guide/en/security/current/install-endpoint.html">Elastic Defend</a> and <a href="https://www.elastic.co/docs/current/integrations/windows">Windows</a> integrations to ensure maximum detection capabilities.</li>
-<li>Enable the Malware Protection setting in the your Elastic agent policy. The detection level can be set to "Detect" so you can view the detections as alerts instead of just having the malicious file disappear.</li>
-</ul>
-</li>
-</ul>
-</li>
 </ol>
-<p>For testing purposes, these can be hosted as Virtual Machines using a software to run VMs such as <a href="https://blogs.vmware.com/workstation/2024/05/vmware-workstation-pro-now-available-free-for-personal-use.html">VMWare Workstation</a> or <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a>.  </p>
+<p>For testing purposes, these can be hosted as Virtual Machines using a software to run VMs such as <a href="https://blogs.vmware.com/workstation/2024/05/vmware-workstation-pro-now-available-free-for-personal-use.html">VMWare Workstation</a> or <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a>.</p>
 <p>The image below illustrates how the setup should look like.</p>
 <p><img alt="network_diagram" src="../img/userguide_images/network_diagram.png" /></p>
 <h2 id="vulnerable-application-installers">Vulnerable Application Installers</h2>
@@ -1717,39 +1706,38 @@
 <thead>
 <tr>
 <th><strong>Application</strong></th>
-<th><strong>Download link</strong></th>
 <th><strong>Description</strong></th>
+<th><strong>Download Link</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Microsoft Visual C++ redistributables (x86)</td>
-<td><a href="https://aka.ms/vs/17/release/vc_redist.x86.exe">https://aka.ms/vs/17/release/vc_redist.x86.exe</a></td>
 <td>For NtQueue injection</td>
+<td><a href="https://aka.ms/vs/17/release/vc_redist.x86.exe">https://aka.ms/vs/17/release/vc_redist.x86.exe</a></td>
 </tr>
 <tr>
 <td>Wondershare Filmora</td>
-<td><a href="https://drive.google.com/file/d/1_Y2tvYV5k76dFDIKTdaH1ULfNQB-ccHT/view">https://drive.google.com/file/d/1_Y2tvYV5k76dFDIKTdaH1ULfNQB-ccHT/view</a></td>
 <td>For Wondershare Filmora vulnerable application</td>
+<td><a href="https://drive.google.com/file/d/1_Y2tvYV5k76dFDIKTdaH1ULfNQB-ccHT/view">https://drive.google.com/file/d/1_Y2tvYV5k76dFDIKTdaH1ULfNQB-ccHT/view</a></td>
 </tr>
 <tr>
 <td>Wacom Driver</td>
-<td><a href="https://cdn.wacom.com/u/productsupport/drivers/win/professional/WacomTablet_6.3.45-1.exe">https://cdn.wacom.com/u/productsupport/drivers/win/professional/WacomTablet_6.3.45-1.exe</a></td>
 <td>For Wacom Driver vulnerable application</td>
+<td><a href="https://cdn.wacom.com/u/productsupport/drivers/win/professional/WacomTablet_6.3.45-1.exe">https://cdn.wacom.com/u/productsupport/drivers/win/professional/WacomTablet_6.3.45-1.exe</a></td>
 </tr>
 <tr>
 <td>BarracudaDrive</td>
-<td><a href="https://download.cnet.com/barracudadrive/3001-18506_4-10723210.html">https://download.cnet.com/barracudadrive/3001-18506_4-10723210.html</a></td>
 <td>For BarracudaDrive vulnerable application</td>
+<td><a href="https://download.cnet.com/barracudadrive/3001-18506_4-10723210.html"><br>https://download.cnet.com/barracudadrive/3001-18506_4-10723210.html</a></td>
 </tr>
 <tr>
 <td>Wondershare Dr Fone</td>
-<td><a href="https://filehippo.com/download_wondershare-drfone-android/history/">https://filehippo.com/download_wondershare-drfone-android/history/</a></td>
 <td>For DrFone vulnerable application</td>
+<td><a href="https://filehippo.com/download_wondershare-drfone-android/history/">https://filehippo.com/download_wondershare-drfone-android/history/</a></td>
 </tr>
 </tbody>
 </table>
-<p>There should also be a Windows machine, which is the target or otherwise, that can be used to build the Go agent (and transfer to the target machine).</p>
 
 
 
