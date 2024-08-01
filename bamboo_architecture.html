@@ -1788,7 +1788,7 @@
 
 
 <h1 id="bamboo-architecture">Bamboo Architecture</h1>
-<p>This section will provide an overview of the Bamboo Framework components and how they interact. The Bamboo Framework consists of 3 major entities: The Client, the Teamserver and the Agent. The architecture diagram below illustrates how the components in each of these entities interact with one another.</p>
+<p>This section will provide an overview of the Bamboo Framework components and how they interact. The Bamboo Framework consists of The Client, the Teamserver and the Agent. The architecture diagram below illustrates how the components in each of them.</p>
 <p><img alt="architecture_diagram" src="img/architecture_diagram.png" /></p>
 <h2 id="bamboo-client">Bamboo Client</h2>
 <p>The Bamboo Client acts as the handler for the Bamboo Teamserver. Developed with <a href="https://www.python.org/downloads/release/python-3110/">Python 3.11</a>, the user can use either the command line (CLI) or graphical interface (GUI) to interact with the rest of the framework and perform actions such as:</p>
@@ -1797,7 +1797,7 @@
 <li>Add and modify exploits available on the Teamserver</li>
 <li>Use the team chat to message other Bamboo users on the same server</li>
 </ul>
-<p>The Bamboo Client can be run on most computers, but it is recommended to run it on the same host as the Teamserver, if only one Client is in use.</p>
+<p>The Bamboo Client can be run on most computers, but it is recommended to run it on the same host as the Teamserver if only one Client is in use.</p>
 <h3 id="components">Components</h3>
 <table>
 <thead>
@@ -1844,7 +1844,7 @@
 <p>The Bamboo Teamserver, designed to run on a Kali Linux machine, is the central server that records and stores data and exploits, and acts as the communication bridge between the users and the Agents. It hosts both <a href="Teamserver/api_reference/overview.html">HTTPS RESTful APIs</a> and manages Websocket connections to handle communications with other components in the framework.</p>
 <p>The Teamserver is built in <a href="https://www.python.org/downloads/release/python-3110/">Python 3.11</a>, and uses <a href="https://flask.palletsprojects.com/en/3.0.x/">Flask</a> for HTTPS communication. <a href="https://www.mongodb.com/try/download/community">MongoDB</a> is used to store information such as user accounts, agents connected and their status, as well as exploits and their configurations.</p>
 <p>The Teamserver keeps track of Agents connected to it by storing their information in the database, and constantly receives heartbeat messages from them to ensure they are alive. The Teamserver then updates the status of the Agents, and mark agents that has not communicated the heartbeat back as 'dead', which gets cleaned from the database after a while.</p>
-<p>By default, the port used by the Teamserver is TCP 4444</p>
+<p>By default, the port used by the Teamserver is TCP 4444.</p>
 <h3 id="components_1">Components</h3>
 <table>
 <thead>
