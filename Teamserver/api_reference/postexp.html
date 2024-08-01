@@ -2292,12 +2292,12 @@
 <!-- Endpoint 2 -->
 <p><br></p>
 <h2 id="enumeration">Enumeration</h2>
-<p>Start enumerating an infected machine</p>
+<p>Start enumerating an target machine</p>
 <h3 id="endpoint_1">Endpoint</h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>POST /postexp/enum
 </span></code></pre></div>
 <h3 id="description_1">Description</h3>
-<p>Bamboo Client calls this endpoint when they want to enumerate the infected machine remotely using the specified Bamboo Agent. The Bamboo teamserver will send a WebSocket broadcast to the Bamboo Agent specified and command it to start enumerate the infected machine. This command can be called by any Bamboo Agent with any privilege level.</p>
+<p>Bamboo Client calls this endpoint when they want to enumerate the target machine remotely using the specified Bamboo Agent. The Bamboo teamserver will send a WebSocket broadcast to the Bamboo Agent specified and command it to start enumerate the target machine. This command can be called by any Bamboo Agent with any privilege level.</p>
 <h3 id="request-schema_1">Request schema</h3>
 <h4>Request body</h4>
 
@@ -2405,12 +2405,12 @@
 <!-- Endpoint 3 -->
 <p><br></p>
 <h2 id="sss_retrieve">SSS_Retrieve</h2>
-<p>Retrieve registry hive of infected machine</p>
+<p>Retrieve registry hive of target machine</p>
 <h3 id="endpoint_2">Endpoint</h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>POST /postexp/retrieve
 </span></code></pre></div>
 <h3 id="description_2">Description</h3>
-<p>Bamboo Client calls this endpoint when they want to retrieve the registry hive of the infected machine remotely using the specified Bamboo Agent. This command can only be called by Bamboo Agent with <code>High</code> or <code>System</code> level privilege. If the requirements are met, the Bamboo teamserver will send a WebSocket broadcast to the Bamboo Agent specified and command it to start retrieving the registry hive of the infected machine.</p>
+<p>Bamboo Client calls this endpoint when they want to retrieve the registry hive of the target machine remotely using the specified Bamboo Agent. This command can only be called by Bamboo Agent with <code>High</code> or <code>System</code> level privilege. If the requirements are met, the Bamboo teamserver will send a WebSocket broadcast to the Bamboo Agent specified and command it to start retrieving the registry hive of the target machine.</p>
 <h3 id="request-schema_2">Request schema</h3>
 <h4>Request body</h4>
 

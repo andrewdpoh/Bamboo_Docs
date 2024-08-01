@@ -527,21 +527,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Bamboo Client">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#components" class="md-nav__link">
-    <span class="md-ellipsis">
-      Components
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -551,21 +536,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Bamboo Teamserver">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#components_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Components
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -574,21 +544,6 @@
       Bamboo Agent
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Bamboo Agent">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#components_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Components
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1707,21 +1662,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Bamboo Client">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#components" class="md-nav__link">
-    <span class="md-ellipsis">
-      Components
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1731,21 +1671,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Bamboo Teamserver">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#components_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Components
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1754,21 +1679,6 @@
       Bamboo Agent
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Bamboo Agent">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#components_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Components
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1798,7 +1708,8 @@
 <li>Use the team chat to message other Bamboo users on the same server</li>
 </ul>
 <p>The Bamboo Client can be run on most computers, but it is recommended to run it on the same host as the Teamserver if only one Client is in use.</p>
-<h3 id="components">Components</h3>
+<h3>Components</h3>
+
 <table>
 <thead>
 <tr>
@@ -1816,7 +1727,7 @@
 <tr>
 <td>GUI Component</td>
 <td>Contain all GUI only related folders and files</td>
-<td>Bamboo Client GUI was built with and rely on this component to interect with the Bamboo Teamserver</td>
+<td>Bamboo Client GUI was built with and rely on this component to interact with the Bamboo Teamserver</td>
 </tr>
 <tr>
 <td>Functions</td>
@@ -1831,7 +1742,7 @@
 <tr>
 <td>Post Exploitation Methods</td>
 <td>Contain preloaded post exploit tools</td>
-<td>Bamboo Clients can use these tools to furture extract valuable information</td>
+<td>Bamboo Clients can use these tools to future extract valuable information</td>
 </tr>
 <tr>
 <td>Post Exploits</td>
@@ -1845,7 +1756,8 @@
 <p>The Teamserver is built in <a href="https://www.python.org/downloads/release/python-3110/">Python 3.11</a>, and uses <a href="https://flask.palletsprojects.com/en/3.0.x/">Flask</a> for HTTPS communication. <a href="https://www.mongodb.com/try/download/community">MongoDB</a> is used to store information such as user accounts, agents connected and their status, as well as exploits and their configurations.</p>
 <p>The Teamserver keeps track of Agents connected to it by storing their information in the database, and constantly receives heartbeat messages from them to ensure they are alive. The Teamserver then updates the status of the Agents, and mark agents that has not communicated the heartbeat back as 'dead', which gets cleaned from the database after a while.</p>
 <p>By default, the port used by the Teamserver is TCP 4444.</p>
-<h3 id="components_1">Components</h3>
+<h3>Components</h3>
+
 <table>
 <thead>
 <tr>
@@ -1883,16 +1795,17 @@
 </tbody>
 </table>
 <h2 id="bamboo-agent">Bamboo Agent</h2>
-<p>The Agent an executable program developed using the <a href="https://go.dev/">Go programming language</a>, and designed to run on a Windows 11 host. It resides in the target machine, and it is recommended for the Agent should be located in a user's desktop directory for the exploits made for the Bamboo Framework to work with the best effect.</p>
-<p>When the Agent is ran by either the command line or double clicking, it first collects information about the host and itself, such as preferred local and public IP addresses, hostname, and integrity level the agent is running at. The Bamboo agent then will repeatedly attempt to connect to the Bamboo Teamserver. Once it is connected, it will initialise a WebSocket connection with the Teamserver to allow it to receive instructions from the server.</p>
+<p>The Agent is an executable program developed using the <a href="https://go.dev/">Go programming language</a>, and is designed to run on a Windows 11 host. It resides in the target machine, and it is recommended for the Agent should be located in a user's desktop directory for the exploits made for the Bamboo Framework to work with the best effect.</p>
+<p>When the Agent is ran by either the command line or double clicking, it first collects information about the host such as preferred local and public IP addresses, hostname, and integrity level the agent is running at. The Bamboo agent then will repeatedly attempt to connect to the Bamboo Teamserver. Once it is connected, it will initialise a WebSocket connection with the Teamserver to allow it to receive instructions from the server.</p>
 <p>Once the agent is connected, it will perform two main actions:</p>
 <ol>
-<li>Listen to the Websocket connection for commmands send from the server</li>
+<li>Listen to the Websocket connection for commands send from the server</li>
 <li>Repeatedly send heartbeat messages to the Teamserver to indicate it is 'alive'</li>
 <li>To do this concurrently, the heartbeat function is ran in a goroutine for concurrency</li>
 </ol>
 <p><img alt="agent_flowchart" src="img/agent_flowchart.png" /></p>
-<h3 id="components_2">Components</h3>
+<h3>Components</h3>
+
 <table>
 <thead>
 <tr>
