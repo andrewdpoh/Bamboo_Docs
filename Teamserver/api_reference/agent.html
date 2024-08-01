@@ -256,7 +256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/recommended_setup.html" class="md-nav__link">
+      <a href="../../User_Guide/recommended_setup.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -312,7 +312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/installation/teamserver-setup.html" class="md-nav__link">
+      <a href="../../User_Guide/installation/teamserver-setup.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -333,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/installation/agent-setup.html" class="md-nav__link">
+      <a href="../../User_Guide/installation/agent-setup.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -362,7 +362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/using_bamboo_client.html" class="md-nav__link">
+      <a href="../../User_Guide/using_bamboo_client.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -418,7 +418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/commands/command_list.html" class="md-nav__link">
+      <a href="../../User_Guide/commands/command_list.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -439,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/commands/command_guide.html" class="md-nav__link">
+      <a href="../../User_Guide/commands/command_guide.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2035,6 +2035,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Client/global_variables.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Global Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Client/misc_func.html" class="md-nav__link">
         
   
@@ -2922,7 +2943,7 @@
 <div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>POST /agent/post_exploit/keylog
 </span></code></pre></div>
 <h3 id="description_4">Description</h3>
-<p>Keylog Result will be called by Bamboo Agent when Bamboo Client command the Bamboo Agent to stop recording keystrokes. There will be error checking to determine if there were any error, if there are no errors, the Bamboo Teamserver will send the keystroke to the user via WebSocket.</p>
+<p>Keylog Result will be called by Bamboo Agent when the Bamboo Client commands the Bamboo Agent to stop recording keystrokes. There will be error checking to determine if there were any error, if there are no errors, the Bamboo Teamserver will send the keystroke to the user via WebSocket.</p>
 <h3 id="request-schema_3">Request schema</h3>
 <h4>Request body</h4>
 
@@ -2967,7 +2988,7 @@
 </span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="nt">&quot;agent_identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;5zrire9a&quot;</span><span class="p">,</span>
 </span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;done&quot;</span><span class="p">,</span>
 </span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="nt">&quot;keystroke&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;keystrokesrecorded&quot;</span><span class="p">,</span>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="nt">&quot;handler&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bamboo User A&quot;</span><span class="p">,</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="nt">&quot;handler&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bambooUser&quot;</span><span class="p">,</span>
 </span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">    </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
 </span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="p">}</span>
 </span></code></pre></div>
@@ -3086,7 +3107,7 @@
 </span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="nt">&quot;agent_identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;5zrire9a&quot;</span><span class="p">,</span>
 </span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;done&quot;</span><span class="p">,</span>
 </span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">    </span><span class="nt">&quot;result&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;a</span><span class="w"> </span><span class="err">very</span><span class="w"> </span><span class="err">lo</span><span class="kc">n</span><span class="err">g</span><span class="w"> </span><span class="err">lis</span><span class="kc">t</span><span class="w"> </span><span class="err">o</span><span class="kc">f</span><span class="w"> </span><span class="err">s</span><span class="kc">tr</span><span class="err">i</span><span class="kc">n</span><span class="err">g&gt;</span><span class="p">,</span>
-</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span><span class="nt">&quot;handler&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bamboo User A&quot;</span><span class="p">,</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span><span class="nt">&quot;handler&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bambooUser&quot;</span><span class="p">,</span>
 </span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">    </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
 </span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="p">}</span>
 </span></code></pre></div>
@@ -3205,7 +3226,7 @@
 </span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="nt">&quot;agent_identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;5zrire9a&quot;</span><span class="p">,</span>
 </span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;done&quot;</span><span class="p">,</span>
 </span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">    </span><span class="nt">&quot;result&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;dic</span><span class="kc">t</span><span class="err">io</span><span class="kc">nar</span><span class="err">y</span><span class="w"> </span><span class="err">o</span><span class="kc">f</span><span class="w"> </span><span class="err">bi</span><span class="kc">nar</span><span class="err">y&gt;</span><span class="p">,</span>
-</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="w">    </span><span class="nt">&quot;handler&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bamboo User A&quot;</span><span class="p">,</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="w">    </span><span class="nt">&quot;handler&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bambooUser&quot;</span><span class="p">,</span>
 </span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="w">    </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
 </span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="p">}</span>
 </span></code></pre></div>
@@ -3232,7 +3253,7 @@
 <tr>
 <td><code>404</code></td>
 <td>{"message": "error"}</td>
-<td>There was an error when enumerating</td>
+<td>There was an error when retrieving</td>
 </tr>
 </tbody>
 </table>

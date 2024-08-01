@@ -256,7 +256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="User%20Guide/recommended_setup.html" class="md-nav__link">
+      <a href="User_Guide/recommended_setup.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -312,7 +312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="User%20Guide/installation/teamserver-setup.html" class="md-nav__link">
+      <a href="User_Guide/installation/teamserver-setup.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -333,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="User%20Guide/installation/agent-setup.html" class="md-nav__link">
+      <a href="User_Guide/installation/agent-setup.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -362,7 +362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="User%20Guide/using_bamboo_client.html" class="md-nav__link">
+      <a href="User_Guide/using_bamboo_client.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -418,7 +418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="User%20Guide/commands/command_list.html" class="md-nav__link">
+      <a href="User_Guide/commands/command_list.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -439,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="User%20Guide/commands/command_guide.html" class="md-nav__link">
+      <a href="User_Guide/commands/command_guide.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1481,6 +1481,27 @@
   
   
     <li class="md-nav__item">
+      <a href="Client/global_variables.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Global Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="Client/misc_func.html" class="md-nav__link">
         
   
@@ -1777,7 +1798,7 @@
 
 <h1 id="evasion">Evasion</h1>
 <h2 id="shellcode-injection">Shellcode Injection</h2>
-<p>Elastic Defend is unable to detect malicious in-memory files. Thus, these shellcode injection techniques are effective in executing payloads undetected. The shellcode injection techniques are implemented within Bamboo Agent and can be selected when the user uses the <a href="Client/commands.html#exploit"><code>exploit</code></a> command.</p>
+<p>Elastic Defend is unable to detect malicious in-memory files. Thus, these shellcode injection techniques are effective in executing payloads undetected. The shellcode injection techniques are implemented within Bamboo Agent and can be selected when the user uses the <a href="Client/commands.html#exploit"><code>exploit</code></a> command. The shellcode for the injection is generated using <a href="https://github.com/TheWover/donut">Donut</a>.</p>
 <h3 id="virtual-allocation-injection">Virtual Allocation Injection</h3>
 <p>Virtual Allocation injection is a technique used to inject shellcode into memory. As this method of injection uses VirtualAlloc, it allocates and injects shellcode into the memory of its own process.</p>
 <p>The exploits used by Bamboo tend to crash the injected process, so using Virtual Allocation will likely cause the Agent that ran it to crash.</p>
@@ -1790,7 +1811,7 @@
 <li>WaitForSingleObject is used to wait for the thread to finish.</li>
 </ol>
 <p><strong>Implementation</strong></p>
-<p><a href="https://github.com/zaneGittins/go-inject">zaneGittins’ go-inject</a> simplifies using Windows functions related to injections, and is used by the agent to implement this technique.</p>
+<p><a href="https://github.com/zaneGittins/go-inject">zaneGittins' go-inject</a> simplifies using Windows functions related to injections, and is used by the agent to implement this technique.</p>
 <details>
 <summary>Expand code</summary>
 
@@ -1831,7 +1852,7 @@
 <li>Close the handle to the process with CloseHandle.</li>
 </ol>
 <p><strong>Implementation</strong></p>
-<p>Instead of finding the PID of a suitable process, the Agent will launch OneDrive.exe from the user’s home directory. OneDrive is a very suitable process to inject into with the exploits Bamboo has, and launching the process before injecting into it will ensure that the process will be available to inject into. It is also whitelisted from Elastic Security’s Component Model Hijacking as it is considered a noisy process.</p>
+<p>Instead of finding the PID of a suitable process, the Agent will launch OneDrive.exe from the user's home directory. OneDrive is a very suitable process to inject into with the exploits Bamboo has, and launching the process before injecting into it will ensure that the process will be available to inject into. It is also whitelisted from Elastic Security's Component Model Hijacking as it is considered a noisy process.</p>
 <details>
 <summary>Expand code</summary>
 
@@ -1858,7 +1879,7 @@
 
 </details>
 
-<p>The rest of the injection technique is implemented with <a href="https://github.com/zaneGittins/go-inject">zaneGittins’ go-inject</a> library.</p>
+<p>The rest of the injection technique is implemented with <a href="https://github.com/zaneGittins/go-inject">zaneGittins' go-inject</a> library.</p>
 <details>
 <summary>Expand code</summary>
 
@@ -1918,9 +1939,9 @@
 <p>The tool below is not an injection technique, but instead used to disrupt the effectiveness of the EDR itself.</p>
 <h3 id="edr-silencer">EDR Silencer</h3>
 <p><strong>Description</strong></p>
-<p>EDRSilencer, created by <a href="https://github.com/netero1010">netero1010</a> is an <a href="https://github.com/netero1010/EDRSilencer">open-source</a> evasion tool designed for disrupting Endpoint Detection and Response (EDR) systems. It leverages Windows Filtering Platform (WFP) APIs, which allows a program developer to create network filtering software that can examine, modify and stop network traffic. EDRSilencer uses the WFP to prevent EDR agents and processes from connecting and reporting security events with their servers, effectively disabling the EDR’s threat detection capabilities of the EDR. The tool currently supports Elastic EDR, among other popular EDR solutions.</p>
+<p>EDRSilencer, created by <a href="https://github.com/netero1010">netero1010</a> is an <a href="https://github.com/netero1010/EDRSilencer">open-source</a> evasion tool designed for disrupting Endpoint Detection and Response (EDR) systems. It leverages Windows Filtering Platform (WFP) APIs, which allows a program developer to create network filtering software that can examine, modify and stop network traffic. EDRSilencer uses the WFP to prevent EDR agents and processes from connecting and reporting security events with their servers, effectively disabling the EDR's threat detection capabilities of the EDR. The tool currently supports Elastic EDR, among other popular EDR solutions.</p>
 <p><strong>Implementation</strong></p>
-<p>In the <a href="https://github.com/netero1010/EDRSilencer/blob/main/EDRSilencer.c">original code's</a> main function, it checks if the user inputs the correct number of command-line arguments and performs different actions based on the argument’s value:</p>
+<p>In the <a href="https://github.com/netero1010/EDRSilencer/blob/main/EDRSilencer.c">original code's</a> main function, it checks if the user inputs the correct number of command-line arguments and performs different actions based on the argument's value:</p>
 <table>
 <thead>
 <tr>
@@ -1966,7 +1987,7 @@
 </span></code></pre></div>
 
 </details>
-<p>This modification allows the executable to be easily incorporated within our C2 and agent, making it more convenient and efficient for our purposes.</p>
+<p>This modification allows the executable to be easily incorporated within our C2 and agent, making it more convenient and efficient for our purposes. With this modification, the file is stored as EDRBlocker.exe in the Teamserver.</p>
 
 
 

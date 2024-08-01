@@ -256,7 +256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/recommended_setup.html" class="md-nav__link">
+      <a href="../../User_Guide/recommended_setup.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -312,7 +312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/installation/teamserver-setup.html" class="md-nav__link">
+      <a href="../../User_Guide/installation/teamserver-setup.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -333,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/installation/agent-setup.html" class="md-nav__link">
+      <a href="../../User_Guide/installation/agent-setup.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -362,7 +362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/using_bamboo_client.html" class="md-nav__link">
+      <a href="../../User_Guide/using_bamboo_client.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -418,7 +418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/commands/command_list.html" class="md-nav__link">
+      <a href="../../User_Guide/commands/command_list.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -439,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/commands/command_guide.html" class="md-nav__link">
+      <a href="../../User_Guide/commands/command_guide.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1786,6 +1786,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Client/global_variables.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Global Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Client/misc_func.html" class="md-nav__link">
         
   
@@ -2177,7 +2198,7 @@
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>POST /postexp/keylog
 </span></code></pre></div>
 <h3 id="description">Description</h3>
-<p>Bamboo Client calls this endpoint when they want to start/stop keylogging activity. All activities will be recorded down into a <code>global variable: keylog_status</code>. keylog_status is a dictionary that keeps track of all keylog activity within Bamboo Teamserver. Therefore, with this global variable, the Bamboo Teamserver will be able to tell if the Bamboo Client user is starting or stopping the keylogging. After the Bamboo Teamserver knows the action to command, a WebSocket broadcast will be made to the Bamboo Agent Specified. This command can be called by any Bamboo Agent with any privilege level.</p>
+<p>Bamboo Client calls this endpoint when they want to start/stop keylogging activity. All activities will be recorded down into a global variable: <a href="../global_variables.html"><code>keylog_status</code></a>. keylog_status is a dictionary that keeps track of all keylog activity within Bamboo Teamserver. Therefore, with this global variable, the Bamboo Teamserver will be able to tell if the Bamboo Client user is starting or stopping the keylogging. After the Bamboo Teamserver knows the action to command, a WebSocket broadcast will be made to the Bamboo Agent Specified. This command can be called by any Bamboo Agent with any privilege level.</p>
 <h3 id="request-schema">Request schema</h3>
 <h4>Request body</h4>
 
@@ -2386,7 +2407,7 @@
 <tr>
 <td>method</td>
 <td>String</td>
-<td>Keylogging</td>
+<td>Enumerate</td>
 </tr>
 <tr>
 <td>handler</td>
@@ -2436,7 +2457,7 @@
 <tr>
 <td>method</td>
 <td>String</td>
-<td>Tool used (enumerate)</td>
+<td>Tool used (retrieve)</td>
 </tr>
 <tr>
 <td>priv_lvl</td>
@@ -2505,7 +2526,7 @@
 <tr>
 <td>method</td>
 <td>String</td>
-<td>Keylogging</td>
+<td>Retrieve</td>
 </tr>
 <tr>
 <td>handler</td>

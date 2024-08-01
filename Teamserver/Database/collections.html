@@ -256,7 +256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/recommended_setup.html" class="md-nav__link">
+      <a href="../../User_Guide/recommended_setup.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -312,7 +312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/installation/teamserver-setup.html" class="md-nav__link">
+      <a href="../../User_Guide/installation/teamserver-setup.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -333,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/installation/agent-setup.html" class="md-nav__link">
+      <a href="../../User_Guide/installation/agent-setup.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -362,7 +362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/using_bamboo_client.html" class="md-nav__link">
+      <a href="../../User_Guide/using_bamboo_client.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -418,7 +418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/commands/command_list.html" class="md-nav__link">
+      <a href="../../User_Guide/commands/command_list.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -439,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/commands/command_guide.html" class="md-nav__link">
+      <a href="../../User_Guide/commands/command_guide.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1681,6 +1681,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Client/global_variables.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Global Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Client/misc_func.html" class="md-nav__link">
         
   
@@ -1964,7 +1985,7 @@
 <p>Bamboo Teamserver uses MongoDB as its database. MongoDB is an unstructured database that stores data in JSON format, which is what Bamboo Client and Bamboo Agent can work easily with. </p>
 <p>Bamboo Teamserver database is called "C2-Server". There are a total of 4 collections, agents, exploits, heartbeats, and user. exploits and user collection should be imported before running while agents and heartbeats collection will be created when certain functions are called.</p>
 <h2 id="collections_1">Collections</h2>
-<p>Each collection within the Bamboo Teamserver"s C2-Server database serves a specific purpose. Below is a detailed description of each collection and the types of data it stores.</p>
+<p>Each collection within the Bamboo Teamserver's C2-Server database serves a specific purpose. Below is a detailed description of each collection and the types of data it stores.</p>
 <!-- Collection agents -->
 <h3 id="agents">agents</h3>
 <p>This collection will be created after the first Bamboo Agent is connected to Bamboo Teamserver. This collection stores all information of connected Bamboo Agents and can be displayed when using the command <a href="../../Client/commands.html#display"><code>display</code></a>.</p>
@@ -2188,7 +2209,7 @@
 <hr />
 <!-- Collection heartbeats -->
 <h3 id="heartbeats">heartbeats</h3>
-<p>This collection is related to the agents collection. This contains all heartbeat related information of the agent. Bamboo Agents will send heartbeats to the Bamboo Teamserver in intervals to notify the server that it is still "alive" and running.</p>
+<p>This collection is related to the agents collection. This contains all heartbeat related information of the agent. Bamboo Agents will send heartbeats to the Bamboo Teamserver in intervals to notify the server that they are still "alive" and running.</p>
 <table>
 <thead>
 <tr>
@@ -2338,7 +2359,7 @@
 </span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="p">{</span>
 </span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bambooUserTwo&quot;</span><span class="p">,</span>
 </span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;paSswORd@111&quot;</span><span class="p">,</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">        </span><span class="s2">&quot;status&quot;</span><span class="w"> </span><span class="s2">&quot;offline&quot;</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">        </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;offline&quot;</span>
 </span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="p">]</span>
 </span></code></pre></div>
