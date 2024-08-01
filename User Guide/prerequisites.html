@@ -1693,6 +1693,8 @@
 <li>Target: Windows 11 machine<ul>
 <li><a href="https://aka.ms/vs/17/release/vc_redist.x86.exe">Microsoft Visual C++ Redistributables</a> must be installed<ul>
 <li>After <a href="installation/agent-setup.html">building the Bamboo Agent</a>, the agent file must be placed in the Desktop folder of the target</li>
+<li>Ensure that the Elastic Agent is also installed to monitor the target</li>
+<li>You can choose to <a href="#vulnerable-application-installers">download the vulnerable applications</a> for Bamboo's pre-loaded exploits</li>
 </ul>
 </li>
 </ul>
@@ -1706,7 +1708,8 @@
 </ul>
 </li>
 </ol>
-<p>For testing purposes, these can be hosted as Virtual Machines using a software to run VMs such as <a href="https://blogs.vmware.com/workstation/2024/05/vmware-workstation-pro-now-available-free-for-personal-use.html">VMWare Workstation</a> or <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a>.</p>
+<p>For testing purposes, these can be hosted as Virtual Machines using a software to run VMs such as <a href="https://blogs.vmware.com/workstation/2024/05/vmware-workstation-pro-now-available-free-for-personal-use.html">VMWare Workstation</a> or <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a>.  </p>
+<p>The image below illustrates how the setup should look like.</p>
 <p><img alt="network_diagram" src="../img/userguide_images/network_diagram.png" /></p>
 <h2 id="vulnerable-application-installers">Vulnerable Application Installers</h2>
 <p>The target machine will be a Windows 11 machine and the Bamboo Agent should be located in the Desktop folder. If you wish to use the pre-loaded exploits in Bamboo, download the following applications on the target:</p>
