@@ -1727,11 +1727,11 @@
 <p>This section documents the Teamserver's endpoints. One of the main forms of communication that the Teamserver uses is Hypertext Transfer Protocol Secure (HTTPS). By using flask, blueprint, and flask_jwt_extended library for Secure Sockets Layer (SSL) and JSON Web Token (JWT), this ensures that all data exchanged between clients and the server is encrypted and secure, protecting sensitive information from unauthorized access. </p>
 <p>Flask Blueprint allows related APIs to be grouped together in the same file, under a common prefix. Flask flask_jwt_extended on the other hand provides an easy and secure way to handle JSON Web Tokens (JWTs) for authentication and authorization.</p>
 <h2 id="base-url">Base URL</h2>
-<p><div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>https://[teamserver_ip]:[port]
-</span></code></pre></div></td></tr></table></div>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>https://[teamserver_ip]:[port]
+</span></code></pre></div>
 For example, if your teamserver is hosted locally on port 4000, your base URL would be</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>https://127.0.0.1:4000
-</span></code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>https://127.0.0.1:4000
+</span></code></pre></div>
 <h2 id="list-of-endpoints">List of Endpoints</h2>
 <p>The table below shows the list of all RESTful APIs in the Bamboo Teamserver, which can be found in the file /teamserver/api.</p>
 <table>

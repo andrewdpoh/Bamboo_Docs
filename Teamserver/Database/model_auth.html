@@ -2051,8 +2051,8 @@
 <p>Authenticates Bamboo Client user credentials</p>
 <h3 id="usage">Usage</h3>
 <!-- should link both endpoint n command to their respective pages -->
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>POST /auth/login
-</span></code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>POST /auth/login
+</span></code></pre></div>
 <h3 id="description">Description</h3>
 <p>login_auth will be called every time a Bamboo Client user wants to log in. This model will first determine if the username exist in the <code>collection users</code>. If it exist, it will then compare between the password one provided by the user and the password in the database and return the status accordingly. </p>
 <h4 id="function-arguments">Function Arguments</h4>
@@ -2078,8 +2078,8 @@
 </tbody>
 </table>
 <h3 id="arguments-example">Arguments Example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>login_auth(&quot;bambooUser&quot;, &quot;adnap&quot;)
-</span></code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>login_auth(&quot;bambooUser&quot;, &quot;adnap&quot;)
+</span></code></pre></div>
 <h3 id="database-method">Database Method</h3>
 <table>
 <thead>
@@ -2098,16 +2098,12 @@
 </tbody>
 </table>
 <h3 id="find-example">Find Example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span>
-<span class="normal"><a href="#__codelineno-2-4">4</a></span>
-<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>[
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>    &quot;username&quot;: &quot;bambooUser&quot;,
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>    &quot;password&quot;: &quot;adnap&quot;,
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>    &quot;status&quot;: &quot;offline&quot;
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>]
-</span></code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    &quot;username&quot;: &quot;bambooUser&quot;,
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    &quot;password&quot;: &quot;adnap&quot;,
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    &quot;status&quot;: &quot;offline&quot;
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>]
+</span></code></pre></div>
 <h3 id="function-return">Function Return</h3>
 <table>
 <thead>
@@ -2124,18 +2120,18 @@
 </tbody>
 </table>
 <h3 id="return-example">Return Example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>Welcome
-</span></code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>Invalid-User
-</span></code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Welcome
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Invalid-User
+</span></code></pre></div>
 <!-- Func 2 -->
 <p><br></p>
 <h2 id="obtain_status">obtain_status</h2>
 <p>Helps Bamboo Teamserver to determine spe</p>
 <h3 id="usage_1">Usage</h3>
 <!-- should link both endpoint n command to their respective pages -->
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>POST /auth/check_agent_status
-</span></code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>POST /auth/check_agent_status
+</span></code></pre></div>
 <h3 id="description_1">Description</h3>
 <p>obtain_status helps Bamboo Teamserver to obtain the status of the specified Bamboo Agent in the <code>collection heartbeats</code>. This is used when Bamboo Client user want to use a command that requires the Bamboo Agent to be "alive". It only returns that Bamboo Agent status.</p>
 <h4 id="function-arguments_1">Function Arguments</h4>
@@ -2156,8 +2152,8 @@
 </tbody>
 </table>
 <h3 id="arguments-example_1">Arguments Example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>obtain_status(&quot;5zrire9a&quot;)
-</span></code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>obtain_status(&quot;5zrire9a&quot;)
+</span></code></pre></div>
 <h3 id="database-method_1">Database Method</h3>
 <table>
 <thead>
@@ -2176,20 +2172,14 @@
 </tbody>
 </table>
 <h3 id="find-example_1">Find Example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
-<span class="normal"><a href="#__codelineno-7-2">2</a></span>
-<span class="normal"><a href="#__codelineno-7-3">3</a></span>
-<span class="normal"><a href="#__codelineno-7-4">4</a></span>
-<span class="normal"><a href="#__codelineno-7-5">5</a></span>
-<span class="normal"><a href="#__codelineno-7-6">6</a></span>
-<span class="normal"><a href="#__codelineno-7-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>[   
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a>    &quot;agent_identifier&quot;: &quot;5zrire9a&quot;,
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a>    &quot;heartbeat&quot;: 6,
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a>    &quot;current_time&quot;: &quot;2024-07-30T16:38:15.653+00:00&quot;,
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5"></a>    &quot;expected_time&quot;: &quot;2024-07-30T16:38:21.653+00:00&quot;,
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6"></a>    &quot;status&quot;: &quot;dead&quot;
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7"></a>]
-</span></code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>[   
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    &quot;agent_identifier&quot;: &quot;5zrire9a&quot;,
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    &quot;heartbeat&quot;: 6,
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    &quot;current_time&quot;: &quot;2024-07-30T16:38:15.653+00:00&quot;,
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    &quot;expected_time&quot;: &quot;2024-07-30T16:38:21.653+00:00&quot;,
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    &quot;status&quot;: &quot;dead&quot;
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>]
+</span></code></pre></div>
 <h3 id="function-return_1">Function Return</h3>
 <table>
 <thead>
@@ -2206,8 +2196,8 @@
 </tbody>
 </table>
 <h3 id="return-example_1">Return Example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a>&quot;agent_status&quot;: &quot;alive&quot;
-</span></code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>&quot;agent_status&quot;: &quot;alive&quot;
+</span></code></pre></div>
 
 
 

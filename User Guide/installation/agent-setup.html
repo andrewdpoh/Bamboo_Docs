@@ -1709,12 +1709,12 @@
 <ol>
 <li>If not yet installed, <a href="https://go.dev/doc/install">install Go</a>. </li>
 <li>Go to the agent directory and run the following command to download dependencies: 
-    <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>go get . 
-</span></code></pre></div></td></tr></table></div></li>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>go get . 
+</span></code></pre></div></li>
 <li>Edit default-ip.txt file to the IP address of the Teamserver </li>
 <li>In the Agent folder, build the Agent (with flags to reduce the size of the exe) with the command to get agent.exe 
-    <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>go build  -ldflags &quot;-s -w&quot; 
-</span></code></pre></div></td></tr></table></div></li>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>go build  -ldflags &quot;-s -w&quot; 
+</span></code></pre></div></li>
 </ol>
 <h2 id="part-2-running-the-agent">Part 2: Running the Agent</h2>
 <ol>

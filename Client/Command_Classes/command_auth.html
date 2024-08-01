@@ -2201,8 +2201,8 @@
 <h2 id="check">check</h2>
 <p>Determines if the server is online</p>
 <h3 id="endpoint">Endpoint</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>GET /auth/
-</span></code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>GET /auth/
+</span></code></pre></div>
 <h4 id="function-argument">Function argument</h4>
 <p><strong>This function does not require any argument</strong></p>
 <h3 id="description">Description</h3>
@@ -2228,8 +2228,8 @@
 <h2 id="authentication">authentication</h2>
 <p>Authenticates the user</p>
 <h3 id="endpoint_1">Endpoint</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>POST /auth/login
-</span></code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>POST /auth/login
+</span></code></pre></div>
 <h3 id="description_1">Description</h3>
 <p>This function sends a POST request to the <code>/auth/login</code> endpoint with the provided username and password. If the credentials are correct, the server returns a JSON response containing the login status and a JWT token. The function returns the login status and the JWT token if available.</p>
 <h4 id="function-argument_1">Function argument</h4>
@@ -2255,8 +2255,8 @@
 </tbody>
 </table>
 <h3 id="arguments-example">Arguments Example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>authentication(&quot;bambooUser&quot;, &quot;adnap&quot;)
-</span></code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>authentication(&quot;bambooUser&quot;, &quot;adnap&quot;)
+</span></code></pre></div>
 <h3 id="function-return_1">Function return</h3>
 <table>
 <thead>
@@ -2282,8 +2282,8 @@
 <h2 id="logout">logout</h2>
 <p>Logs out the user</p>
 <h3 id="endpoint_2">Endpoint</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>POST /auth/logout
-</span></code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>POST /auth/logout
+</span></code></pre></div>
 <h3 id="description_2">Description</h3>
 <p>This function sends a POST request to the <code>/auth/logout</code> endpoint with the provided username. If the server responds with a status code of 200, it prints a message indicating that the user has exited the server.</p>
 <h4 id="function-argument_2">Function argument</h4>
@@ -2309,15 +2309,15 @@
 </tbody>
 </table>
 <h3 id="arguments-example_1">Arguments Example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>logout(&quot;bambooUser&quot;, jwt_token)
-</span></code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>logout(&quot;bambooUser&quot;, jwt_token)
+</span></code></pre></div>
 <h3 id="function-return_2">Function Return</h3>
 <p><strong>The function does not return anything</strong></p>
 <h2 id="check_agent_status">check_agent_status</h2>
 <p>Checks the status of an agent.</p>
 <h3 id="endpoint_3">Endpoint</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>POST /auth/check_agent_status
-</span></code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>POST /auth/check_agent_status
+</span></code></pre></div>
 <h3 id="description_3">Description</h3>
 <p>This function sends a POST request to the <code>/auth/check_agent_status</code> endpoint with the provided username and agent identifier. The server responds with the status of the agent, which is returned as a JSON object.</p>
 <h4 id="function-argument_3">Function argument</h4>
@@ -2348,8 +2348,8 @@
 </tbody>
 </table>
 <h3 id="arguments-example_2">Arguments Example</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>check_agent_status(&quot;bambooUser&quot;, &quot;5zrire9a&quot;, jwt_token)
-</span></code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>check_agent_status(&quot;bambooUser&quot;, &quot;5zrire9a&quot;, jwt_token)
+</span></code></pre></div>
 <h3 id="function-return_3">Function return</h3>
 <table>
 <thead>

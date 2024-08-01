@@ -1728,17 +1728,17 @@
 <li>Open a terminal or command prompt on your computer.</li>
 <li>
 <p>Clone the repository (skip this step if you already have the code).
-    <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>git clone https://github.com/time0ut07/C2-Agent.git
-</span></code></pre></div></td></tr></table></div></p>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git clone https://github.com/time0ut07/C2-Agent.git
+</span></code></pre></div></p>
 </li>
 <li>
 <p>Change directory into the folder.
-    <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>    cd C2-Agent
-</span></code></pre></div></td></tr></table></div></p>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>    cd C2-Agent
+</span></code></pre></div></p>
 </li>
 <li>Install requirements.
-    <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>    pip install -r requirements.txt
-</span></code></pre></div></td></tr></table></div></li>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>    pip install -r requirements.txt
+</span></code></pre></div></li>
 </ol>
 <h2 id="part-2-setting-up-mongodb">Part 2: Setting up MongoDB</h2>
 <p><strong>Windows</strong></p>
@@ -1755,24 +1755,24 @@
 <ol>
 <li>Install the <a href="https://www.mongodb.com/docs/manual/administration/install-community/">MongoDB Community Server</a> according to the operating system.</li>
 <li>Start the mongodb service
-    <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>sudo systemctl start mongod
-</span></code></pre></div></td></tr></table></div></li>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo systemctl start mongod
+</span></code></pre></div></li>
 <li>Using the shell command <code>[mongosh]</code>(https://www.mongodb.com/docs/mongodb-shell/) to interact with mongodb</li>
 <li>Create the database C2-Server if it does not exist 
-    <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>use C2-Server
-</span></code></pre></div></td></tr></table></div></li>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>use C2-Server
+</span></code></pre></div></li>
 <li>Create a collection called "<strong>user</strong>"
-    <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>db.createCollection(&quot;user&quot;)
-</span></code></pre></div></td></tr></table></div></li>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>db.createCollection(&quot;user&quot;)
+</span></code></pre></div></li>
 <li>Import the JSON file <strong>C2-Server.user.json</strong> to the <strong>user</strong> collection with the following command:
-    <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>mongoimport --uri=&quot;mongodb://localhost:27017&quot; --db=C2-Server --collection=user --file=C2-Server.user.json --jsonArray
-</span></code></pre></div></td></tr></table></div></li>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>mongoimport --uri=&quot;mongodb://localhost:27017&quot; --db=C2-Server --collection=user --file=C2-Server.user.json --jsonArray
+</span></code></pre></div></li>
 <li>Repeat steps 4 to 6 to create the collection "<strong>exploits</strong>" and import the data file <strong>C2-Server.exploits.json</strong>.</li>
 </ol>
 <h2 id="part-3-running-the-teamserver">Part 3: Running the Teamserver</h2>
 <p>Run the teamserver (to listen on all interfaces) with: 
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>python teamserver.py -ip 0.0.0.0
-</span></code></pre></div></td></tr></table></div></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>python teamserver.py -ip 0.0.0.0
+</span></code></pre></div></p>
 <p>The Teamserver uses default command line arguments to change the port and address it listens to</p>
 <table>
 <thead>

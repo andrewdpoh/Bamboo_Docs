@@ -1686,13 +1686,47 @@
 
 <h1 id="prerequisites">Prerequisites</h1>
 <h2 id="systems-required">Systems Required</h2>
-<p>As Bamboo is a pentesting C2 Framework, it will require multiple systems to be set up and connected. </p>
-<p>At minimum, two machines are required – one 'attacker' machine where the Bamboo Teamserver and Client is set up and where the attacker will be working from, and one 'target' machine that has the Bamboo Agent and is the target for the attacker. </p>
+<p>As Bamboo is a penetration testing C2 Framework, it will require multiple systems to be set up and connected.</p>
+<p>At minimum, two machines are required – one 'attacker' machine where the Bamboo Teamserver and Client is set up and where the attacker will be working from, and one 'target' machine that has the Bamboo Agent and is the target for the attacker.</p>
 <p>An Elastic Stack deployment can also be set up to monitor the target machine, to test the evasion capabilities of Bamboo. To set up Elastic, refer to this documentation for a self-managed deployment.</p>
-<h1 id="network-digram">NETWORK DIGRAM???</h1>
+<p><img alt="network_diagram" src="../img/userguide_images/network_diagram.png" /></p>
 <p>The attacker machine should be a Linux machine, preferably Kali Linux. It should also have the following running on it:</p>
-<p>The target machine is a Windows 11 machine with the Bamboo Agent located in the Desktop folder. To fully use the exploits in Bamboo, refer to SOMEWHERE to download the vulnerable applications. </p>
-<p>There should also be a Windows machine, which is the target or otherwise, that can be used to build the Go agent (and transfer to the target machine). </p>
+<ul>
+<li>Python 3.11 or above with Pip as its package installer</li>
+</ul>
+<p>The target machine is a Windows 11 machine with the Bamboo Agent located in the Desktop folder. To fully use the exploits in Bamboo, download the following applications:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Application</strong></th>
+<th><strong>Download link</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Microsoft Visual C++ redistributables (x86)</td>
+<td><a href="https://aka.ms/vs/17/release/vc_redist.x86.exe">https://aka.ms/vs/17/release/vc_redist.x86.exe</a></td>
+<td>For NtQueue injection</td>
+</tr>
+<tr>
+<td>Wondershare Filmora</td>
+<td><a href="https://drive.google.com/file/d/1_Y2tvYV5k76dFDIKTdaH1ULfNQB-ccHT/view">https://drive.google.com/file/d/1_Y2tvYV5k76dFDIKTdaH1ULfNQB-ccHT/view</a></td>
+<td>For Wondershare Filmora exploit</td>
+</tr>
+<tr>
+<td>Wacom Driver</td>
+<td><a href="https://cdn.wacom.com/u/productsupport/drivers/win/professional/WacomTablet_6.3.45-1.exe">https://cdn.wacom.com/u/productsupport/drivers/win/professional/WacomTablet_6.3.45-1.exe</a></td>
+<td>For Wacom Driver exploit</td>
+</tr>
+<tr>
+<td>BarracudaDrive</td>
+<td><a href="https://download.cnet.com/barracudadrive/3001-18506_4-10723210.html">https://download.cnet.com/barracudadrive/3001-18506_4-10723210.html</a></td>
+<td>For BarracudaDrive exploit</td>
+</tr>
+</tbody>
+</table>
+<p>There should also be a Windows machine, which is the target or otherwise, that can be used to build the Go agent (and transfer to the target machine).</p>
 
 
 
