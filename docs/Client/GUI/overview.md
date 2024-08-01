@@ -4,7 +4,7 @@ This section will provide an overview of the graphical user interface (GUI) Clie
 
 The GUI was developed in Python 3.11, using CustomTkinter (CTk), the UI-library made by Tom Schimansky, as well as Tkinter, the standard Python interface to the Tk GUI toolkit.
 
-When handler_gui.py is first run, users will be greeted by the server connect & login window, which is a separate CTk main loop from the main application. This is done by running login.py, where this window is initialised, in a subprocess using the subprocess module.
+When handler_gui.py is first run, users will be greeted by the server connect and login window, which is a separate CTk main loop from the main application. This is done by running login.py, where this window is initialised, in a subprocess using the subprocess module.
 
 Users will first be prompted to connect to the server. Once connected, the window will hide the frame containing the inputs for server connection, and make the frame containing the inputs for user login visible. If the user has successfully logged on before, the username section will be filled in from info.txt.
 

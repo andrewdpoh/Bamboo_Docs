@@ -1,6 +1,6 @@
 # Model Class - agents
 
-This class contains all models related to Bamboo Agent. Bamboo Teamserver will make use of the functions within this class to find, update, add, and delete Bamboo Agents according to the needs of Bamboo Client. This class will be interacting with the [agents](../Database/collections.md#agents) collection and the [heartbeats](../Database/collections.md#heartbeats) collection
+This class contains all models related to Bamboo Agent. The Bamboo Teamserver will make use of the functions within this class to find, update, add, and delete Bamboo Agents according to the needs of Bamboo Client. This class will be interacting with the [agents](../Database/collections.md#agents) collection and the [heartbeats](../Database/collections.md#heartbeats) collection
 
 <!-- Func 1 -->
 
@@ -16,7 +16,7 @@ POST /agent/initial_connection/register
 
 ### Description
 
-add_agent is used when a new Bamboo Agent is registered and Bamboo Teamserver wants to insert the new Bamboo Agent information into the `collection agents`
+add_agent is used when a new Bamboo Agent is registered and the Bamboo Teamserver wants to insert the new Bamboo Agent information into the `collection agents`.
 
 #### Function Arguments
 
@@ -79,7 +79,7 @@ POST /handler_func/agent/display
 
 ### Description
 
-show_agents extracts all registered Bamboo Agent data from the `collection agents`. It will then loop through all the data and append them into a list, returning the list to Bamboo Teamserver.
+show_agents extracts all registered Bamboo Agent data from the `collection agents`. It will then loop through all the data and append them into a list, returning the list to the Bamboo Teamserver.
 
 #### Function Arguments
 
@@ -134,7 +134,7 @@ POST /agent/initial_connection/register
 
 ### Description
 
-check_agent_identifier attempts to find specified agent identifier in `collection agents`, and determines if it exist in the database
+check_agent_identifier attempts to find specified agent identifier in `collection agents`, and determines if it exist in the database.
 
 #### Function Arguments
 
@@ -182,7 +182,7 @@ POST /agent/heartbeat
 
 ### Description
 
-add_heartbeat will allows Bamboo Teamserver to keep track of all Bamboo Agent status. It will be called when a new Bamboo Agent is registered or existing registered Bamboo Agent send their heartbeat. Only `collection heartbeats` will be affected.
+add_heartbeat will allows the Bamboo Teamserver to keep track of all Bamboo Agent status. It will be called when a new Bamboo Agent is registered or existing registered Bamboo Agent send their heartbeat. Only `collection heartbeats` will be affected.
 
 The model will first attempt to find the Bamboo Agent using their agent identifier to determine if the Bamboo Agent is new by extracting data. It will be empty if the Bamboo Agent is new. If the Bamboo Agent is new, it will insert the data into the collection. If the Bamboo Agent already exist, it will determine if the Bamboo Agent heartbeat was "late" or not and update the existing information. It will return different values depending on it.
 
@@ -268,7 +268,7 @@ POST /handler_func/agent/display
 
 ### Description
 
-get_heartbeat objective is to extract the status of the Bamboo Agent to determine if they are "dead" or "alive" from the `collection heartbeats`. It will then loop through all the data and append only the status into a list, returning the list to Bamboo Teamserver.
+get_heartbeat objective is to extract the status of the Bamboo Agent to determine if they are "dead" or "alive" from the `collection heartbeats`. It will then loop through all the data and append only the status into a list, returning the list to the Bamboo Teamserver.
 
 #### Function Arguments
 
@@ -304,14 +304,12 @@ data = [
 Update Bamboo Agent status to dead
 
 ### Usage
-<!-- should link both endpoint n command to their respective pages -->
-```
-Automatic function in Bamboo Teamserver that cleans up Bamboo Agent in database
-```
+
+Automatic function in the Bamboo Teamserver that cleans up Bamboo Agent in database
 
 ### Description
 
-status_dead will update the specified Bamboo Agent status to dead in the `collection heartbeats`.
+status_dead will update the specified Bamboo Agent status to dead in the collection [heartbeats](collections.md#heartbeats).
 
 #### Function Arguments
 
@@ -351,10 +349,8 @@ status_dead("5zrire9a")
 Extract all Bamboo Agent who are "alive"
 
 ### Usage
-<!-- should link both endpoint n command to their respective pages -->
-```
-Automatic function in Bamboo Teamserver that cleans up Bamboo Agent in database
-```
+
+Automatic function in the Bamboo Teamserver that cleans up Bamboo Agent in database
 
 ### Description
 
@@ -558,7 +554,7 @@ Remove all "dead" registered Bamboo Agent from the database
 ### Usage
 <!-- should link both endpoint n command to their respective pages -->
 ```
-Automatic function in Bamboo Teamserver that cleans up Bamboo Agent in database
+Automatic function in the Bamboo Teamserver that cleans up Bamboo Agent in database
 ```
 
 ### Description

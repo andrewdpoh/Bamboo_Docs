@@ -1,9 +1,6 @@
 # Model Class - users
 
-<!-- models, collections, and global_var with back ticks is to be link (n remove back ticks) -->
-<!-- commands within braces {} are to be link as well -->
-
-This class contains all models related to users. Bamboo Teamserver will make use of the functions within this class to find, update, add, and delete user information stored in the database according to Bamboo Client command. This class will be interacting with the [users](../Database/collections.md#users) collection only
+This class contains all models related to users. Bamboo Teamserver will make use of the functions within this class to find, update, add, and delete user information stored in the database according to Bamboo Client command. This class will be interacting with the [users](../Database/collections.md#users) collection only.
 
 <!-- Func 1 -->
 
@@ -67,7 +64,7 @@ POST /auth/login
 
 ### Description
 
-When a Bamboo Client user log ins, Bamboo Teamserver will call this model to update the username status to "online" in the [users](../Database/collections.md#users) collection.
+When a Bamboo Client user logs in, Bamboo Teamserver will call this model to update the username status to "online" in the [users](../Database/collections.md#users) collection.
 
 #### Function Arguments
 
@@ -127,7 +124,7 @@ POST /auth/logout
 
 ### Description
 
-When a Bamboo Client user log outs, Bamboo Teamserver will call this model to update the username status to "offline" in the [users](../Database/collections.md#users) collection.
+When a Bamboo Client user logs out, Bamboo Teamserver will call this model to update the username status to "offline" in the [users](../Database/collections.md#users) collection.
 
 #### Function Arguments
 

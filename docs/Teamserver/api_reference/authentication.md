@@ -151,7 +151,7 @@ POST /auth/check_agent_status
 
 ### Description
 
-When Bamboo Client user uses commands such as {`exploit` and `cmd`}, Bamboo Client will need to determine if the Bamboo Agent in use is online. This endpoint uses the model [obtain_status](../Database/model_auth.md#obtain_status) and will return the status of the specific Bamboo Agent.
+When Bamboo Client user uses commands such as `exploit` and `cmd`, Bamboo Client will need to determine if the Bamboo Agent in use is online. This endpoint uses the model [obtain_status](../Database/model_auth.md#obtain_status) and will return the status of the specific Bamboo Agent.
 
 
 ### Request schema
@@ -177,7 +177,7 @@ When Bamboo Client user uses commands such as {`exploit` and `cmd`}, Bamboo Clie
 
 |Status Code|Schema|Description|
 |-----------|------|-----------|
-|`200`|{"status": "success", "agent_status": agent_status}|Successfully Logout|
+|`200`|{"status": "success", "agent_status": agent_status}|Successfully Logged Out|
 |`404`|{"status": "failed"}|Invalid Body|
 
 ### Response example

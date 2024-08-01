@@ -82,7 +82,7 @@ Clicking on Technical Doc will open the document in the browser.
 
 ![defaultdf](../../img/GUI_images/defaultdf.png)
 
-The display frame is made using the CTk.CTkFrame() widget, and is used to display information using 'tables' generated with CTk.CTkLabel() widgets.
+The display frame is made using the CTk.CTkScrollableFrame() widget, and is used to display information using 'tables' generated with CTk.CTkLabel() widgets.
 
 Upon launching the main application, the default homescreen for the display frame has the Bamboo logo and text telling the user to click on the main menu to display items there.
 
@@ -96,7 +96,7 @@ Depending on the menu option clicked, the display frame can either display a tab
 
 The websocket logs is a CTk.CTkTextbox() widget, and contains messages and/or logs from the Bamboo Teamserver, including messages from the teamchat, as well as any agent connection. Its class is defined in /handler/gui/widgets/ws_textBox.py.
 
-It checks for messages from the Bamboo Teamserver using a websocket process that runs alongside the main process using multiprocessing, and a recursive function that calls itself every 1000ms. This function will check if a message has been received, and will remove the ANSI coding before inserting it into the websocket logs.
+It checks for messages from the Bamboo Teamserver using a websocket process that runs alongside the main process using multiprocessing, and a recursive function that calls itself every 1000ms. This function will check if a message has been received, and will remove the ANSI encoding before inserting it into the websocket logs.
 
 ---
 
@@ -105,7 +105,7 @@ It checks for messages from the Bamboo Teamserver using a websocket process that
 ![tabs](../../img/GUI_images/tabs.png)
 
 
-At the bottom of the widget is a CTk.CTkTabview() widget, which by default contains 2 tabs, TEAMCHAT and MAIN CONSOLE. It can have up to 7 additional tabs for running agents. The class is defined in /handler/gui/widgets/tabs.py.
+At the bottom of the widget is a CTk.CTkTabview() widget, which by default contains 2 tabs, TEAMCHAT and CONSOLE. It can have up to 7 additional tabs for running agents. The class is defined in /handler/gui/widgets/tabs.py.
 
 ### Teamchat
 
@@ -209,12 +209,12 @@ Modifying exploits must follow the same rules as adding an exploit, such as file
 
 ### Agent Identifier Tabs
 
-Agent identifier tabs can be opened using the `use [agent_identifier]` command in MAIN CONSOLE. Only 7 agent identifier tabs can be opened at any one time on a client.
+Agent identifier tabs can be opened using the `use [agent_identifier]` command in CONSOLE. Only 7 agent identifier tabs can be opened at any one time on a client.
 
 ![agent_id_tabs](../../img/GUI_images/agent_id_tabs.png)
 
 
-Clicking on an agent identifier tab will show three buttons: Start Enumerating, Toggle Keylog and Get Registry Hives. These buttons are only shown when the current tab is an agent identifier tab, and will not appear in TEAMCHAT or MAIN CONSOLE. As there is no tab-changed event for CTk, this is done using a recursive function that checks for the current tab every 100ms and hides or shows the buttons accordingly.
+Clicking on an agent identifier tab will show three buttons: Start Enumerating, Toggle Keylog and Get Registry Hives. These buttons are only shown when the current tab is an agent identifier tab, and will not appear in TEAMCHAT or CONSOLE. As there is no tab-changed event for CTk, this is done using a recursive function that checks for the current tab every 100ms and hides or shows the buttons accordingly.
 
 The three buttons, as well as the commands that can only be used when an agent is in use, can be found below. 
 
@@ -240,7 +240,7 @@ Opens a new CTk.CTkToplevel window where users can select the exploit to run. Th
 
 Usage: `cmd`
 
-Opens a command prompt for the current agent.
+Enables users to send Windows commands to the current agent.
 
 #### enum / Start Enumerating
 

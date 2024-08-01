@@ -6,7 +6,7 @@ The commands class provides methods for interacting with an agent through variou
 
 ## exploit_process
 
-Starts an exploit process on the specified agent.
+Starts an exploit process on the specified agent
 
 ### Endpoint
 
@@ -18,7 +18,7 @@ POST /exploit/send_config
 
 ### Description
 
-This function first retrieves all available exploits from the Bamboo Teamserver using the `/exploit/view_all` endpoint. The user will select an exploit, and start start configuring it. This function is dynamic in a way that only shows what can be chosen to the user. As different exploits have different configurations, each exploit configuration steps may be different. If during the configuration, the user wants to stop the process, the `/exploit/quit` endpoint will be called for logging purposes. The `/exploit/send_config` endpoint will be called to proceed once the user confirms the exploitation.
+This function first retrieves all available exploits from the Bamboo Teamserver using the `/exploit/view_all` endpoint. The user will select an exploit, and start configuring it. This function is dynamic in a way that only shows what can be chosen to the user. As different exploits have different configurations, each exploit configuration steps may be different. If during the configuration, the user wants to stop the process, the `/exploit/quit` endpoint will be called for logging purposes. The `/exploit/send_config` endpoint will be called to proceed once the user confirms the exploitation.
 
 ### Function Argument
 
@@ -44,7 +44,7 @@ exploit_process("bambooUser", "5zrire9a", jwt_token)
 
 ## command_prompt
 
-Sends a command to the agent and retrieves the output.
+Sends a command to the agent and retrieves the output
 
 ### Endpoint
 
@@ -81,7 +81,7 @@ command_prompt("bambooUser", "5zrire9a", "whoami", jwt_token)
 
 ## enum
 
-Enumerates information about the infected machine.
+Enumerates information about the target machine
 
 ### Endpoint
 
@@ -91,7 +91,7 @@ POST /postexp/enum
 
 ### Description
 
-This method requests the enumeration of an infected machine and indicates that the result is back and can be viewed.
+This method requests the enumeration of an target machine and indicates that the result is back and can be viewed.
 
 ### Function Argument
 
@@ -131,7 +131,7 @@ POST /postexp/retrieve
 
 ### Description
 
-This function will send the command to the Bamboo Agent and depending on the method (keylog/retrieve), there will be different outputs. SSS_Retrieve can only be used if the Bamboo Agent privilege is "High" or "System"
+This function will send the command to the Bamboo Agent and depending on the method (keylog/retrieve), there will be different outputs. SSS_Retrieve can only be used if the Bamboo Agent privilege is "High" or "System".
 
 ### Function Argument
 

@@ -13,7 +13,7 @@ POST /postexp/keylog
 
 ### Description
 
-Bamboo Client calls this endpoint when they want to start/stop keylogging activity. All activities will be recorded down into a `global variable: keylog_status`. keylog_status is a dictionary that keeps track of all keylog activity within Bamboo Teamserver. Therefore, with this global variable, the Bamboo Teamserver will be able to tell if the Bamboo Client user is starting or stopping the keylogging. After the Bamboo Teamserver knows the action to command, a WebSocket broadcast will be made to the Bamboo Agent Specified. This command can be called by any Bamboo Agent with any privilege level.
+Bamboo Client calls this endpoint when they want to start/stop keylogging activity. All activities will be recorded down into a global variable: [`keylog_status`](../global_variables.md). keylog_status is a dictionary that keeps track of all keylog activity within Bamboo Teamserver. Therefore, with this global variable, the Bamboo Teamserver will be able to tell if the Bamboo Client user is starting or stopping the keylogging. After the Bamboo Teamserver knows the action to command, a WebSocket broadcast will be made to the Bamboo Agent Specified. This command can be called by any Bamboo Agent with any privilege level.
 
 ### Request schema
 
@@ -80,7 +80,7 @@ Bamboo Client calls this endpoint when they want to start/stop keylogging activi
 
 ## Enumeration
 
-Start enumerating an infected machine
+Start enumerating an target machine
 
 ### Endpoint
 
@@ -90,7 +90,7 @@ POST /postexp/enum
 
 ### Description
 
-Bamboo Client calls this endpoint when they want to enumerate the infected machine remotely using the specified Bamboo Agent. The Bamboo teamserver will send a WebSocket broadcast to the Bamboo Agent specified and command it to start enumerate the infected machine. This command can be called by any Bamboo Agent with any privilege level.
+Bamboo Client calls this endpoint when they want to enumerate the target machine remotely using the specified Bamboo Agent. The Bamboo teamserver will send a WebSocket broadcast to the Bamboo Agent specified and command it to start enumerate the target machine. This command can be called by any Bamboo Agent with any privilege level.
 
 ### Request schema
 
@@ -135,7 +135,7 @@ Bamboo Client calls this endpoint when they want to enumerate the infected machi
 |Field|Type|Description|
 |-----|----|-----------|
 |command|String|post exploit|
-|method|String|Keylogging|
+|method|String|Enumerate|
 |handler|String|User that commanded|
 
 ### WebSocket example
@@ -153,7 +153,7 @@ Bamboo Client calls this endpoint when they want to enumerate the infected machi
 
 ## SSS_Retrieve
 
-Retrieve registry hive of infected machine
+Retrieve registry hive of target machine
 
 ### Endpoint
 
@@ -163,7 +163,7 @@ POST /postexp/retrieve
 
 ### Description
 
-Bamboo Client calls this endpoint when they want to retrieve the registry hive of the infected machine remotely using the specified Bamboo Agent. This command can only be called by Bamboo Agent with `High` or `System` level privilege. If the requirements are met, the Bamboo teamserver will send a WebSocket broadcast to the Bamboo Agent specified and command it to start retrieving the registry hive of the infected machine.
+Bamboo Client calls this endpoint when they want to retrieve the registry hive of the target machine remotely using the specified Bamboo Agent. This command can only be called by Bamboo Agent with `High` or `System` level privilege. If the requirements are met, the Bamboo teamserver will send a WebSocket broadcast to the Bamboo Agent specified and command it to start retrieving the registry hive of the target machine.
 
 ### Request schema
 
@@ -173,7 +173,7 @@ Bamboo Client calls this endpoint when they want to retrieve the registry hive o
 |-----|----|-----------|
 |username|String|Username of user|
 |agent_identifier|String|Identifier of Bamboo Agent|
-|method|String|Tool used (enumerate)|
+|method|String|Tool used (retrieve)|
 |priv_lvl|String|Privilege level of Bamboo Agent|
 
 ### Request example
@@ -210,7 +210,7 @@ Bamboo Client calls this endpoint when they want to retrieve the registry hive o
 |Field|Type|Description|
 |-----|----|-----------|
 |command|String|post exploit|
-|method|String|Keylogging|
+|method|String|Retrieve|
 |handler|String|User that commanded|
 
 ### WebSocket example

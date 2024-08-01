@@ -65,7 +65,7 @@ POST /handler_func/handler/use_agent
 
 ### Description
 
-This endpoint is called when a Bamboo Client user wants to start using a Bamboo Agent to interact with using the command [`use [agent]`](../../Client/commands.md#use). Using the model [use_agent](../Database/model_agents.md#use_agent), the Bamboo Teamserver will be able to identify if the Bamboo Agent specified exist. If it does, the data of that Bamboo Agent will be return.
+This endpoint is called when a Bamboo Client user wants to start using a Bamboo Agent to interact with using the command [`use [agent]`](../../Client/commands.md#use). Using the model [use_agent](../Database/model_agents.md#use_agent), the Bamboo Teamserver will be able to identify if the Bamboo Agent specified exist. If it does, the data of that Bamboo Agent will be returned.
 
 ### Request schema
 
@@ -118,7 +118,7 @@ POST /handler_func/handler/stop_agent
 
 ### Description
 
-This endpoint is called when a Bamboo Client user wants to stop using a Bamboo Agent using the command [`stop`](../../Client/commands.md#stop). It is for logging purposes
+This endpoint is called when a Bamboo Client user wants to stop using a Bamboo Agent using the command [`stop`](../../Client/commands.md#stop). It is for logging purposes.
 
 ### Request schema
 
@@ -170,7 +170,7 @@ POST /handler_func/handler/remove_agent
 
 ### Description
 
-This endpoint is called when a Bamboo Client user wants to remove a Bamboo Agent from the Bamboo Teamserver using the [`delete [agent]`](../../Client/commands.md#delete). Using the model [remove_agent](../Database/model_agents.md#remove_agent), the Bamboo Teamserver will delete all instances of the specified Bamboo Agent if it exist. Additionally, if the Bamboo Agent is still running, the Bamboo Teamserver will send a [`kill`](../../Client/commands.md#kill) command to stop the Bamboo Agent.
+This endpoint is called when a Bamboo Client user wants to remove a Bamboo Agent from the Bamboo Teamserver using the [`kill [agent]`](../../Client/commands.md#kill). Using the model [remove_agent](../Database/model_agents.md#remove_agent), the Bamboo Teamserver will delete all instances of the specified Bamboo Agent if it exist. Additionally, if the Bamboo Agent is still running, the Bamboo Teamserver will send a [`kill`](../../Client/commands.md#kill) command to stop the Bamboo Agent.
 
 ### Request schema
 
@@ -379,7 +379,7 @@ POST /handler_func/handler/delete_user
 
 ### Description
 
-This endpoint is called when a Bamboo Client user wants to remove a user from the Bamboo Teamserver using the [`remove [username]`](../../Client/commands.md#remove). Using the model [delete_user](../Database/model_users.md#delete_user), the Bamboo Teamserver will be able to delete the specified user.
+This endpoint is called when a Bamboo Client user wants to remove a user from the Bamboo Teamserver using the [`remove [username]`](../../Client/commands.md#remove) command. Using the model [delete_user](../Database/model_users.md#delete_user), the Bamboo Teamserver will be able to delete the specified user.
 
 ### Request schema
 

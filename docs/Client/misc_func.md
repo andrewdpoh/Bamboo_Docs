@@ -2,8 +2,6 @@
 
 The functions below shows all the miscellaneous functions that can be found in Bamboo Client.
 
-<br>
-
 ## arguments
 
 ### Description
@@ -175,31 +173,11 @@ server_msg(ws,
 
 ### Description
 
-This file contains 3 functions, `open_keylog`, `open_enum`, and `open_retrieve`. These functions help enable the dropdown menu of the GUI to open the respective folder when clicked.
+This file contains 3 functions, `open_keylog`, `open_enum`, and `open_retrieve`. These functions allow the dropdown menu of the GUI to open the respective folder when clicked.
 
 ### Function Argument
 
 **This function does not require any arguments**
-
-## resize
-
-### Description
-
-This function enables the widgets and the text within the GUI to be resized when the window size changes
-
-### Function Argument
-
-| Field  | Type   | Description  |
-| ------ | ------ | ------------ |
-| app    | Object | Tkinter Root |
-| ws_box | Object | Widget       |
-| tabs   | Object | Widget       |
-
-### Argument Example
-
-```
-resize(app, ws_box, tabs)
-```
 
 ## start\_\*
 

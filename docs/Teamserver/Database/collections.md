@@ -8,7 +8,7 @@ Bamboo Teamserver database is called "C2-Server". There are a total of 4 collect
 
 ## Collections
 
-Each collection within the Bamboo Teamserver"s C2-Server database serves a specific purpose. Below is a detailed description of each collection and the types of data it stores.
+Each collection within the Bamboo Teamserver's C2-Server database serves a specific purpose. Below is a detailed description of each collection and the types of data it stores.
 
 <!-- Collection agents -->
 ### agents
@@ -120,7 +120,7 @@ The table below shows the models and Endpoints which interacts with this collect
 <!-- Collection heartbeats -->
 ### heartbeats
 
-This collection is related to the agents collection. This contains all heartbeat related information of the agent. Bamboo Agents will send heartbeats to the Bamboo Teamserver in intervals to notify the server that it is still "alive" and running.
+This collection is related to the agents collection. This contains all heartbeat related information of the agent. Bamboo Agents will send heartbeats to the Bamboo Teamserver in intervals to notify the server that they are still "alive" and running.
 
 |Key|Value Type|Description|Examples|
 |---|----------|-----------|--------|
@@ -194,7 +194,7 @@ As Bamboo is just a PoC, the password stored in the database will not be encrypt
     {
         "username": "bambooUserTwo",
         "password": "paSswORd@111",
-        "status" "offline"
+        "status": "offline"
     }
 ]
 ```

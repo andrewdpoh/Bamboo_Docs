@@ -2,8 +2,6 @@
 
 The functions below shows all the miscellaneous functions that can be found in Bamboo Teamserver.
 
-<br>
-
 ## generate_unique_id
 
 ### Description

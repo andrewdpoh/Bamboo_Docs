@@ -256,32 +256,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/overview.html" class="md-nav__link">
+      <a href="../../User%20Guide/recommended_setup.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Overview
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../User%20Guide/prerequisites.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Prerequisites
+    Recommended Setup
   </span>
   
 
@@ -305,10 +284,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
-          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -319,8 +298,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             Installation
           </label>
@@ -333,11 +312,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/installation/agent-setup.html" class="md-nav__link">
+      <a href="../../User%20Guide/installation/teamserver-setup.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Agent Setup
+    Teamserver Setup
   </span>
   
 
@@ -354,11 +333,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../User%20Guide/installation/teamserver-setup.html" class="md-nav__link">
+      <a href="../../User%20Guide/installation/agent-setup.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Teamserver Setup
+    Agent Setup
   </span>
   
 
@@ -411,10 +390,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
         
           
-          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -425,8 +404,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             Commands
           </label>
@@ -2697,7 +2676,7 @@
 </span></code></pre></div>
 <h3 id="description">Description</h3>
 <p>Agent heartbeats endpoint is for Bamboo Agents to 'ping' the Bamboo Teamserver after their initial connection. This heartbeat mechanism helps determine if a Bamboo Agent is still 'alive' and running. The initial connection will give Bamboo Agents 5 seconds before the next heartbeat is expected. After that, the Bamboo Agent will continue sending their heartbeat at random intervals between 5 to 10 seconds. This endpoint will use the model <a href="../Database/model_agents.html#add_heartbeat">add_heartbeat</a> to repeatedly update the collection <a href="../Database/collections.html#heartbeats">heartbeats</a>.</p>
-<p>After obtaining the 2 data in the request body from a Bamboo Agent, the Bamboo Teamserver will take the time that the request was made and compare it with the expected_heartbeat column in the database. Refer to db collection heartbeats for more information.</p>
+<p>After obtaining the 2 pieces of data in the request body from a Bamboo Agent, the Bamboo Teamserver will take the time that the request was made and compare it with the expected_heartbeat column in the database. Refer to the database collection for more information.</p>
 <p>If the current time is later than the expected time, it would mean that the Bamboo Agent was 'dead' and it became 'alive' after a while. While if the current time matches the expected time for the next heartbeat, it would mean that the Bamboo Agent is 'punctual' and still alive.</p>
 <h3 id="request-schema">Request schema</h3>
 <h4>Request body</h4>
@@ -2782,17 +2761,17 @@
 <tr>
 <td>hostname</td>
 <td>String</td>
-<td>Hostname if infected machine</td>
+<td>Hostname of target machine</td>
 </tr>
 <tr>
 <td>publicIP</td>
 <td>String</td>
-<td>Public IP address of infected machine</td>
+<td>Public IP address of target machine</td>
 </tr>
 <tr>
 <td>privateIP</td>
 <td>String</td>
-<td>Private IP address of infected machine</td>
+<td>Private IP address of target machine</td>
 </tr>
 <tr>
 <td>Integrity</td>
@@ -3062,7 +3041,7 @@
 <div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>POST /agent/post_exploit/enumerate
 </span></code></pre></div>
 <h3 id="description_5">Description</h3>
-<p>Enumerate Result will be called by Bamboo Agent when Bamboo Client command the Bamboo Agent to enumerate the infected machine. There will be error checking to determine if there were any error, if there are no errors, the Bamboo Teamserver will send the enumerate results to the user via WebSocket.</p>
+<p>Enumerate Result will be called by Bamboo Agent when Bamboo Client command the Bamboo Agent to enumerate the target machine. There will be error checking to determine if there were any error, if there are no errors, the Bamboo Teamserver will send the enumerate results to the user via WebSocket.</p>
 <h3 id="request-schema_4">Request schema</h3>
 <h4>Request body</h4>
 
@@ -3181,7 +3160,7 @@
 <div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>POST /agent/post_exploit/sss_retrieve
 </span></code></pre></div>
 <h3 id="description_6">Description</h3>
-<p>SSS_Retrieve Result will be called by Bamboo Agent when Bamboo Client command the Bamboo Agent to Retrieve registry hives from the infected machine. There will be error checking to determine if there were any error, if there are no errors, the Bamboo Teamserver will send the retrieved results to the user via WebSocket.</p>
+<p>SSS_Retrieve Result will be called by Bamboo Agent when Bamboo Client command the Bamboo Agent to Retrieve registry hives from the target machine. There will be error checking to determine if there were any error, if there are no errors, the Bamboo Teamserver will send the retrieved results to the user via WebSocket.</p>
 <h3 id="request-schema_5">Request schema</h3>
 <h4>Request body</h4>
 

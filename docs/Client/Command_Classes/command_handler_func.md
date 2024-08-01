@@ -41,7 +41,7 @@ display("bambooUser", jwt_token)
 
 ## use_agent
 
-Obtains agent information and caches it for future use.
+Obtains agent information and caches it for future use
 
 ### Endpoint
 
@@ -77,7 +77,7 @@ use_agent("bambooUser", "5zrire9a", jwt_token)
 
 ## stop_agent
 
-Clears the cache and stops using the specified agent.
+Clears the cache and stops using the specified agent
 
 ### Endpoint
 
@@ -113,7 +113,7 @@ stop_agent("bambooUser", "5zrire9a", jwt_token)
 
 ## remove_agent
 
-Removes an agent from the database.
+Removes an agent from the database
 
 ### Endpoint
 
@@ -123,7 +123,7 @@ POST /handler_func/handler/remove_agent
 
 ### Description
 
-This function sends a request to remove an agent from the database and handles success or failure responses. If the agent is still running, it will sent server will send a kill command to stop the agent from running.
+This function sends a request to remove an agent from the database and handles success or failure responses. If the agent is still running, it will sent server will send a `kill` command to stop the agent from running.
 
 ### Function Argument
 
@@ -149,7 +149,7 @@ remove_agent("bambooUser", "5zrire9a", jwt_token)
 
 ## info_status
 
-Checks the status of a specific agent.
+Checks the status of a specific agent
 
 ### Endpoint
 
@@ -185,7 +185,7 @@ info_status("bambooUser", "5zrire9a", jwt_token)
 
 ## view_users
 
-Views and displays all users in the database.
+Views and displays all users in the database
 
 ### Endpoint
 
@@ -220,7 +220,7 @@ view_users("bambooUser", jwt_token)
 
 ## register_user
 
-Registers a new user in the database.
+Registers a new user in the database
 
 ### Endpoint
 
@@ -257,7 +257,7 @@ register_user("bambooUser", "bambooUserTwo", "paSswORd@111", jwt_token)
 
 ## delete_user
 
-Deletes a user from the database.
+Deletes a user from the database
 
 ### Endpoint
 

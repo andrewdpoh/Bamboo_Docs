@@ -15,7 +15,7 @@ POST /agent/heartbeat
 
 Agent heartbeats endpoint is for Bamboo Agents to 'ping' the Bamboo Teamserver after their initial connection. This heartbeat mechanism helps determine if a Bamboo Agent is still 'alive' and running. The initial connection will give Bamboo Agents 5 seconds before the next heartbeat is expected. After that, the Bamboo Agent will continue sending their heartbeat at random intervals between 5 to 10 seconds. This endpoint will use the model [add_heartbeat](../Database/model_agents.md#add_heartbeat) to repeatedly update the collection [heartbeats](../Database/collections.md#heartbeats).
 
-After obtaining the 2 data in the request body from a Bamboo Agent, the Bamboo Teamserver will take the time that the request was made and compare it with the expected_heartbeat column in the database. Refer to db collection heartbeats for more information.
+After obtaining the 2 pieces of data in the request body from a Bamboo Agent, the Bamboo Teamserver will take the time that the request was made and compare it with the expected_heartbeat column in the database. Refer to the database collection for more information.
 
 If the current time is later than the expected time, it would mean that the Bamboo Agent was 'dead' and it became 'alive' after a while. While if the current time matches the expected time for the next heartbeat, it would mean that the Bamboo Agent is 'punctual' and still alive.
 
@@ -80,9 +80,9 @@ After the procedure is completed, the Bamboo Teamserver will broadcast to all co
 
 |Field|Type|Description|
 |-----|----|-----------|
-|hostname|String|Hostname if infected machine|
-|publicIP|String|Public IP address of infected machine|
-|privateIP|String|Private IP address of infected machine|
+|hostname|String|Hostname of target machine|
+|publicIP|String|Public IP address of target machine|
+|privateIP|String|Private IP address of target machine|
 |Integrity|String|Privilege level of Bamboo Agent|
 
 ### Request example
@@ -207,7 +207,7 @@ POST /agent/post_exploit/keylog
 
 ### Description
 
-Keylog Result will be called by Bamboo Agent when Bamboo Client command the Bamboo Agent to stop recording keystrokes. There will be error checking to determine if there were any error, if there are no errors, the Bamboo Teamserver will send the keystroke to the user via WebSocket.
+Keylog Result will be called by Bamboo Agent when the Bamboo Client commands the Bamboo Agent to stop recording keystrokes. There will be error checking to determine if there were any error, if there are no errors, the Bamboo Teamserver will send the keystroke to the user via WebSocket.
 
 
 ### Request schema
@@ -229,7 +229,7 @@ Keylog Result will be called by Bamboo Agent when Bamboo Client command the Bamb
     "agent_identifier": "5zrire9a",
     "status": "done",
     "keystroke": "keystrokesrecorded",
-    "handler": "Bamboo User A",
+    "handler": "bambooUser",
     "error": ""
 }
 ```
@@ -285,7 +285,7 @@ POST /agent/post_exploit/enumerate
 
 ### Description
 
-Enumerate Result will be called by Bamboo Agent when Bamboo Client command the Bamboo Agent to enumerate the infected machine. There will be error checking to determine if there were any error, if there are no errors, the Bamboo Teamserver will send the enumerate results to the user via WebSocket.
+Enumerate Result will be called by Bamboo Agent when Bamboo Client command the Bamboo Agent to enumerate the target machine. There will be error checking to determine if there were any error, if there are no errors, the Bamboo Teamserver will send the enumerate results to the user via WebSocket.
 
 ### Request schema
 
@@ -306,7 +306,7 @@ Enumerate Result will be called by Bamboo Agent when Bamboo Client command the B
     "agent_identifier": "5zrire9a",
     "status": "done",
     "result": <a very long list of string>,
-    "handler": "Bamboo User A",
+    "handler": "bambooUser",
     "error": ""
 }
 ```
@@ -363,7 +363,7 @@ POST /agent/post_exploit/sss_retrieve
 
 ### Description
 
-SSS_Retrieve Result will be called by Bamboo Agent when Bamboo Client command the Bamboo Agent to Retrieve registry hives from the infected machine. There will be error checking to determine if there were any error, if there are no errors, the Bamboo Teamserver will send the retrieved results to the user via WebSocket.
+SSS_Retrieve Result will be called by Bamboo Agent when Bamboo Client command the Bamboo Agent to Retrieve registry hives from the target machine. There will be error checking to determine if there were any error, if there are no errors, the Bamboo Teamserver will send the retrieved results to the user via WebSocket.
 
 ### Request schema
 
@@ -384,7 +384,7 @@ SSS_Retrieve Result will be called by Bamboo Agent when Bamboo Client command th
     "agent_identifier": "5zrire9a",
     "status": "done",
     "result": <dictionary of binary>,
-    "handler": "Bamboo User A",
+    "handler": "bambooUser",
     "error": ""
 }
 ```
@@ -395,7 +395,7 @@ SSS_Retrieve Result will be called by Bamboo Agent when Bamboo Client command th
 |-----------|------|-----------|
 |`200`|{"message": "success"}|Successfully sent broadcasted to Bamboo Client|
 |`400`|{"message": "failed"}|Failed to broadcast to Bamboo Client|
-|`404`|{"message": "error"}|There was an error when enumerating|
+|`404`|{"message": "error"}|There was an error when retrieving|
 
 ### Response example
 

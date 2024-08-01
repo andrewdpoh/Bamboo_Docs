@@ -1,6 +1,6 @@
 # Commands
 
-This is not a user guide, this is the documentation for Bamboo Client Commands. Bamboo Client offers a wide variety of commands in both CLI and GUI interface. This enables users to interact with the Bamboo Teamserver, Bamboo Agent, and even other Bamboo Client users. The table below contains all the commands that Bamboo offers. The commands below are mainly for the CLI and may defer in the GUI. Use the `help` command see the difference in the GUI.
+This is the documentation for commands. If you're looking for the user guide, it can be found [here](../User_Guide/using_bamboo_client.md). Bamboo Client offers a wide variety of commands in both CLI and GUI interface. This enables users to interact with the Bamboo Teamserver, Bamboo Agent, and even other Bamboo Client users. The table below contains all the commands that Bamboo offers. The commands below are mainly for the CLI and may defer in the GUI. Use the `help` command see the difference in the GUI.
 
 | Command                       | Description                                |
 |-------------------------------|--------------------------------------------|
@@ -227,7 +227,7 @@ Enumerate the agent machine.
 
 ### postexp
 
-Run a post exploit.
+Run a post exploit tool on the Bamboo Agent
 
 | CLI Command         | GUI Command             | Command           |
 |---------------------|-------------------------|-------------------|

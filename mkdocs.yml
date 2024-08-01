@@ -32,15 +32,14 @@ nav:
   - Introduction: index.md
 
   - User Guide: 
-    - User Guide/overview.md
-    - User Guide/prerequisites.md
+    - User_Guide/recommended_setup.md
     - Installation:
-      - User Guide/installation/agent-setup.md
-      - User Guide/installation/teamserver-setup.md
-    - User Guide/using_bamboo_client.md
+      - User_Guide/installation/teamserver-setup.md
+      - User_Guide/installation/agent-setup.md
+    - User_Guide/using_bamboo_client.md
     - Commands:
-      - User Guide/commands/command_list.md
-      - User Guide/commands/command_guide.md
+      - User_Guide/commands/command_list.md
+      - User_Guide/commands/command_guide.md
 
   - Bamboo Architecture: bamboo_architecture.md
 
@@ -84,6 +83,7 @@ nav:
       - Client/Command_Classes/command_handler_func.md
     - GUI Command Classes:
       - Client/GUI_Command_Classes/gui_commands.md
+    - Client/global_variables.md
     - Miscellaneous Functions: Client/misc_func.md
 
   - Exploits: exploits.md

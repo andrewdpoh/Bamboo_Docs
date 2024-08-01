@@ -2,7 +2,7 @@
 
 ## Shellcode Injection
 
-Elastic Defend is unable to detect malicious in-memory files. Thus, these shellcode injection techniques are effective in executing payloads undetected. The shellcode injection techniques are implemented within Bamboo Agent and can be selected when the user uses the [`exploit`](Client/commands.md#exploit) command.
+Elastic Defend is unable to detect malicious in-memory files. Thus, these shellcode injection techniques are effective in executing payloads undetected. The shellcode injection techniques are implemented within Bamboo Agent and can be selected when the user uses the [`exploit`](Client/commands.md#exploit) command. The shellcode for the injection is generated using [Donut](https://github.com/TheWover/donut).
 
 ### Virtual Allocation Injection
 
@@ -20,7 +20,7 @@ The technique involves the following steps:
 
 **Implementation**
 
-[zaneGittins’ go-inject](https://github.com/zaneGittins/go-inject) simplifies using Windows functions related to injections, and is used by the agent to implement this technique.
+[zaneGittins' go-inject](https://github.com/zaneGittins/go-inject) simplifies using Windows functions related to injections, and is used by the agent to implement this technique.
 
 <details>
 <summary>Expand code</summary>
@@ -68,7 +68,7 @@ The steps this technique uses is:
 
 **Implementation**
 
-Instead of finding the PID of a suitable process, the Agent will launch OneDrive.exe from the user’s home directory. OneDrive is a very suitable process to inject into with the exploits Bamboo has, and launching the process before injecting into it will ensure that the process will be available to inject into. It is also whitelisted from Elastic Security’s Component Model Hijacking as it is considered a noisy process.
+Instead of finding the PID of a suitable process, the Agent will launch OneDrive.exe from the user's home directory. OneDrive is a very suitable process to inject into with the exploits Bamboo has, and launching the process before injecting into it will ensure that the process will be available to inject into. It is also whitelisted from Elastic Security's Component Model Hijacking as it is considered a noisy process.
 
 <details>
 <summary>Expand code</summary>
@@ -97,7 +97,7 @@ fmt.Println("exploit pid:", exploitPID)
 
 </details>
 
-The rest of the injection technique is implemented with [zaneGittins’ go-inject](https://github.com/zaneGittins/go-inject) library.
+The rest of the injection technique is implemented with [zaneGittins' go-inject](https://github.com/zaneGittins/go-inject) library.
 
 <details>
 <summary>Expand code</summary>
@@ -175,11 +175,11 @@ The tool below is not an injection technique, but instead used to disrupt the ef
 
 **Description**
 
-EDRSilencer, created by [netero1010](https://github.com/netero1010) is an [open-source](https://github.com/netero1010/EDRSilencer) evasion tool designed for disrupting Endpoint Detection and Response (EDR) systems. It leverages Windows Filtering Platform (WFP) APIs, which allows a program developer to create network filtering software that can examine, modify and stop network traffic. EDRSilencer uses the WFP to prevent EDR agents and processes from connecting and reporting security events with their servers, effectively disabling the EDR’s threat detection capabilities of the EDR. The tool currently supports Elastic EDR, among other popular EDR solutions.
+EDRSilencer, created by [netero1010](https://github.com/netero1010) is an [open-source](https://github.com/netero1010/EDRSilencer) evasion tool designed for disrupting Endpoint Detection and Response (EDR) systems. It leverages Windows Filtering Platform (WFP) APIs, which allows a program developer to create network filtering software that can examine, modify and stop network traffic. EDRSilencer uses the WFP to prevent EDR agents and processes from connecting and reporting security events with their servers, effectively disabling the EDR's threat detection capabilities of the EDR. The tool currently supports Elastic EDR, among other popular EDR solutions.
 
 **Implementation**
 
-In the [original code's](https://github.com/netero1010/EDRSilencer/blob/main/EDRSilencer.c) main function, it checks if the user inputs the correct number of command-line arguments and performs different actions based on the argument’s value:
+In the [original code's](https://github.com/netero1010/EDRSilencer/blob/main/EDRSilencer.c) main function, it checks if the user inputs the correct number of command-line arguments and performs different actions based on the argument's value:
 
 | Arguments            | Description                                                     |
 | -------------------- | --------------------------------------------------------------- |
@@ -206,4 +206,4 @@ int main() {
 ```
 
 </details>
-This modification allows the executable to be easily incorporated within our C2 and agent, making it more convenient and efficient for our purposes.
+This modification allows the executable to be easily incorporated within our C2 and agent, making it more convenient and efficient for our purposes. With this modification, the file is stored as EDRBlocker.exe in the Teamserver.

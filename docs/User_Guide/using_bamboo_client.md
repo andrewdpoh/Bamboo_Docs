@@ -1,5 +1,7 @@
 # Using Bamboo Client 
 
+This page covers usage of the Bamboo Client GUI. The CLI alternative also uses the same commands.
+
 ## Running GUI
 
 You can run the Bamboo Client on the same machine as the Teamserver with the command:
@@ -26,11 +28,11 @@ The Teamserver IP, port number, and login username fields will be saved across s
 (1) Menu Bar – Provides easy access to display and manage resources on the server. The tabs in the Menu Bar are as follows:
 
 - BAMBOO – Display the Bamboo icon on the Display panel
-- Display Agents — Allow the user to see the Bamboo Agents connected to the Teamserver in the Display Table. 
+- Agents — Allow the user to see the Bamboo Agents connected to the Teamserver in the Display Table. 
 - Users – Display users stored in the Teamserver’s database or bring up a window to add a new user account.
 - Exploits – Display exploits stored in the Teamserver’s or bring up a window to add an exploit. 
 - View files – Opens the File Manager application for the folders that stores the results of post-exploitation functions or system enumeration
-- Help
+- Help - Displays Technical Documentation and Help menu for commands
 
 (2) Display panel – Displays information selected from the Menu Bar in a table format. The table comes with a dropdown to remove specific items from the database or disconnect agents 
 
@@ -45,9 +47,9 @@ The Teamserver IP, port number, and login username fields will be saved across s
 
 A new agent tab (labelled by the agent id) can be created with the command `use [agent id]` in the console. This tab will allow users to use agent-specific commands to control and command the agent. 
 
-(5) Console – Displays the command-line console for the selected tabs. For more information about the commands, refer to !!LINK TO COMMANDS` 
+(5) Console – Displays the command-line console for the selected tabs. For more information about the commands, refer to [commands](../Client/commands.md)` 
 
-(6) Buttons – Buttons to command selected agent to perform select functions  The available actions using these buttons are:
+(6) Buttons – Buttons to command selected agent to perform selected functions. The available actions using these buttons are:
 
 - Start Enumerating – perform system enumeration on the host the Agent is on
 - Toggle Keylog – Start or stop the keylogging function on the Agent

@@ -1,6 +1,6 @@
 # Command Guide
 
-This page will show how to do some general actions using the GUI Client. 
+This page covers how to perform general actions using the GUI Client. 
 
 ## Agent Control
 
@@ -15,10 +15,10 @@ Enter `exploit` in the agent console.
 - A popup will appear to select configurations. The options you have depend on the exploits available and the settings on them.
 - First you choose an exploit from the Teamserver’s database
 - The next choice is the evasion technique, if injection is an option for the exploit. The choices are:
-    - Drop-to-Disk – drop exploit to disk and run it. Provides no evasion
-    - Process Injection
-    - Virtual Allocation
-    - Gadget Injection
+    1. Drop-to-Disk – drop exploit to disk and run it (i.e. no evasion technique applied)
+    2. Process Injection
+    3. Virtual Allocation
+    4. Gadget Injection
 - Choose the Donut shellcode options. Default is recommended
 
 ![run exploits2](../../img/userguide_images/run-exploits2.png)
@@ -47,11 +47,11 @@ To end an agent, enter `kill [agent id]` in a console. It will tell the agent to
 
 ### Stop Controlling Agent 
 
-To close the console of an agent, enter close in the console of the agent. This does not disconnect or terminate the agent
+To close the console of an agent, enter `stop` in the console of the agent. This does not disconnect or terminate the agent
 
-### CLI Commands 
+### Terminal Commands 
 
-To access a command prompt in the agent, enter cli in the agent’s console. 
+To access a terminal/command prompt in the agent, enter `cmd` in the agent’s console. 
 
 ![cmd on agent](../../img/userguide_images/agent-cmd.png)
 
@@ -61,7 +61,7 @@ From here, you can enter commands and it will execute in a command prompt.
 
 To stop using the command prompt, enter `exit` in the console.
 
-## Exploits Management
+## Exploit Management
 
 ### Display Exploits
 
@@ -75,7 +75,7 @@ The available exploits in the database will be in the Display panel
 
 ### Add Exploit
 
-To add exploits, either enter add in a console or go to Menu > Exploits > Add Exploits to launch a new window to add exploits. 
+To add exploits, either enter `add` in a console or go to Menu > Exploits > Add Exploits to launch a new window to add exploits. 
 
 ![add exploits](../../img/userguide_images/run-exploits.png)
 
@@ -89,7 +89,7 @@ When adding exploits, the user will configure the following:
 
 ### Modify Exploit
 
-To modify exploits, either enter modify in a console or go to Menu > Exploits > Modify Exploits to launch a new window to add exploits. 
+To modify exploits, either enter `modify` in a console or go to Menu > Exploits > Modify Exploits to launch a new window to add exploits. 
 
 ![modify exploits](../../img/userguide_images/modify-exploits.png)
 
@@ -126,26 +126,27 @@ Go to Menu > Users > Display Users
 ![display_user](../../img/userguide_images/display_users.png)
 
 ### Add User
-To modify exploits, either enter register in a console or go to Menu > Users > Add User to launch a new window to add exploits. 
+To modify exploits, either enter `register` in a console or go to Menu > Users > Add User to launch a new window to add exploits. 
 
 ![add_user](../../img/userguide_images/add_user.png)
 
 Enter a username and password for the new user and click Register. You may not create a username that already exists.
 
 ### Remove User
-To remove a user account, you can do the following: 
+To remove a user account, you can do the following:  
+
 1. Open the table of exploits on the Display panel with Menu > User > Display User 
-2. At the “Delete user?” dropdown, select the user to remove and click Confirm. 
+2. At the “Delete user?” dropdown, select the user to remove and click Confirm  
 
 ![remove_user](../../img/userguide_images/remove_user.png)
 
 ## Other Functions
 
 ### Team Chat
-To access the Team Chat, go to the TEAMCHAT tab. You can send messages by entering your message in the text box
+To access the Team Chat, go to the TEAMCHAT tab. You can send messages by entering your message in the text box.
 
 ![teamchat](../../img/userguide_images/teamchat.png)
 
-To remove the message history, enter the clear command in another console.
+To remove the message history, enter the `clear` command in another console.
 
 
