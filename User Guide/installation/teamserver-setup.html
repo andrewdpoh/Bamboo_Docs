@@ -11,10 +11,10 @@
         <link rel="canonical" href="http://Bamboo_Docs/User%20Guide/installation/teamserver-setup.html">
       
       
-        <link rel="prev" href="agent-setup.html">
+        <link rel="prev" href="../prerequisites.html">
       
       
-        <link rel="next" href="../using_bamboo_client.html">
+        <link rel="next" href="agent-setup.html">
       
       
       <link rel="icon" href="../../img/logo.png">
@@ -313,27 +313,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="agent-setup.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Agent Setup
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -413,6 +392,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="agent-setup.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent Setup
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1707,41 +1707,41 @@
 <li>Open a terminal or command prompt on your computer.</li>
 <li>Install <a href="https://www.python.org/downloads/release/python-3110/">Python 3.11</a> and make sure you have pip as the package manager.</li>
 <li>Clone the repository (skip this step if you already have the code).
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git clone https://github.com/time0ut07/C2-Agent.git
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git clone https://github.com/time0ut07/C2-Agent.git
 </span></code></pre></div></li>
 <li>Change directory into the folder.
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>    cd C2-Agent
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cd C2-Agent
 </span></code></pre></div></li>
 <li>Install requirements.
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>    pip install -r requirements.txt
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>    pip install -r requirements.txt
 </span></code></pre></div></li>
 </ol>
 <h2 id="part-2-setting-up-mongodb">Part 2: Setting up MongoDB</h2>
 <p><strong>Windows</strong></p>
 <ol>
-<li>Download the <a href="https://www.mongodb.com/try/download/community">MongoDB Community Server</a>.</li>
+<li>Download the <a href="https://www.mongodb.com/try/download/community">MongoDB Community Server</a></li>
 <li>Open MongoDB Compass and connect to the local database</li>
 <li>Create a database named "C2-Server"</li>
 <li>In the database, create a collection named "<strong>user</strong>"</li>
 <li>In the user collection, select add data &gt; import JSON or CSV file</li>
 <li>Select <strong>C2-Server.user.json</strong> from the folder</li>
-<li>Repeat steps 4 to 6 to create the collection "<strong>exploits</strong>" and import the data file <strong>C2-Server.exploits.json</strong>.</li>
+<li>Repeat steps 4 to 6 to create the collection "<strong>exploits</strong>" and import the data file <strong>C2-Server.exploits.json</strong></li>
 </ol>
 <p><strong>Unix</strong></p>
 <ol>
 <li>Install the <a href="https://www.mongodb.com/docs/manual/administration/install-community/">MongoDB Community Server</a> according to the operating system.</li>
 <li>Start the mongodb service
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo systemctl start mongod
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo systemctl start mongod
 </span></code></pre></div></li>
-<li>Using the shell command <code>[mongosh]</code>(https://www.mongodb.com/docs/mongodb-shell/) to interact with mongodb</li>
-<li>Create the database C2-Server if it does not exist 
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>use C2-Server
+<li>Using the shell command <a href="https://www.mongodb.com/docs/mongodb-shell/"><code>mongosh</code></a> to interact with mongodb</li>
+<li>Use the database "C2-Server". The command below will create the database if it does not exist 
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>use C2-Server
 </span></code></pre></div></li>
 <li>Create a collection called "<strong>user</strong>"
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>db.createCollection(&quot;user&quot;)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>db.createCollection(&quot;user&quot;)
 </span></code></pre></div></li>
 <li>Import the JSON file <strong>C2-Server.user.json</strong> to the <strong>user</strong> collection with the following command:
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>mongoimport --uri=&quot;mongodb://localhost:27017&quot; --db=C2-Server --collection=user --file=C2-Server.user.json --jsonArray
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>mongoimport --uri=&quot;mongodb://localhost:27017&quot; --db=C2-Server --collection=user --file=C2-Server.user.json --jsonArray
 </span></code></pre></div></li>
 <li>Repeat steps 4 to 6 to create the collection "<strong>exploits</strong>" and import the data file <strong>C2-Server.exploits.json</strong>.</li>
 </ol>
@@ -1797,7 +1797,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="agent-setup.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Agent Setup">
+          <a href="../prerequisites.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Recommended Setup">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1807,20 +1807,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Agent Setup
+                Recommended Setup
               </div>
             </div>
           </a>
         
         
           
-          <a href="../using_bamboo_client.html" class="md-footer__link md-footer__link--next" aria-label="Next: Using Bamboo Client">
+          <a href="agent-setup.html" class="md-footer__link md-footer__link--next" aria-label="Next: Agent Setup">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Using Bamboo Client
+                Agent Setup
               </div>
             </div>
             <div class="md-footer__button md-icon">
